@@ -16,7 +16,6 @@ function TextCircle(props) {
   )
 }
 
-
 function LandingPage() {
   return (
     <div className='container'>
