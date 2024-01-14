@@ -17,25 +17,16 @@ import Contact from './contact/Contact';
 function App() {
   return (
     <Router>
-      <div className='App'>     {/* root element */}
-        <div className='Header'>
-          <Header />
-        </div>
-        
-        <div className='Current-page'>
-          {/** May be able to set this up with the useLocation hook. */}
-        </div>
+      <Header />
 
-        <div className='Footer'>
-          <Footer />
-        </div>
-      </div>
       <Routes>
-        <Route path='/LandingPage' element={<LandingPage />} />
+        <Route path='/' element={<LandingPage />} />
         <Route path='/Projects' element={<Projects />} />
         <Route path='/Blogs' element={<Blogs />} />
         <Route path='/Contact' element={<Contact />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }
