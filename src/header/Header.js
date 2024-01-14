@@ -3,28 +3,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+function listLink(displayText, to='./' + displayText) {
+  return (
+    <li>
+      <Link to={to} className='text-center fs-5 text-black' style={{ textDecoration: 'none' }}>
+        {displayText}
+      </Link>
+    </li>
+  )
+}
+
+const listSeparator = () => {
+  return (
+    <li className='mx-1 text-secondary'>
+      |
+    </li>
+  )
+}
+
 const listOfLinks = () => {
   return (
     <div className='row'>
       <ul className='d-flex justify-content-between list-unstyled' >
-        <li>
-          <Link to='/Projects' className='text-center fs-5 text-black' style={{ textDecoration: 'none' }}>
-            Projects</Link>
-        </li>
-        <li className='mx-1 text-secondary'>
-          |
-        </li>
-        <li>
-          <Link to='/Blogs' className='text-center fs-5 text-black' style={{ textDecoration: 'none' }}>
-            Blogs</Link>
-        </li>
-        <li className='mx-1 text-secondary'>
-          |
-        </li>
-        <li>
-          <Link to='/Contact' className='text-center fs-5 text-black' style={{ textDecoration: 'none' }}>
-            Contact</Link>
-        </li>
+        {listLink('Projects')}
+        {listSeparator()}
+        {listLink('Blogs')}
+        {listSeparator()}
+        {listLink('Contact')}
       </ul >
     </div>
   )
