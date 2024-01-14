@@ -4,7 +4,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <class className='container'>
+    <div className='container'>
       <div className='row text-center'>
         <div className='col-4'>
           <h1 className='fs-5'>This Website</h1>
@@ -27,7 +27,7 @@ function Footer() {
           <p>example@me.com</p>
         </div>
       </div>
-    </class>
+    </div>
   )
 }
 
