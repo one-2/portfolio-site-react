@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+// Written by Stephen Elliott on 12/1/2024
+
+// import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap css
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from './header/Header';
+import Footer from './footer/Footer';
+
+import LandingPage from './landing/LandingPage';
+import Projects from './projects/Projects';
+import Blogs from './blogs/Blogs';
+import Contact from './contact/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>     {/* root element */}
+        <div className='Header'>
+          <Header />
+        </div>
+        
+        <div className='Current-page'>
+          {/** May be able to set this up with the useLocation hook. */}
+        </div>
+
+        <div className='Footer'>
+          <Footer />
+        </div>
+      </div>
+      <Routes>
+        <Route path='/LandingPage' element={<LandingPage />} />
+        <Route path='/Projects' element={<Projects />} />
+        <Route path='/Blogs' element={<Blogs />} />
+        <Route path='/Contact' element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
