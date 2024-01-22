@@ -1,30 +1,59 @@
-// Written by Stephen Elliott on 12/1/2024
+// Written by Stephen Elliott on 12/1/2024, 23/1/24
+// This script renders the footer element.
 
 import React from 'react';
 
-function Footer() {
+const WebsiteInfo = () => {
+  // Creates the website construction footer infopanel.
+  return (
+    <div>
+      <h1 className='fs-5'>This Website</h1>
+      <p>
+        Built with React and Bootstrap.<br />
+        (c) Stephen Elliott 2024.
+      </p>
+    </div>
+  )
+}
+
+const SocialsInfo = () => {
+  // Creates the social media footer infopanel.
+  return (
+    <div className='text-center'>
+      <h1 className='fs-5'>Follow Me</h1>
+      <div className='row'>
+        <ul className='list-unstyled'>
+          <li>* LinkedIn</li> 
+          {/* TODO: add logos */}
+          <li>* GitHub</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+const SmileyPanel = () => {
+  // Creates an emoji panel.
   return (
     <div className='container'>
+      <h1 className='fs-3'>🤠🤠</h1>
+    </div>
+  )
+}
+
+function Footer() {
+  // Creates the footer.
+  return (
+    <div className='container mt-5'>
       <div className='row text-center'>
         <div className='col-4'>
-          <h1 className='fs-5'>This Website</h1>
-          <p>
-            Built with React and Bootstrap <br />
-            (c) Stephen Elliott 2024
-          </p>
+          <WebsiteInfo />
         </div>
         <div className='col-4'>
-          <h1 className='fs-5'>Follow Me</h1> {/* Todo: is this styling correct? */}
-          <p>
-            <ul className='list-unstyled'>
-              <li>LinkedIn</li>
-              <li>GitHub</li>
-            </ul>
-          </p>
+          <SocialsInfo />
         </div>
-        <div className='col-4'>
-          <h1 className='fs-5'>Contact</h1>
-          <p>example@me.com</p>
+        <div className='col-4 d-flex align-items-center justify-content-center'>
+          <SmileyPanel />
         </div>
       </div>
     </div>
