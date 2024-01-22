@@ -1,8 +1,10 @@
-// Written by Stephen Elliott on 12/1/2024
+// Written by Stephen Elliott on 12/1/2024, 23/1/24
+// This script renders the footer element.
 
 import React from 'react';
 
 const WebsiteInfo = () => {
+  // Creates the website construction footer infopanel.
   return (
     <div>
       <h1 className='fs-5'>This Website</h1>
@@ -15,6 +17,7 @@ const WebsiteInfo = () => {
 }
 
 const SocialsInfo = () => {
+  // Creates the social media footer infopanel.
   return (
     <div>
       <h1 className='fs-5'>Follow Me</h1> {/* Todo: is this styling correct? */}
@@ -29,6 +32,7 @@ const SocialsInfo = () => {
 }
 
 const ContactInfo = () => {
+  // Creates the contact information footer infopanel.
   return (
     <div>
       <h1 className='fs-5'>Contact</h1>
@@ -38,6 +42,7 @@ const ContactInfo = () => {
 }
 
 function Footer() {
+  // Creates the footer.
   return (
     <div className='container'>
       <div className='row text-center'>
