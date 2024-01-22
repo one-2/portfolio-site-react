@@ -9,8 +9,8 @@ const WebsiteInfo = () => {
     <div>
       <h1 className='fs-5'>This Website</h1>
       <p>
-        Built with React and Bootstrap <br />
-        (c) Stephen Elliott 2024
+        Built with React and Bootstrap.<br />
+        (c) Stephen Elliott 2024.
       </p>
     </div>
   )
@@ -19,24 +19,24 @@ const WebsiteInfo = () => {
 const SocialsInfo = () => {
   // Creates the social media footer infopanel.
   return (
-    <div>
-      <h1 className='fs-5'>Follow Me</h1> {/* Todo: is this styling correct? */}
-      <p>
+    <div className='text-center'>
+      <h1 className='fs-5'>Follow Me</h1>
+      <div className='row'>
         <ul className='list-unstyled'>
-          <li>LinkedIn</li>
-          <li>GitHub</li>
+          <li>* LinkedIn</li> 
+          {/* TODO: add logos */}
+          <li>* GitHub</li>
         </ul>
-      </p>
+      </div>
     </div>
   )
 }
 
-const ContactInfo = () => {
-  // Creates the contact information footer infopanel.
+const SmileyPanel = () => {
+  // Creates an emoji panel.
   return (
-    <div>
-      <h1 className='fs-5'>Contact</h1>
-      <p>example@me.com</p>
+    <div className='container'>
+      <h1 className='fs-3'>🤠🤠</h1>
     </div>
   )
 }
@@ -44,7 +44,7 @@ const ContactInfo = () => {
 function Footer() {
   // Creates the footer.
   return (
-    <div className='container'>
+    <div className='container mt-5'>
       <div className='row text-center'>
         <div className='col-4'>
           <WebsiteInfo />
@@ -52,8 +52,8 @@ function Footer() {
         <div className='col-4'>
           <SocialsInfo />
         </div>
-        <div className='col-4'>
-          <ContactInfo />
+        <div className='col-4 d-flex align-items-center justify-content-center'>
+          <SmileyPanel />
         </div>
       </div>
     </div>
