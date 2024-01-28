@@ -5,7 +5,7 @@ function ThisWebsiteData() {
     const title = 'My Portfolio Site';
     const dateFrom = '23/15/42'
     const dateTo = '51/79/54'
-    const overview = 'A brief overview of my project. I built a website from scratch using a combination of online learning, React, and React Bootstrap.'
+    const summary = 'A brief overview of my project. I built a website from scratch using a combination of online learning, React, and React Bootstrap.'
     const skills = [
         // TODO: refactor into a separate data retrieval system. I don't want this hard-coded into my backend. Not scalable.
         'HTML, CSS, and Javascript',
@@ -20,7 +20,7 @@ function ThisWebsiteData() {
             'title': title,
             'dateFrom': dateFrom,
             'dateTo': dateTo,
-            'overview': overview,
+            'summary': summary,
             'skillsList': skillsList,
             'fullStory': fullStory
         }

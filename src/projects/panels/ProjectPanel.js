@@ -71,7 +71,7 @@ function getProjectData(projectId) {
           'title': 'default',
           'dateFrom': 'no such page',
           'dateTo': 'no such page',
-          'overview': 'no such page',
+          'summary': 'no such page',
           'skillsList': 'no such page',
           'fullStory': 'no such page'
         }
