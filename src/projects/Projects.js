@@ -1,7 +1,7 @@
 // Written by Stephen Elliott on 12/1/2024
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function NavPanel() {
   return (
@@ -14,12 +14,7 @@ function NavPanel() {
       </div>
       <div>
         <div>
-          <h3 className='fs-5'>
-            2024
-          </h3>
-          <Link className='text-center fs-5 text-black' style={{ textDecoration: 'none' }}>
-            My Portfolio Site
-          </Link>
+          <NavLinkList subtitle='2024' />
         </div>
       </div>
     </div>
@@ -87,6 +82,34 @@ function Projects() {
         </div>
       </div>
     </div>
+  )
+}
+
+function NavLinkList({ subtitle }) {
+  const allLinks = [
+    <NavLinkListItem to={''} text={'This website'} />,
+    <NavLinkListItem to={''} text={'Deez nuts'} />
+  ];
+
+  return (
+    <container>
+      <h3 className='fs-5'>
+        {subtitle}
+      </h3>
+      <ul>
+        {allLinks}
+      </ul>
+    </container>
+  );
+}
+
+function NavLinkListItem({ to, text }) {
+  return (
+    <li>
+      <Link to={to} className='text-center fs-5 text-black' style={{ textDecoration: 'none' }}>
+        {text}
+      </Link>
+    </li>
   )
 }
 
