@@ -6,10 +6,8 @@ import { useParams } from 'react-router-dom'; // state hook allows you to create
 
 function ProjectPanel() {
   let { projectId } = useParams(); // must destructure the object here as the params are returned as an object
-  console.log(projectId);
-
   const projectData = getProjectData(projectId);
-  console.log(projectData);
+
   return (
     <div className='container border border-primary'>
       <div className='row mt-3 mb-3'>
