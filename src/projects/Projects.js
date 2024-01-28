@@ -2,9 +2,29 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom'; // state hook allows you to create route-dependent returns
 
 import ProjectPanel from './panels/ProjectPanel'
+
+
+function Projects() {
+  return (
+    <div className='container'>
+      <div className='row'>
+        <div className='col-3'>
+          <NavPanel />
+        </div>
+        <div className='col-9'>
+          {/* {
+            projectId ?
+              <ProjectPanel projectId={projectId} /> :
+              <ProjectPanel />
+          } */}
+          <ProjectPanel />
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function NavPanel() {
   return (
@@ -24,36 +44,16 @@ function NavPanel() {
   )
 }
 
-function Projects() {
-  let projectId = useParams();
-
-  return (
-    <div className='container'>
-      <div className='row'>
-        <div className='col-3'>
-          <NavPanel />
-        </div>
-        <div className='col-9'>
-          {/* {
-            projectId ?
-              <ProjectPanel projectId={projectId} /> :
-              <ProjectPanel />
-          } */}
-          <ProjectPanel projectId={'ThisWebsite'} />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function NavLinkList({subtitle}) {
+function NavLinkList({ subtitle }) {
   const links = [
-    {to:'', text:'This website'},
-    {to:'', text:'Next project'}
+    // NB must be absolute paths or the URL params are appended
+    { to: '/Projects/ThisWebsite', text: 'This website' },
+    { to: '/Projects/NextProject', text: 'Next project' }
   ];
-  
-  const allLinks = 
-    links.map((link) => <NavLinkListItem to={link.to} text={link.text} />);
+
+  const allLinks =
+    links.map((link) =>
+      <NavLinkListItem to={link.to} text={link.text} />);
 
   return (
     <container>
