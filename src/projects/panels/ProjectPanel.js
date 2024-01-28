@@ -57,15 +57,15 @@ function ProjectPanel() {
 function getProjectData(projectId) {
   switch (projectId) {
     // no url params (ie http://localhost:3000/Projects)
-    case undefined:
+    case undefined: // TODO: handle this so the url doesn't change when it's clicked (polish)
       return ThisWebsiteData();
 
     // named url params (eg http://localhost:3000/Projects/ThisWebsite)
-    case ('ThisWebsite'):
+    case ('ThisWebsite'): // TODO: Shift to a db
       return ThisWebsiteData();
 
     // default (error) url params (eg http://localhost:3000/Projects/0000000)
-    default:
+    default: // TODO: Replace with error case
       return (
         {
           'title': 'default',
