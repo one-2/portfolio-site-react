@@ -31,7 +31,7 @@ function NavPanel() {
     <div className='container border border-secondary'>
       {/* TODO: fix border size */}
       <div className='mt-3 mb-3'>
-        <h2 className='fs-2'>
+        <h2 className='fs-2 text-center'>
           Map
         </h2>
       </div>
@@ -44,54 +44,78 @@ function NavPanel() {
   )
 }
 
-// Simple bootstrap alternative to link panel trouble:
-// import React from 'react';
-// import Nav from 'react-bootstrap/Nav';
-
-// function LinksList() {
-//   return (
-//     <Nav className="flex-column flex-sm-row"> {/* Use flexbox to create a 2x1 layout */}
-//       <Nav.Link href="/home">Home</Nav.Link> {/* Use Nav.Link to create a link */}
-//       <Nav.Link href="/about">About</Nav.Link>
-//     </Nav>
-//   );
-// }
-
-// export default LinksList;
-
-
 function NavLinkList({ subtitle }) {
-  const links = [
-    // NB must be absolute paths or the URL params are appended
-    { to: '/Projects/ThisWebsite', text: 'This website' },
-    { to: '/Projects/NextProject', text: 'Next project' }
-  ];
-
-  let allLinks =
-    links.map((link) =>
-      <NavLinkListItem to={link.to} text={link.text} className='col-6'/>);
-
+  const allLinks = <NavLinksLayout />
 
   return (
     <div className=''>
       <h3 className='fs-4'>
         {subtitle}
       </h3>
-      <ul className='row list-unstyled align-content-center'>
+      <ul className='row list-unstyled justify-content-center'>
         {allLinks}
       </ul>
     </div>
   );
 }
 
+function NavLinksLayout() {
+  // Paths must be absolute paths or the URL params are appended
+  const links = [ // TODO: refactor into backend
+    { to: '/Projects/ThisWebsite', text: 'This Site' },
+    { to: '/Projects/NextProject', text: 'Cowpoke Ranch' },
+    { to: '/Projects/NextProject', text: 'Smokey Saloon' },
+    { to: '/Projects/NextProject', text: 'Dust Devil' }
+  ];
+
+  const allLinkListItems = links.map((link) =>
+    <NavLinkListItem to={link.to} text={link.text} />);
+  
+  let layout = [];
+  let previous;
+
+  // for every link in links
+  console.log(allLinkListItems[0])
+  for (let idx = 0; idx < allLinkListItems.length; idx++) {
+    const current = allLinkListItems[idx];
+    if (idx % 2 == 0) {
+      // if the link index is [0, 2, ...], cleanly divisible by two, add it to a temp variable
+      previous = current;
+    } else {
+      // if the link index is [1, 3, ...], add the current link and the temp to a row
+      layout.push(
+        <div className='row justify-content-center'>
+          {previous}
+          {current}
+        </div>
+      )
+      // wipe the temp
+      previous = null;
+    }
+  }
+  // when there are no more links,
+  // if there is still an element to be added, add the temp to a row
+  if (previous != null) {
+    layout.push(
+      <div className='row'>
+        {previous}
+      </div>
+    )
+  }
+
+  return layout;
+}
+
 function NavLinkListItem({ to, text }) {
   return (
-      <li className='justify-content-center text-center border border-primary rounded-4 me-3'>
-        <Link to={to} className='p-3 fs-5 text-black' style={{ textDecoration: 'none' }}>
-          {text}
-        </Link>
-      </li>
+    <li className='col d-flex align-items-center justify-content-center text-center m-1 pt-1 pb-1 border border-primary rounded-4 bg-primary'>
+      {/* v TODO: Make bold */}
+      <Link to={to} className='fs-5 text-white' style={{ textDecoration: 'none' }}> 
+        {text}
+      </Link>
+    </li>
   )
 }
+
 
 export default Projects;
