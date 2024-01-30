@@ -21,7 +21,11 @@ function App() {
 
       <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/Projects' element={<Projects />} />
+
+        <Route path='/Projects/' element={<Projects />} />
+        <Route path='/Projects/:projectId' element={<Projects />} />
+        {/* ^ This is an example of DYANMIC ROUTING. */}
+
         <Route path='/Blogs' element={<Blogs />} />
         <Route path='/Contact' element={<Contact />} />
       </Routes>
