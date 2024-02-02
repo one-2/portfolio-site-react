@@ -10,6 +10,11 @@ function Projects() {
   return (
     <div className='container'>
       <div className='row'>
+        <h1 className='fs-1 text-center'>
+          Projects.
+        </h1>
+      </div>
+      <div className='row'>
         <div className='col-3'>
           <NavPanel />
         </div>
@@ -45,15 +50,13 @@ function NavPanel() {
 }
 
 function NavLinkList({ subtitle }) {
-  const allLinks = <NavLinksLayout />
-
   return (
     <div className=''>
       <h3 className='fs-4'>
         {subtitle}
       </h3>
       <ul className='row list-unstyled justify-content-center'>
-        {allLinks}
+        <NavLinksLayout />
       </ul>
     </div>
   );
@@ -70,12 +73,11 @@ function NavLinksLayout() {
 
   const allLinkListItems = links.map((link) =>
     <NavLinkListItem to={link.to} text={link.text} />);
-  
+
   let layout = [];
   let previous;
 
   // for every link in links
-  console.log(allLinkListItems[0])
   for (let idx = 0; idx < allLinkListItems.length; idx++) {
     const current = allLinkListItems[idx];
     if (idx % 2 == 0) {
@@ -110,7 +112,7 @@ function NavLinkListItem({ to, text }) {
   return (
     <li className='col d-flex align-items-center justify-content-center text-center m-1 pt-1 pb-1 border border-primary rounded-4 bg-primary'>
       {/* v TODO: Make bold */}
-      <Link to={to} className='fs-5 text-white' style={{ textDecoration: 'none' }}> 
+      <Link to={to} className='fs-5 text-white' style={{ textDecoration: 'none' }}>
         {text}
       </Link>
     </li>
