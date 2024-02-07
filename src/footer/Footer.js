@@ -4,7 +4,7 @@
 import React from 'react';
 
 const WebsiteInfo = () => {
-  // Creates the website construction footer infopanel.
+  // Creates the website construction footer info-panel.
   return (
     <div>
       <h1 className='fs-5'>This Website</h1>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import NavLinkList from '../projects/NavLinkList';
+import NavLinkList from '../navPanel/NavLinkList';
 
 function Blogs() {
   const linksFeb24 = [

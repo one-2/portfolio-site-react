@@ -2,12 +2,25 @@
 
 import React from 'react';
 
-function Contact () {
-    return (
-        <div className='col-12 Contact-block'>
-            <p>This is where my contact information goes.</p>
+
+
+import ContactForm from './ContactForm'
+
+function Contact() {
+  return (
+    <div className='container'>
+      <div className='row'>
+        <h1 className='fs-1 text-center'>
+          Contact.
+        </h1>
+      </div>
+      <div className='row justify-content-center'>
+        <div className='d-flex justify-content-center'>
+          <ContactForm />
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Contact;
