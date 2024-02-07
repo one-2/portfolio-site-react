@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import logo from './logo.jpg';
+import logo from './landing_image.jpg';
 import { Link } from 'react-router-dom';
 
 function MainImage() {
