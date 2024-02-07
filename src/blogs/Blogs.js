@@ -2,9 +2,21 @@
 
 import React from 'react';
 
-import ListItem from '../projects/ListItem'
+import NavLinkList from '../projects/NavLinkList';
 
 function Blogs() {
+  const linksFeb24 = [
+    { to: '', text: 'Around the World - Part Two.' },
+    { to: '', text: 'A Life On the Wind.' },
+    { to: '', text: 'Desert Nights.' },
+  ]
+
+  const linksJan24 = [
+    { to: '', text: 'Around the World - Part One.' },
+    { to: '', text: 'Catching Tides.' },
+    { to: '', text: 'The Way of the Road.' },
+  ]
+
   return (
     <div className='container'>
       <div className='row'>
@@ -17,21 +29,11 @@ function Blogs() {
           <div className='container border border-primary'>
             <div className='m-3'>
               <div className=''>
-                <h3 className='fs-5'>February.</h3>
-                <ul className='fs-5 list-unstyled'>
-                  {/* TODO: embolden or italicise the list entry when page is active. */}
-                  <li>Around the World - Part Two.</li>
-                  <li>A Life On the Wind.</li>
-                  <li>Desert Nights.</li>
-                </ul>
+                {/* TODO: embolden or italicise the list entry when page is active. */}
+                <NavLinkList subtitle={'February'} links={linksFeb24} />
               </div>
               <div>
-                <h2 className='fs-5'>January <span className='fs-4'>2024.</span></h2>
-                <ul className='fs-5 list-unstyled'>
-                  <li>Around the World - Part One.</li>
-                  <li>Catching Tides.</li>
-                  <li>The Way of the Road.</li>
-                </ul>
+                <NavLinkList subtitle={'January 2024'} links={linksJan24} />
               </div>
             </div>
           </div>
