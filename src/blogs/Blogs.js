@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import ListItem from '../projects/ListItem'
+
 function Blogs() {
   return (
     <div className='container'>
