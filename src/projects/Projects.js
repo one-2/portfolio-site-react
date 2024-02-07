@@ -3,7 +3,7 @@
 import React from 'react';
 
 import ProjectPanel from './panels/ProjectPanel'
-import NavPanel from './NavPanel';
+import NavPanel from '../navPanel/NavPanel';
 
 function Projects() {
   const links = [ // TODO: refactor into backend
