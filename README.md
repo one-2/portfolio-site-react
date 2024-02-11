@@ -1,7 +1,7 @@
 # My Portfolio Site
 ## About
 ### Summary
-This is my portfolio site! I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship software products on future projects.
+This is my portfolio site! I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
 
 ### Status
 I just finished **Stage 1.7**: "Write a formal project plan and README."
@@ -12,10 +12,10 @@ I'm now working on  **Stage 1.8**: "Refactor my Stage 1 work, to implement
     - Self-documenting, or docstring'd, code."
 
 ### Goals
-My ambitions for this project are:
+My ambitions for this project are to:
 1. Create a place where I can share my projects, research, and knowledge with interested people.
 2. Develop strong fundamental web development skills, and explore interesting advanced topics.
-3. Hone my project management skills for self-directed projects. I want to perform self-directed machine learning research for my next project. This will require highly efficient, structured workflow practices.
+3. Hone my project management skills for self-directed projects. I want to perform self-directed machine learning research for my next project, so it's important to learn highly efficient, structured workflow practices.
 4. Inspire other students to pursue their own self-directed learning.
 5. Demonstrate a technical competency to future employers.
 
@@ -23,7 +23,7 @@ My ambitions for this project are:
 I am using the MERN stack for this project. I chose this stack because it has
 - Strong support from large companies, giving it a long expected lifetime.
 - High-quality learning resources on Coursera, my platform of choice.
-- Ease of use, and high development velocity.
+- Ease of use and high development velocity.
 - Strong demand in the global job market.
 - Extensive package support.
 
@@ -37,30 +37,27 @@ I am using the MERN stack for this project. I chose this stack because it has
 
 ### Development cycle
 I'm following the Waterfall development cycle for a couple of reasons:
-1. I've followed Agile at Chubb, UniMate, and in several uni courses, but I have no experience with Waterfall. I'd like to experience the benefits and drawbacks of both.
+1. I've followed Agile at Chubb, UniMate, and in several uni courses, but I have little experience with Waterfall. I'd like to experience the benefits and drawbacks of both.
 2. I don't expect the project requirements to evolve much with user feedback.
 3. I don't want to ship a public-facing representation of myself if it's not finished.
-4. I want to take the time to explore, evaluate, test, and implement these unfamiliar technologies.
+4. I want to give myself time to explore, evaluate, test, and implement these unfamiliar technologies. Efficiency is not a primary goal this time around.
 
 ## Project Plan
 ### Stage 1: Setup, Design and Placeholder Implementation
-1. Find some frontend design inspiration.
-2. Build the app structure.
-3. Draft the app's key pages and components:
-    - Landing page.
-    - Header component.
-    - Footer component.
-    - Projects page.
-    - Contact page.
-4. Add internal navigation/routing using React Router.
-5. Complete some basic interface improvements:
-    - Write example content for the Blog page and Contact page.
-    - Add placeholder shapes, logos, and links to all components.
-6. Take blog notes on the development process, particularly:
-    - Problems I've faced during development
-    - How I overcame them.
-    - What I learned through these challenges.
-7. Write a formal project plan and README.
+1. Find some frontend design inspiration. ✅
+2. Build the app structure. ✅
+3. Draft the app's key pages and components: ✅
+    - Landing page. ✅
+    - Header component. ✅
+    - Footer component. ✅
+    - Projects page. ✅
+    - Contact page. ✅
+4. Add internal navigation/routing using React Router. ✅
+5. Complete some basic interface improvements: ✅
+    - Write example content for the Blog page and Contact page. ✅
+    - Add placeholder shapes, logos, and links to all components. ✅
+6. Take blog notes on the development process, particularly focusing on: problems I've faced during development; how I've overcome them; and what I learned through these challenges. ✅
+7. Write a formal project plan and README. ✅
 8. Refactor my Stage 1 work, to implement
     - SOLID design principles.
     - Newest, minimal Bootstrap syntax.
@@ -116,3 +113,6 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - What did I want to do but skipped, and why.
 
 Thanks for reading! 🤠
+
+
+©️ Stephen Elliott 2024. All rights reserved.
