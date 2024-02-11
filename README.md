@@ -4,9 +4,12 @@
 This is my portfolio site! I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship software products on future projects.
 
 ### Status
-I just finished **Stage 1.7**: "writing a formal project plan and README."
+I just finished **Stage 1.7**: "Write a formal project plan and README."
 
-I'm now working on  **Stage 1.8**: "Refactor my Stage 1 work."
+I'm now working on  **Stage 1.8**: "Refactor my Stage 1 work, to implement
+    - SOLID design principles.
+    - Newest, minimal Bootstrap syntax.
+    - Self-documenting, or docstring'd, code."
 
 ### Goals
 My ambitions for this project are:
@@ -57,7 +60,7 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - Problems I've faced during development
     - How I overcame them.
     - What I learned through these challenges.
-7. Write a project plan and README.
+7. Write a formal project plan and README.
 8. Refactor my Stage 1 work, to implement
     - SOLID design principles.
     - Newest, minimal Bootstrap syntax.
