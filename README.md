@@ -67,8 +67,8 @@ I'm following the Waterfall development cycle for a couple of reasons:
         - Contact.
         - Header.
         - Footer.
-        - Landing.
-        - Nav panel.
+        - Landing. ✅
+        - Nav panel. ✅
         - Projects. ✅
 
 ### Stage 2: Backend and Content Addition
