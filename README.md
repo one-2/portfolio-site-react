@@ -120,6 +120,12 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - What are my next steps with this project.
     - What did I want to do but skipped, and why.
 
+## Resources used
+Thank you to the authors and maintainers of these resources:
+https://www.geeksforgeeks.org/mongodb-tutorial/
+
+
+
 Thanks for reading! 🤠
 
 
