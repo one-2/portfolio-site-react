@@ -1,35 +1,42 @@
-import NavLinkList from './NavLinkList';
+import NavSublist from "./NavSublist";
 
 export default function NavPanel({ title, subtitleAndLinksList }) {
   return (
     <div className='container border border-primary'>
       <div className='m-3'>
-        <h2 className='fs-2 text-center'>
-          {title}
-        </h2>
+        <NavTitle title={title} />
       </div>
       <div>
-        <AllNavLinkListElements subtitleAndLinksList={ subtitleAndLinksList } />
+        <AllNavSublists subtitleAndLinksList={subtitleAndLinksList} />
       </div>
     </div>
   )
 }
 
-function AllNavLinkListElements({ subtitleAndLinksList }) {
-  let listOfNavLinkLists = []
+function NavTitle({ title }) {
+  <h2 className='fs-2 text-center'>
+    {title}
+  </h2>
+}
+
+function AllNavSublists({ subtitleAndLinksList }) {
+  // Puts the sublists into a single container
+  // Note: Paths must be absolute paths or the URL params are appended
+  let allNavSublists = []
   for (const iterator of subtitleAndLinksList) {
     const subtitle = iterator.subtitle;
     const linksList = iterator.links;
-    const element = (
+    const sublist = (
       <div>
-        <NavLinkList subtitle={subtitle} links={linksList} />
+        <NavSublist subtitle={subtitle} links={linksList} />
       </div>
     );
-    listOfNavLinkLists.push(element);
+    allNavSublists.push(sublist);
   }
+
   return (
     <div className='container'>
-      {listOfNavLinkLists}
+      {allNavSublists}
     </div>
   )
 }

@@ -1,13 +1,14 @@
-import NavLinksLayout from "./NavLinksLayout";
+import NavSublistLayout from "./NavSublistLayout";
 
-export default function NavLinkList({ subtitle, links } ) {
+export default function NavSublist({ subtitle, links } ) {
+    // Builds a titled sublist for the Nav panel
     return (
         <div className=''>
             <h3 className='fs-4'>
                 {subtitle}
             </h3>
             <ul className='row list-unstyled justify-content-center'>
-                <NavLinksLayout links={ links } />
+                <NavSublistLayout links={ links } />
             </ul>
         </div>
     );
