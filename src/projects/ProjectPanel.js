@@ -1,6 +1,7 @@
 // Written by Stephen Elliott on 28/1/24.
 // Renders the project information panel.
 
+import NavPanel from "../navPanel/NavPanel";
 import ThisWebsiteData from "./ThisWebsiteData";
 import { useParams } from 'react-router-dom'; // state hook allows you to create route-dependent returns
 

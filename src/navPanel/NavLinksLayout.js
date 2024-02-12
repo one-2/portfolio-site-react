@@ -31,7 +31,7 @@ export default function NavLinksLayout({ links }) {
     if (previous != null) {
         layout.push(
             <div className='row'>
-                {previous}
+                { previous }
             </div>
         )
     }

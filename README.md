@@ -63,13 +63,13 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - Newest, minimal Bootstrap syntax.
     - Self-documenting, or docstring'd, code.
     - Particularly, refactor:
-        - Blogs.
+        - Blogs. ✅
         - Contact.
         - Header.
         - Footer.
         - Landing.
         - Nav panel.
-        - Projects.
+        - Projects. ✅
 
 ### Stage 2: Backend and Content Addition
 1. Implement a MERN backend to retrieve data for the Projects and Blogs pages.
