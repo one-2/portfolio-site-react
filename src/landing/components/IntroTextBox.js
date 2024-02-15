@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function IntroTextBox() {
+export default function IntroTextBox() {
   return (
     <div className='row'>
       <h1 className='fs-1'>

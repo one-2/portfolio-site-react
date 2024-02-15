@@ -1,4 +1,4 @@
-import NavPanelLinksList from "./linksList/NavPanelLinksList";
+import NavPanelLinksList from "./components/NavPanelLinksList";
 
 export default function NavPanel({ title, subtitleAndLinksList }) {
   return (

@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import { IntroTextBox } from './IntroTextBox';
-import { FeatureCircles } from './FeatureCircles';
-import { MainImage } from './MainImage';
+import IntroTextBox from './components/IntroTextBox';
+import FeatureCircles from './components/FeatureCircles';
+import MainImage from './components/MainImage';
 
 function LandingPage() {
   return (

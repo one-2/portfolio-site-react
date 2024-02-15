@@ -2,9 +2,9 @@
 // This script renders the footer element.
 
 import React from 'react';
-import { SmileyPanel } from './panels/SmileyPanel';
-import { SocialsInfo } from './panels/SocialsPanel';
-import { WebsiteInfo } from './panels/WebsitePanel';
+import { SmileyPanel } from './components/SmileyPanel';
+import { SocialsInfo } from './components/SocialsPanel';
+import { WebsiteInfo } from './components/WebsitePanel';
 
 export default function Footer() {
   // Creates the footer.

@@ -2,9 +2,9 @@
 
 import React from 'react'
 
-import BlogNavPanel from './BlogNavPanel'
-import BlogMainPanel from './BlogMainPanel'
-import BlogReaderComments from './BlogReaderComments'
+import BlogNavPanel from './components/BlogNavPanel'
+import BlogMainPanel from './components/BlogMainPanel'
+import BlogReaderCommentsPanel from './components/BlogReaderCommentsPanel'
 
 export default function Blogs() {
   return (
@@ -22,7 +22,7 @@ export default function Blogs() {
           <BlogMainPanel />
         </div>
         <div className='col-3'>
-          <BlogReaderComments />
+          <BlogReaderCommentsPanel />
         </div>
       </div>
     </div>

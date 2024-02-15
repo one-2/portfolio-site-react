@@ -1,4 +1,4 @@
-import NavPanel from "../navPanel/NavPanel";
+import NavPanel from "../../navPanel/NavPanel";
 
 export default function ProjectNavPanel() {
   const title = 'Desert Nights'

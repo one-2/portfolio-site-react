@@ -59,9 +59,9 @@ I'm following the Waterfall development cycle for a couple of reasons:
 6. Take blog notes on the development process, particularly focusing on: problems I've faced during development; how I've overcome them; and what I learned through these challenges. ✅
 7. Write a formal project plan and README. ✅
 8. Refactor my Stage 1 work, to implement
-    - SOLID design principles.
-    - Newest, minimal Bootstrap syntax.
-    - Self-documenting, or docstring'd, code.
+    - SOLID design principles. ✅ - This will require more reviews as we go. It looks OK for now.
+    - Newest, minimal Bootstrap syntax. ❌ - Decided not to, for now. It would obscure the interface I am programming to.
+    - Self-documenting, or docstring'd, code. ✅
     - Particularly, refactor:
         - Blogs. ✅
         - Contact. ✅

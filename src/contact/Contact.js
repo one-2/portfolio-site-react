@@ -1,15 +1,14 @@
 // Written by Stephen Elliott on 12/1/2024
 import React from 'react';
 
-import ContactForm from './ContactForm'
+import ContactForm from './components/ContactForm'
+import ContactTitle from './components/ContactTitle';
 
-function Contact() {
+export default function Contact() {
   return (
     <div className='container'>
       <div className='row'>
-        <h1 className='fs-1 text-center'>
-          Contact.
-        </h1>
+        <ContactTitle />
       </div>
       <div className='row justify-content-center'>
         <div className='d-flex justify-content-center'>
@@ -19,5 +18,3 @@ function Contact() {
     </div>
   )
 }
-
-export default Contact;

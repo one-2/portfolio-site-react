@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-import ProjectPanel from './ProjectPanel'
-import ProjectNavPanel from './ProjectNavPanel';
+import ProjectPanel from './components/ProjectPanel'
+import ProjectNavPanel from './components/ProjectNavPanel';
 
 function Projects() {
   return (

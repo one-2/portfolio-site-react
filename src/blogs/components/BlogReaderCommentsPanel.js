@@ -1,5 +1,5 @@
 
-export default function BlogReaderComments() {
+export default function BlogReaderCommentsPanel() {
   return (
     <div className='container border border-primary ps-3 pe-3 pt-2'>
       <div className='row m-3 text-center'>
