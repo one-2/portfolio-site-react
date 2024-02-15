@@ -4,12 +4,12 @@
 This is my portfolio site! I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
 
 ### Status
-I just finished **Stage 1.7**: "Write a formal project plan and README."
-
-I'm now working on  **Stage 1.8**: "Refactor my Stage 1 work, to implement
+I just finished **Stage 1.8**: "Refactor my Stage 1 work, to implement
     - SOLID design principles.
     - Newest, minimal Bootstrap syntax.
     - Self-documenting, or docstring'd, code."
+
+I'm now working on  **Stage 2.1**: "1. Implement a MERN backend to retrieve data for the Projects and Blogs pages."
 
 ### Goals
 My ambitions for this project are to:
