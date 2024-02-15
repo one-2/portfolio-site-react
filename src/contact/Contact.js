@@ -1,8 +1,5 @@
 // Written by Stephen Elliott on 12/1/2024
-
 import React from 'react';
-
-
 
 import ContactForm from './ContactForm'
 

@@ -64,8 +64,8 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - Self-documenting, or docstring'd, code.
     - Particularly, refactor:
         - Blogs. ✅
-        - Contact.
-        - Header.
+        - Contact. ✅
+        - Header. ✅
         - Footer.
         - Landing. ✅
         - Nav panel. ✅
