@@ -2,46 +2,11 @@
 // This script renders the footer element.
 
 import React from 'react';
+import { SmileyPanel } from './panels/SmileyPanel';
+import { SocialsInfo } from './panels/SocialsPanel';
+import { WebsiteInfo } from './panels/WebsitePanel';
 
-const WebsiteInfo = () => {
-  // Creates the website construction footer info-panel.
-  return (
-    <div>
-      <h1 className='fs-5'>This Website</h1>
-      <p>
-        Built with React and Bootstrap.<br />
-        (c) Stephen Elliott 2024.
-      </p>
-    </div>
-  )
-}
-
-const SocialsInfo = () => {
-  // Creates the social media footer infopanel.
-  return (
-    <div className='text-center'>
-      <h1 className='fs-5'>Follow Me</h1>
-      <div className='row'>
-        <ul className='list-unstyled'>
-          <li>* LinkedIn</li> 
-          {/* TODO: add logos */}
-          <li>* GitHub</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
-
-const SmileyPanel = () => {
-  // Creates an emoji panel.
-  return (
-    <div className='container'>
-      <h1 className='fs-3'>🤠🤠</h1>
-    </div>
-  )
-}
-
-function Footer() {
+export default function Footer() {
   // Creates the footer.
   return (
     <div className='container mt-5'>
@@ -59,5 +24,3 @@ function Footer() {
     </div>
   )
 }
-
-export default Footer;

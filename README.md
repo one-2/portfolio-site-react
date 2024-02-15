@@ -66,7 +66,7 @@ I'm following the Waterfall development cycle for a couple of reasons:
         - Blogs. ✅
         - Contact. ✅
         - Header. ✅
-        - Footer.
+        - Footer. ✅
         - Landing. ✅
         - Nav panel. ✅
         - Projects. ✅
