@@ -96,3 +96,6 @@ https://www.linkedin.com/advice/0/how-can-you-ensure-secure-error-handling-loggi
 https://www.reddit.com/r/ExperiencedDevs/comments/17d876h/where_to_store_logs/
 https://en.wikipedia.org/wiki/Common_Log_Format
 Bing GPT.
+* https://www.geeksforgeeks.org/mongodb-tutorial/
+* https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
+* https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
