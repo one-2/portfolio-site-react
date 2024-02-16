@@ -17,30 +17,37 @@ I will use MongoDB for the database. It uses a simple, flexible NoSQL data model
 Projects            collection
 
 Project
-|- ObjectID         str
-|- Title            str
-|- DateFrom         int
-|- DateTo           int
-|- Summary          str
-|- Skills           str
-|- Body             str
+|- objectID         str
+|- title            str
+|- dateFrom         int
+|- dateTo           int
+|- summary          str
+|- skills           str
+|- body             str
 
 Blogs               collection
 
 Blog                dict
-|- ObjectID         str
-|- Title            str
-|- DatePublished    int
-|- Body             str
+|- objectID         str
+|- title            str
+|- datePublished    int
+|- body             str
 
 Users               collection
 
 User                    dict
-|- ObjectID             str
-|- Name                 str
-|- EmailAddress         str
-|- DateTimeSubscribed   int
-|- Subscriptions        [str ObjectID]
+|- objectID             str
+|- name                 str
+|- emailAddress         str
+|- dateTimeSubscribed   int
+|- subscriptions        [str ObjectID]
+
+BugReports
+|- objectID             str
+|- emailAddress         str
+|- dateTime             int
+|- route                str
+|- report               str
 
 ### Design a second NoSQL database structure for logging.
 Common Log Format compliant (host ident authuser date request status bytes).
