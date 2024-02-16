@@ -42,6 +42,15 @@ User                dict
 |- Signup date      str
 |- Subscriptions    [str ObjectID]
 
+## Enhancing the backend
+Future options include
+1. Caching.
+2. Indexing with MongoDB.
+3. Compression.
+4. Lazy loading / file splitting.
+5. Optimising assets.
+
 ## References
 https://www.lifewire.com/the-acid-model-1019731
 https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/
+https://www.linkedin.com/advice/0/how-can-you-optimize-mern-stack-application-performance-mzdhf
