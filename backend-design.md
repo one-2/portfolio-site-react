@@ -19,8 +19,8 @@ Projects            collection
 Project
 |- ObjectID         str
 |- Title            str
-|- From date        str
-|- To date          str
+|- DateFrom         int
+|- DateTo           int
 |- Summary          str
 |- Skills           str
 |- Body             str
@@ -30,19 +30,47 @@ Blogs               collection
 Blog                dict
 |- ObjectID         str
 |- Title            str
-|- Publish date     str
+|- DatePublished    int
 |- Body             str
 
 Users               collection
 
-User                dict
-|- ObjectID         str
-|- Name             str
-|- Email address    str
-|- Signup date      str
-|- Subscriptions    [str ObjectID]
+User                    dict
+|- ObjectID             str
+|- Name                 str
+|- EmailAddress         str
+|- DateTimeSubscribed   int
+|- Subscriptions        [str ObjectID]
 
 ### Design a second NoSQL database structure for logging.
+Common Log Format compliant (host ident authuser date request status bytes).
+
+AdminLogs           collection
+
+AdminLog            dict
+|- host
+|- ident
+|- authuser
+|- date
+|- request
+|- status
+|- bytes
+|- userAgent
+|- referrer
+|- ip
+|- responseTime
+
+UserLogs            collection
+
+UserLog             dict
+As for AdminLog.
+
+ErrorLogs           collection
+
+ErrorLog            dict
+As for AdminLog, and also
+|- message
+|- stackTrace
 
 ## Enhancing the backend
 Future options include
@@ -56,3 +84,8 @@ Future options include
 https://www.lifewire.com/the-acid-model-1019731
 https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/
 https://www.linkedin.com/advice/0/how-can-you-optimize-mern-stack-application-performance-mzdhf
+
+https://www.linkedin.com/advice/0/how-can-you-ensure-secure-error-handling-logging
+https://www.reddit.com/r/ExperiencedDevs/comments/17d876h/where_to_store_logs/
+https://en.wikipedia.org/wiki/Common_Log_Format
+Bing GPT.
