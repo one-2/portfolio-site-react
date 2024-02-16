@@ -13,7 +13,7 @@ I will use MongoDB for the database. It uses a simple, flexible NoSQL data model
 * It's widely used in industry.
 * Community support and integration documentation is strong. MongoDB is commonly used in concert with the other elements of my stack.
 
-### Design a NoSQL database structure.
+### Design a NoSQL database structure for user services.
 Projects            collection
 
 Project
@@ -41,6 +41,8 @@ User                dict
 |- Email address    str
 |- Signup date      str
 |- Subscriptions    [str ObjectID]
+
+### Design a second NoSQL database structure for logging.
 
 ## Enhancing the backend
 Future options include

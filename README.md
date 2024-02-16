@@ -76,10 +76,12 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - Design the database. ✅
         - Specify the database requirements. Justify your choices. ✅
         - Choose a technology. Justify your choice. ✅
-        - Design a NoSQL database structure. ✅
+        - Design a NoSQL database structure for user services. ✅
+        - Design a second NoSQL database structure for logging.
     - Design the backend.
         - Design the API using the ExpressJS framework on NodeJS, following the database structure and
             - Observer pattern for user subscription and termination.
+            - Chain of Responsibility pattern for logging.
         - Write failing unit tests for the API.
         - Write failing integration tests.
             - Backend-server interaction.
