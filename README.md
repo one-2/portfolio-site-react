@@ -74,8 +74,8 @@ I'm following the Waterfall development cycle for a couple of reasons:
 ### Stage 2: Backend and Content Addition
 1. Design and build a MERN backend to retrieve data for the Projects, Blogs, and Email List pages.
     - Design the database.
-        - Choose a technology. Justify your choice in your blog notes.
-        - Specify the database requirements. Justify your choice in your blog notes.
+        - Specify the database requirements. Justify your choices.
+        - Choose a technology. Justify your choice.
         - Design a NoSQL database structure.
     - Implement the backend.
         - Design the API using the ExpressJS framework on NodeJS, following the database structure.
