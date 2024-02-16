@@ -72,15 +72,35 @@ I'm following the Waterfall development cycle for a couple of reasons:
         - Projects. ✅
 
 ### Stage 2: Backend and Content Addition
-1. Implement a MERN backend to retrieve data for the Projects and Blogs pages.
-2. Add text data to the Projects database.
+1. Design and build a MERN backend to retrieve data for the Projects, Blogs, and Email List pages.
+    - Design the database.
+        - Choose a technology. Justify your choice in your blog notes.
+        - Specify the database requirements. Justify your choice in your blog notes.
+        - Design a NoSQL database structure.
+    - Implement the backend.
+        - Design the API using the ExpressJS framework on NodeJS, following the database structure.
+        - Write failing unit tests for the API.
+        - Write failing integration tests.
+            - Backend-server interaction.
+            - Routing.
+            - Error handling.
+        - Implement the API using NodeJS.
+            - Make unit tests pass.
+        - Upload test data to the server.
+            - Make integration tests pass.
+    - Secure the backend.
+        - Research backend security issues.
+        - Design security features.
+        - Implement security features.
+2. Add data to the Projects database.
     - UniMate.
     - This site.
     - Sumobots.
-3. Add a Professional Experience page.
+3. Add to the Blogs database.
+4. Add a Professional Experience page.
     - Embed a non-scrapable CV, or LinkedIn.
     - Link my GitHub.
-4. Take blog notes on the development process so far.
+5. Take blog notes on the development process so far.
 
 ### Stage 3: User Interface and User Experience
 1. You're (kind-of) half-way through! Make a social media post about the development process so far.
