@@ -72,15 +72,41 @@ I'm following the Waterfall development cycle for a couple of reasons:
         - Projects. ✅
 
 ### Stage 2: Backend and Content Addition
-1. Implement a MERN backend to retrieve data for the Projects and Blogs pages.
-2. Add text data to the Projects database.
+1. Design and build a MERN backend to retrieve data for the Projects, Blogs, and Email List pages.
+    - Design the databases. ✅
+        - Specify the database requirements. Justify your choices. ✅
+        - Choose a technology. Justify your choice. ✅
+        - Design a NoSQL database structure for user services. ✅
+        - Design a second NoSQL database structure for logging. ✅
+    - Design the backend.
+        - Design the API using the ExpressJS framework on NodeJS, following the database structure and
+            - Observer pattern for user subscription and termination.
+            - Chain of Responsibility pattern for logging.
+        - Write failing unit tests for the API.
+        - Write failing integration tests.
+            - Backend-server interaction.
+            - Routing.
+            - Error handling.
+            - Logging.
+        - Implement the API using NodeJS.
+            - Mock up in PostMan.
+            - Make unit tests pass.
+        - Implement the server.
+            - Upload test data.
+            - Make integration tests pass.
+    - Secure the backend.
+        - Research backend security issues.
+        - Design security features.
+        - Implement security features.
+2. Add data to the Projects database.
     - UniMate.
     - This site.
     - Sumobots.
-3. Add a Professional Experience page.
+3. Add to the Blogs database.
+4. Add a Professional Experience page.
     - Embed a non-scrapable CV, or LinkedIn.
     - Link my GitHub.
-4. Take blog notes on the development process so far.
+5. Take blog notes on the development process so far.
 
 ### Stage 3: User Interface and User Experience
 1. You're (kind-of) half-way through! Make a social media post about the development process so far.
@@ -120,13 +146,20 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - What are my next steps with this project.
     - What did I want to do but skipped, and why.
 
-## Resources used
-Thank you to the authors and maintainers of these resources:
-https://www.geeksforgeeks.org/mongodb-tutorial/
+## References
+Thank you to the authors and maintainers of these resources!
+
+### Courses
+https://www.coursera.org/professional-certificates/meta-front-end-developer
+
+### Optimisation
+https://www.linkedin.com/advice/0/how-can-you-optimize-mern-stack-application-performance-mzdhf
+
+### UI
+https://www.wix.com/ (for prototype UI design inspiration)
 
 
 
 Thanks for reading! 🤠
-
 
 ©️ Stephen Elliott 2024. All rights reserved.
