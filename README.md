@@ -146,16 +146,20 @@ I'm following the Waterfall development cycle for a couple of reasons:
     - What are my next steps with this project.
     - What did I want to do but skipped, and why.
 
-## Resources used
-Thank you to the authors and maintainers of these resources, in the order that I used them:
-* https://www.coursera.org/professional-certificates/meta-front-end-developer
-* https://www.wix.com/ (for prototype UI design inspiration)
-* https://www.geeksforgeeks.org/mongodb-tutorial/
-* https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
-* https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
+## References
+Thank you to the authors and maintainers of these resources!
+
+### Courses
+https://www.coursera.org/professional-certificates/meta-front-end-developer
+
+### Optimisation
+https://www.linkedin.com/advice/0/how-can-you-optimize-mern-stack-application-performance-mzdhf
+
+### UI
+https://www.wix.com/ (for prototype UI design inspiration)
+
 
 
 Thanks for reading! 🤠
-
 
 ©️ Stephen Elliott 2024. All rights reserved.

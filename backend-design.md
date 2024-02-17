@@ -88,14 +88,17 @@ Future options include
 5. Optimising assets.
 
 ## References
+### Database design
 https://www.lifewire.com/the-acid-model-1019731
 https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/
-https://www.linkedin.com/advice/0/how-can-you-optimize-mern-stack-application-performance-mzdhf
+https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
 
+### Logging
 https://www.linkedin.com/advice/0/how-can-you-ensure-secure-error-handling-logging
 https://www.reddit.com/r/ExperiencedDevs/comments/17d876h/where_to_store_logs/
 https://en.wikipedia.org/wiki/Common_Log_Format
 Bing GPT.
-* https://www.geeksforgeeks.org/mongodb-tutorial/
-* https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
-* https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
+
+### Server and database backend implementation
+https://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
+https://www.geeksforgeeks.org/mongodb-tutorial/
