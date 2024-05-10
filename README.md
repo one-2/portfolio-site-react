@@ -1,15 +1,12 @@
 # My Portfolio Site
 ## About
 ### Summary
-This is my portfolio site! I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
+I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
 
 ### Status
-I just finished **Stage 1.8**: "Refactor my Stage 1 work, to implement
-    - SOLID design principles.
-    - Newest, minimal Bootstrap syntax.
-    - Self-documenting, or docstring'd, code."
+I'm now **moving my site to Next.js.** The framework I started on, Create React App, has been deprecated and was breaking my builds.
 
-I'm now working on  **Stage 2.1**: "1. Implement a MERN backend to retrieve data for the Projects and Blogs pages."
+Once I'm finished rebuilding, I'll move on to  **Stage 2.1**: "Implement a MERN backend to retrieve data for the Projects and Blogs pages."
 
 ### Goals
 My ambitions for this project are to:
@@ -27,13 +24,14 @@ I am using the MERN stack for this project. I chose this stack because it has
 - Strong demand in the global job market.
 - Extensive package support.
 
-| Name          | Usage         | Implemented yet? |
-|:-             |-              |:-:    |
-| React         | Frontend      | Yes   |
-| Bootstrap     | Styling       | Yes   |
-| Node JS       | Backend       | Yes   |
-| Express JS    | Backend API   | No    |
-| MongoDB       | Database      | No    |
+| Name          | Usage             | Implemented yet?  |
+|:-             |-                  |:-:                |
+| React         | Frontend          | Yes               |
+| Next.js       | React Framework   | No                |
+| Bootstrap     | Styling           | Yes               |
+| Node JS       | Backend           | Yes               |
+| Express JS    | Backend API       | No                |
+| MongoDB       | Database          | No                |
 
 ### Development cycle
 I'm following the Waterfall development cycle for a couple of reasons:
