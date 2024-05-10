@@ -3,8 +3,9 @@
 ### Specify the database requirements. Justify your choice.
 I will design the database to the BASE model (basically available, soft state, and eventually consistent), rather than the ACID model, since
 * Availability is a higher priority than consistency.
-* The same data will not be accessed by several users at once in any foreseeable future of this application.
+* The same data will not be accessed by several clients at once in any foreseeable future of this application.
 * Development velocity is a higher priority than data stability.
+
 
 ### Choose a technology. Justify your choice.
 I will use MongoDB for the database. It uses a simple, flexible NoSQL data model. I chose MongoDB because
@@ -13,29 +14,30 @@ I will use MongoDB for the database. It uses a simple, flexible NoSQL data model
 * It's widely used in industry.
 * Community support and integration documentation is strong. MongoDB is commonly used in concert with the other elements of my stack.
 
-### Design a NoSQL database structure for user services.
-Projects            collection
+
+### Design a NoSQL database structure for the site's services.
+Projects                collection
 
 Project
-|- objectID         str
-|- title            str
-|- dateFrom         int
-|- dateTo           int
-|- summary          str
-|- skills           str
-|- body             str
+|- objectID             str
+|- title                str
+|- dateFrom             int
+|- dateTo               int
+|- summary              str
+|- skills               str
+|- body                 str
 
-Blogs               collection
+Blogs                   collection
 
-Blog                dict
-|- objectID         str
-|- title            str
-|- datePublished    int
-|- body             str
+Blog                    dict
+|- objectID             str
+|- title                str
+|- datePublished        int
+|- body                 str
 
-Users               collection
+Subscribers             collection
 
-User                    dict
+Subscriber              dict
 |- objectID             str
 |- name                 str
 |- emailAddress         str
@@ -49,35 +51,37 @@ BugReports
 |- route                str
 |- report               str
 
+
 ### Design a second NoSQL database structure for logging.
-Common Log Format compliant (host ident authuser date request status bytes).
+Common Log Format compliant (host ident authsubscriber date request status bytes).
 
-AdminLogs           collection
+AdminLogs               collection
 
-AdminLog            dict
-|- host
-|- ident
-|- authuser
-|- date
-|- request
-|- status
-|- bytes
-|- userAgent
-|- referrer
-|- ip
-|- responseTime
+AdminLog                dict
+|- host                 str
+|- ident                str
+|- authuser             str
+|- date                 str
+|- request              str
+|- status               str
+|- bytes                int
+|- userAgent            str
+|- referrer             str
+|- ip                   str
+|- responseTime         int
 
-UserLogs            collection
+SubscriberLogs          collection
 
-UserLog             dict
+SubscriberLog           dict
 As for AdminLog.
 
-ErrorLogs           collection
+ErrorLogs               collection
 
-ErrorLog            dict
-As for AdminLog, and also
+ErrorLog                dict
+As for AdminLog, and
 |- message
 |- stackTrace
+
 
 ## Enhancing the backend
 Future options include
