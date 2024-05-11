@@ -66,6 +66,7 @@
   font-weight: bold;
   font-family: var(--font-mono);
   font-size: x-large;
+  max-width: 8ch; 
 }
 
 .card {

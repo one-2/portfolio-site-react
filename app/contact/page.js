@@ -1,7 +1,12 @@
+// The design of this page was heavily inspired by (https://codepen.io/jangajdosik/pen/BOmYRm),
+// and some code was borrowed. The program was modified to fit the framework.
+
 import styles from './page.module.css'
 
-// Heavily inspired by https://codepen.io/jangajdosik/pen/BOmYRm
-// NOTE: rendering workaround for document. bug in the above: https://stackoverflow.com/questions/24647839/referenceerror-document-is-not-defined-in-plain-javascript
+// TODO: add user input, validation/screening, live text rendering, email sending
+//       or db upload, and this sick matrix background: (https://codepen.io/yaclive/pen/EayLYO)
+
+// NOTE: rendering workaround for document. bug in the above: (https://stackoverflow.com/questions/24647839/referenceerror-document-is-not-defined-in-plain-javascript)
 export default function Contact() {
   let messageStartString = '> '
   return (

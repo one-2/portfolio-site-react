@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
 import Link from 'next/link'
 
+// TODO: add live decoding/rendering on hover.
+
 export default function Home() {
-  // 57 65 20 6C 69 76 65 20 69 6E 20 61 20 66 75 74 75 72 65 20 66 65 77 20 69 6D 61 67 69 6E 65 64 20 70 6F 73 73 69 62 6C 65 2E
-
-
+  // Hex code: 57 65 20 6C 69 76 65 20 69 6E 20 61 20 66 75 74 75 72 65 20 66 65 77 20 69 6D 61 67 69 6E 65 64 20 70 6F 73 73 69 62 6C 65 2E
   return (
     <main className={styles.main}>
     
@@ -17,7 +17,7 @@ export default function Home() {
         <p>57</p>
         <p>65</p>
         <p>20</p>
-        <Link href='map' className={styles.pop}>Map of AI</Link>
+        <Link href='map' className={styles.pop}>Learning Machines</Link>
         <p>6C</p>
         <p>69</p>
         <p>76</p>
@@ -36,7 +36,7 @@ export default function Home() {
         <p>74</p>
         <p>75</p>
         <p>72</p>
-        <Link href='modelling' className={styles.pop}>Modelling</Link>
+        <Link href='modeling' className={styles.pop}>Modeling</Link>
         <p>65</p>
         <p>20</p>
         <p>66</p>
@@ -44,7 +44,7 @@ export default function Home() {
         <p>65</p>
         <p>77</p>
         <p>20</p>
-        <Link href='website' className={styles.pop}>Website</Link>
+        <Link href='webDevelopment' className={styles.pop}>Web Dev</Link>
         <p>69</p>
         <p>6D</p>
         <p>61</p>
