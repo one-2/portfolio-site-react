@@ -1,4 +1,10 @@
-.main {
+/*
+NOTE: class inheritance syntax:
+.x .y => a standalone class y inside a class x.
+.x.y => a class y assigned to a class x.
+*/
+
+.terminalContainer {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -46,11 +52,19 @@
     color: white;
 }
 
-/*
-NOTE: class inheritance syntax:
-.x .y => a standalone class y inside a class x.
-.x.y => a class y assigned to a class x.
-*/
 .terminal .content p.system {
     color: #00ff3c;
 }
+
+
+/* Input form */
+
+.terminal .content .form .input {
+        border: none !important;
+        background: transparent;
+        caret-color: white; /* Sets the cursor color */
+        outline: none;
+        color: inherit;
+        font-family: inherit; 
+        font-size: inherit;
+  }
