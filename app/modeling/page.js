@@ -6,7 +6,12 @@
 //  - project overview on landing page, with a menu of subsections to view below.
 // => similar structure to the blog section.
 
-// Also add my Exxon Mobil project.
+// Also add:
+//  - Exxon Mobil project.
+//  - Conway automaton in glowy orange blocky SF style.
+//  - Automaton builder.
+//  - Natural simulations such as population growth, spiral drawing machine.
+//  - Statistical process visualisations.
 
 export default function econModeling() {
     return <div>EconModeling</div>

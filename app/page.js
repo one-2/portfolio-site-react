@@ -17,7 +17,7 @@ export default function Home() {
         <p>57</p>
         <p>65</p>
         <p>20</p>
-        <Link href='map' className={styles.pop}>Learning Machines</Link>
+        <Link href='learningMachines' className={styles.pop}>Learning Machines</Link>
         <p>6C</p>
         <p>69</p>
         <p>76</p>

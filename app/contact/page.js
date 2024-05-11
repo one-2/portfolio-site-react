@@ -6,6 +6,7 @@ import styles from './page.module.css'
 import React, { useEffect, useRef } from 'react';
 
 // TODO:
+//  - add red exit circle to go back to the home page.
 //  - add email string validation.
 //  - add a prompt for the user's message.
 //  - add database upload/email sending with naughty word and attack string validation.
