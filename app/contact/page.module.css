@@ -1,0 +1,56 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 3rem;
+    min-height: 100vh;
+    background-color: grey;
+}
+
+.terminal {
+    width: 80%;
+    height: 100%;
+    margin: 50px auto;
+    background: #000;
+    border: 0.5px solid #ccc;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.terminal .header {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px 5px 0 0;
+}
+
+.terminal .header p {
+    color: #a19d9d;
+    padding: 5px 15px 0 15px;
+}
+
+.terminal .content {
+    width: 100%;
+    height: 100%;
+    /* Add terminal font v */
+    font-family: var(--font-mono); 
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.terminal .content p {
+    padding: 5px 15px 0 15px;
+}
+
+.terminal .content p.user {
+    color: white;
+}
+
+/*
+NOTE: class inheritance syntax:
+.x .y => a standalone class y inside a class x.
+.x.y => a class y assigned to a class x.
+*/
+.terminal .content p.system {
+    color: #00ff3c;
+}
