@@ -9,15 +9,15 @@ export default function Home() {
     <main className={styles.main}>
     
       <div className={styles.description}
-        style={{paddingLeft:'5%', paddingTop:'2.5%', paddingBottom:'2.5%'}}>
+        style={{paddingLeft:'5%', paddingTop:'1%', paddingBottom:'3%'}}>
           <h1>Hello.</h1>
       </div>
 
-      <div className={styles.grid} style= {{alignContent: 'left', textAlign: 'right', width:'90%'}}>
+      <div className={styles.grid} style={{justifyContent: 'space-between', textAlign: 'right', width:'90%', fontSize:'1rem'}}>
         <p>57</p>
         <p>65</p>
         <p>20</p>
-        <pop><Link href='map'>Map of AI</Link></pop>
+        <Link href='map' className={styles.pop}>Map of AI</Link>
         <p>6C</p>
         <p>69</p>
         <p>76</p>
@@ -28,7 +28,7 @@ export default function Home() {
         <p>6E</p>
         <p>20</p>
         <p>61</p>
-        <pop><Link href='blog'>Blog</Link></pop>
+        <Link href='blog' className={styles.pop}>Blog</Link>
         <p>20</p>
         <p>66</p>
 
@@ -36,7 +36,7 @@ export default function Home() {
         <p>74</p>
         <p>75</p>
         <p>72</p>
-        <pop><Link href='modelling'>Modelling</Link></pop>
+        <Link href='modelling' className={styles.pop}>Modelling</Link>
         <p>65</p>
         <p>20</p>
         <p>66</p>
@@ -44,7 +44,7 @@ export default function Home() {
         <p>65</p>
         <p>77</p>
         <p>20</p>
-        <pop><Link href='website'>Website</Link></pop>
+        <Link href='website' className={styles.pop}>Website</Link>
         <p>69</p>
         <p>6D</p>
         <p>61</p>
@@ -55,7 +55,7 @@ export default function Home() {
         <p>65</p>
         <p>64</p>
         <p>20</p>
-        <pop><Link href='resume'>Resume</Link></pop>
+        <Link href='resume' className={styles.pop}>Resume</Link>
         <p>70</p>
         <p>6F</p>
 
@@ -66,7 +66,7 @@ export default function Home() {
         <p>6C</p>
         <p>65</p>
         <p>2E</p>
-        <pop><Link href='contact'>Contact</Link></pop>
+        <Link href='contact' className={styles.pop}>Contact</Link>
       </div>
 
     </main>

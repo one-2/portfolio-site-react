@@ -57,10 +57,15 @@
   width: var(--max-width);
   gap: 2rem 0;
   text-align: center;
+  align-items: center;
+  font-family: Cascadia Mono;
+
 }
 
-.grid pop {
+.pop {
   font-weight: bold;
+  font-family: var(--font-mono);
+  font-size: x-large;
 }
 
 .card {
