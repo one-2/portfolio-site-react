@@ -9,11 +9,11 @@ export default function Home() {
     <main className={styles.main}>
     
       <div className={styles.description}
-        style={{paddingLeft:'5%', paddingTop:'1%', paddingBottom:'3%'}}>
+        style={{paddingLeft:'3%', paddingTop:'1%', paddingBottom:'1%'}}>
           <h1>Hello.</h1>
       </div>
 
-      <div className={styles.grid} style={{justifyContent: 'space-between', textAlign: 'right', width:'90%', fontSize:'1rem'}}>
+      <div className={styles.grid} style={{}}>
         <p>57</p>
         <p>65</p>
         <p>20</p>

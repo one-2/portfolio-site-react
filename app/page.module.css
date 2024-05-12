@@ -3,16 +3,17 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
 .description {
   display: inherit;
   justify-content: inherit;
-  align-items: inherit;
+  align-items: start;
   font-size: 0.85rem;
-  max-width: var(--max-width);
+  max-width: inherit; /* var(--max-width)   Off to keep the title aligned with
+    the body as desired. */
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
@@ -35,7 +36,9 @@
 }
 
 .description h1 {
-  position: relative;
+  /* position: relative; */
+  justify-content: inherit;
+  align-items: inherit;
   margin: 0;
   padding: 0rem;
   font-size: 7.5rem;
@@ -52,14 +55,16 @@
 
 .grid {
   display: grid;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
   grid-template-columns: repeat(8, auto);
-  max-width: 100%;
-  width: var(--max-width);
   gap: 2rem 0;
-  text-align: center;
   align-items: center;
+  justify-content: space-between;
+  text-align: right;
   font-family: Cascadia Mono;
-
+  font-size: 1rem;
 }
 
 .pop {
