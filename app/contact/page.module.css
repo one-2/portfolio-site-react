@@ -24,18 +24,42 @@ NOTE: class inheritance syntax:
     flex-grow: 1;
 }
 
-.terminal .header {
+/* Header */
+.header {
     width: 100%;
     height: 25px;
     border-radius: 5px 5px 0 0;
 }
 
-.terminal .header p {
+.header p {
     color: #a19d9d;
     padding: 5px 15px 0 15px;
 }
 
-.terminal .content {
+/* Button */
+.buttons {
+  grid-column-gap: 1px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.btn {
+  float:left;
+  margin-left: 7px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background:   red;
+
+}
+
+.btn:hover{
+  background:blue;
+}
+
+
+/* Terminal content */
+ .content {
     width: 100%;
     height: 100%;
     /* Add terminal font v */
@@ -44,22 +68,23 @@ NOTE: class inheritance syntax:
     line-height: 1;
 }
 
-.terminal .content p {
+ .content p {
     padding: 5px 15px 0 15px;
 }
 
-.terminal .content p.user {
+ .content p.user {
     color: white;
 }
 
-.terminal .content p.system {
+ .content p.system {
     color: #00ff3c;
 }
 
 
+
 /* Input form */
 
-.terminal .content .form .input {
+ .content .form .input {
         border: none !important;
         background: transparent;
         caret-color: white; /* Sets the cursor color */

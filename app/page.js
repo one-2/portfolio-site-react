@@ -13,7 +13,7 @@ export default function Home() {
           <h1>Hello.</h1>
       </div>
 
-      <div className={styles.grid} style={{}}>
+      <div className={styles.grid}>
         <p>57</p>
         <p>65</p>
         <p>20</p>
