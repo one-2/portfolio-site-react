@@ -53,27 +53,6 @@
   font-family: var(--font-mono);
 }
 
-.grid {
-  display: grid;
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  grid-template-columns: repeat(8, auto);
-  gap: 2rem 0;
-  align-items: center;
-  justify-content: space-between;
-  text-align: right;
-  font-family: Cascadia Mono;
-  font-size: 1rem;
-}
-
-.pop {
-  font-weight: bold;
-  font-family: var(--font-mono);
-  font-size: x-large;
-  max-width: 8ch; 
-}
-
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
@@ -232,12 +211,6 @@
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);

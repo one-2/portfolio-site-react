@@ -7,13 +7,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
 
 // TODO:
-//  - add red exit circle to go back to the home page.
-//  - add email string validation.
-//  - add a prompt for the user's message.
-//  - add database upload/email sending with naughty word and attack string validation.
-//  - add a success message / terminal 'deboot'.
-//  - turn the terminal into a modal over the landing page. (https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
-//  - add this sick matrix background: (https://codepen.io/yaclive/pen/EayLYO)
+//  - Features:
+//    - add email and message string validation (no naughty words, no attacks).
+//    - add database submission with email notification to me.
+//  - UI:
+//    - add a countdown and reroute to main page after the user submits.
+//    - add a launch/deboot animation to fade thescreen to white on transition,
+//      and then fade in the content.
+
+//  - Extension - IE leave til after other sections are in a reasonable state:
+//    - turn the terminal into a modal over the landing page. (https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
+//    - homepage background fades to black and terminal is surrounded by digital
+//      rain as user types: (https://codepen.io/yaclive/pen/EayLYO)
 
 let messageStartString = 'PS C:\\> '
 
@@ -29,18 +34,16 @@ export default function Contact() {
         <div className={styles.content}>
           <p className={styles.user}>{messageStartString}run(promptForContactInformation)</p>
           <p className={styles.system}>Please enter your email address.</p>
-          {inputBox()}
+          {form()}
         </div>
       </div>
     </main>
   )
 }
 
-function inputBox() {
-  // TODO: add validation of email and message (validity, no naughty words, no
-  //       attacks.
-
-  // This code focuses the input box when the box is initially rendered.
+function form() {
+  // TODO:
+  //  - add validation of email and message (validity, no naughty words, no attacks.
 
   const [userEmailInput, setUserEmailInput] = useState('');
   const [userMessageInput, setUserMessageInput] = useState('');
