@@ -4,36 +4,53 @@ NOTE: class inheritance syntax:
 .x.y => a class y assigned to a class x.
 */
 
+/* Full screen */
 .terminalContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 3rem;
-    min-height: 100vh;
-    background-color: grey;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background-color: black;
+  /* Positioning */
+  position: 'relative';
 }
 
+/* Terminal */
 .terminal {
-    width: 80%;
-    height: 100%;
-    margin: 50px auto;
-    background: #000;
-    border: 0.5px solid #ccc;
-    border-radius: 7px;
-    flex-grow: 1;
+  /* Styling */
+  background: #000;
+  border: 0.5px solid #ccc;
+  border-radius: 7px;
+  /* Size */
+  width: 50%;
+  height: 75%;
+  /* Positioning */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  /* Animation */
+  animation: fade-in 0.5s linear 3.5s backwards;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 100;
+  }
 }
 
 /* Header */
 .header {
-    width: 100%;
-    height: 25px;
-    border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 25px;
+  border-radius: 5px 5px 0 0;
 }
 
 .header p {
-    color: #a19d9d;
-    padding: 5px 15px 0 15px;
+  color: #a19d9d;
+  padding: 5px 15px 0 15px;
 }
 
 /* Button */
@@ -44,52 +61,52 @@ NOTE: class inheritance syntax:
 }
 
 .btn {
-  float:left;
+  float: left;
   margin-left: 7px;
   width: 12px;
   height: 12px;
   border-radius: 100%;
-  background:   red;
+  background: red;
 
 }
 
-.btn:hover{
-  background:blue;
+.btn:hover {
+  background: blue;
 }
 
 
 /* Terminal content */
- .content {
-    width: 100%;
-    height: 100%;
-    /* Add terminal font v */
-    font-family: var(--font-mono); 
-    font-size: 0.8rem;
-    line-height: 1;
+.content {
+  width: 100%;
+  height: 100%;
+  /* Add terminal font v */
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
- .content p {
-    padding: 5px 15px 0 15px;
+.content p {
+  padding: 5px 15px 0 15px;
 }
 
- .content p.user {
-    color: white;
+.content p.user {
+  color: white;
 }
 
- .content p.system {
-    color: #00ff3c;
+.content p.system {
+  color: #00ff3c;
 }
 
 
 
 /* Input form */
-
- .content .form .input {
-        border: none !important;
-        background: transparent;
-        caret-color: white; /* Sets the cursor color */
-        outline: none;
-        color: inherit;
-        font-family: inherit; 
-        font-size: inherit;
-  }
+.content .form .input {
+  border: none !important;
+  background: transparent;
+  caret-color: white;
+  /* Sets the cursor color */
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
