@@ -28,10 +28,10 @@ function buildRoutes() {
     // Returns (<Route/>, index)
     const routeData = [
         ['Learning Machines', 'learningMachines', 3],
-        ['Blog', 'blog', 13],
-        ['Modeling', 'modeling', 20],
-        ['Software', 'software', 27],
-        ['Resume', 'resume', 37],
+        ['•', '/', 13],         // ['Blog', 'blog', 13],
+        ['•', '/', 20],         // ['Modeling', 'modeling', 20],
+        ['•', '/', 27],         // ['Software', 'software', 27],
+        ['•', '/', 37],         // ['Resume', 'resume', 37],
         ['Contact', 'contact', 47]
     ];
     const routeElements = routeData.map(

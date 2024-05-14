@@ -5,9 +5,9 @@
 import styles from './page.module.css'
 import Link from 'next/link'
 
-import EntryForm from './_components/entryForm';
+import EntryForm from './_userForm/entryForm';
 
-import { MatrixRainingLetters } from './_components/rain';
+import { MatrixRainingLetters } from './_userForm/_rain/rain';
 
 import React from 'react';
 
