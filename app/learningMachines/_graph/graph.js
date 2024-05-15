@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3'; // Import D3 library
 
-import data from './dummyData.json'; // Data path
+import learningData from './_data/learningData.json'; // Data path
 
 function ForceDirectedGraph() {
   // Code adapted from (https://observablehq.com/@d3/force-directed-graph/2?intent=fork)
@@ -12,13 +12,13 @@ function ForceDirectedGraph() {
 
   useEffect(() => {
     // Set up D3 force simulation
-    const width = 928;
+    const width = 600; // TODO: change to max
     const height = 600;
 
     const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-    const links = data.links.map(d => ({ ...d }));
-    const nodes = data.nodes.map(d => ({ ...d }));
+    const links = learningData.links.map(d => ({ ...d }));
+    const nodes = learningData.nodes.map(d => ({ ...d }));
 
     const simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id(d => d.id))
