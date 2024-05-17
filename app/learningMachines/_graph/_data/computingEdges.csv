@@ -1,0 +1,62 @@
+FromId,ToId
+Algorithms,Computational complexity theory
+Algorithms,Adaptive algorithms
+Algorithms,Algorithmic optimisation
+Algorithms,Algorithmic estimation
+Algorithms,Theoretical computer science
+,
+Algorithms,Learning algorithms
+,
+Learning algorithms,Computational learning theory
+,
+Computational complexity theory,Time-space tradeoff
+Computational complexity theory,Memory cost
+Computational complexity theory,Computational cost
+Computational complexity theory,Optimisation of algorithms
+,
+Time-space tradeoff,Compute / processor capacity
+Time-space tradeoff,Storage capacity
+,
+Memory cost,Storage capacity
+Computational cost,Compute / processor capacity
+,
+Optimisation of algorithms,Randomised numerical linear algebra
+,
+Randomised numerical linear algebra,Numerical linear algebra
+,
+Numerical linear algebra,Algorithmic estimation
+Algorithmic estimation,Linear algebra
+,
+Linear algebra,Mathematics
+,
+Algorithmic estimation,Estimation
+,
+Estimation,Statistics
+,
+Statistics,Mathematics
+,
+Theoretical computer science,Mathematics
+,
+Adaptive algorithms,Adaptive momentum
+,
+Adaptive momentum,Momentum
+,
+Algorithms,Search algorithms
+,
+Search algorithms,Informed search / best-first search / heuristic search
+Search algorithms,Uninformed search
+Search algorithms,Tree search
+Search algorithms,Graph search
+,
+Heuristic search,A* search
+Heuristic search,Greedy search
+,
+Uninformed search,Depth-first search
+Uninformed search,Breadth-first search
+,
+Tree search,Trees
+Tree search,Binary tree search
+,
+Binary tree search,Binary trees
+,
+Binary trees,Trees

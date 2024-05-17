@@ -1,0 +1,62 @@
+FromId,ToId
+Data type,Architecture selection
+,
+Architecture,Architecture selection
+Architecture,Computational learning theory
+Architecture,Architectural framework
+,
+Architectural framework,Parameter model
+Architectural framework,Non-parameter model
+Architecture selection,Data generating process
+,
+Parameter model,Parameters
+Parameter model,Neural network
+Parameter model,Regression
+,
+Parameters,Capacity
+,
+Capacity,Computational learning theory
+,
+Non-parameter models,Decision tree
+Non-parameter models,
+,
+Architecture,Interpretability
+,
+Neural network,Recurrent neural network
+Neural network,Feed-forward neural network
+Neural network,Long short-term memory neural network
+Neural network,Residual neural network
+Neural network,Convolutional neural network
+Neural network,Attention neural network
+,
+Autoregressive stochastic process,Attention neural network
+Autoregressive stochastic process,Recurrent neural network
+Autoregressive stochastic process,Long short-term memory neural network
+,
+Residual neural network,Dense neural network
+,
+Convolutional neural network,Vision data
+Convolutional neural network,Autoregressive stochastic process
+,
+Feed-forward neural network,
+,
+Architecture,Inherently interpretable model
+,
+Inherently interpretable models,Interpretability
+,
+Architecture,Black-box model
+,
+Black-box models,Neural network
+,
+Inherently interpretable model,Physics-informed neural network
+Inherently interpretable model,Symbolic regression
+,
+Symbolic regression,Regression
+,
+Autoregressive stochastic process,Data types
+,
+Symbolic regression,Genetic algorithm
+,
+Genetic algorithm,Algorithms
+,
+Autoregressive stochastic process,Temporal continuity

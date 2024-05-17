@@ -1,8 +1,9 @@
 FromId,ToId
+Computational learning theory,Algorithmic optimisation
+,
 Algorithmic optimisation,Gradient methods
 Algorithmic optimisation,Non-gradient methods
 Algorithmic optimisation,Learning rules
-,
 ,
 Gradient methods,Backpropagation
 Gradient methods,Gradient descent
@@ -42,11 +43,12 @@ Parameters,Overparameterisation
 Overparameterisation,Generalisation
 Overparameterisation,Overfitting
 ,
-Overfitting,Exploitation
-,
-Exploitation,Exploration
-,
-Exploration,Underfitting
+Exploration-exploitation tradeoff,
+Exploration-exploitation tradeoff,Exploration
+Exploration-exploitation tradeoff,Exploitation
+Exploration-exploitation tradeoff,Overfitting
+Exploration-exploitation tradeoff,Underfitting
+Exploration-exploitation tradeoff,Generalisation
 ,
 Fit,Underfitting
 Fit,Overfitting
@@ -63,6 +65,7 @@ Implicit regularisation,Dropout
 Weight space,Parameters
 Weight space,Connections
 ,
+Regularisation,Generalisation
 ,
 Backpropagation,Vanishing and exploding gradients problem
 Vanishing and exploding gradients,Transfer functions
@@ -79,3 +82,8 @@ Piecewise linear transfer function,Leaky rectified linear unit function
 Non-linear transfer functions,Sigmoid function
 Non-linear transfer functions,Hyperbolic tangent function
 Non-linear transfer functions,Vanishing and exploding gradients problem
+,
+Exploration,Momentum
+,
+Momentum,Adaptive algorithms
+Momentum,Physics
