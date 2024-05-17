@@ -20,7 +20,6 @@ function buildHexElements() {
     const hexElements = hexes.map((val) => (
         <p>{val}</p>
     ));
-    console.log(hexElements)
     return hexElements;
 }
 
