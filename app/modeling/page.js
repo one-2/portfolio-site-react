@@ -13,6 +13,13 @@
 //  - Natural simulations such as population growth, spiral drawing machine.
 //  - Statistical process visualisations.
 
+// Extension: animate a chart with many series starting divergent and converging to
+// a single line. Render in real time.
+// - D3 (https://observablehq.com/@d3/multi-line-chart/2?intent=fork)
+// - AMCharts ((https://www.amcharts.com/demos-v4/highlighting-line-chart-series-on-legend-hover-v4/)
+
 export default function econModeling() {
-    return <div>EconModeling</div>
+  return (
+    <div>EconModeling</div>
+  )
 }

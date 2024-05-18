@@ -30,7 +30,7 @@ function buildRoutes() {
         ['•', '/', 13],         // ['Blog', 'blog', 13],
         ['•', '/', 20],         // ['Modeling', 'modeling', 20],
         ['•', '/', 27],         // ['Software', 'software', 27],
-        ['•', '/', 37],         // ['Resume', 'resume', 37],
+        ['•', '/', 37],         // ['???', '???', 37],
         ['Contact', 'contact', 47]
     ];
     const routeElements = routeData.map(
