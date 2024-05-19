@@ -9,6 +9,8 @@
 // - A live demo of some visually understandable ML model. Eg a pong/tic-tac-toe/chess
 //   RL player, or an image generator.
 // - Clickable mailto: link.
+//
+// Also: RAG chatbot for CV and site exploration.
 
 export default function Resume() {
     return <div>Resume</div>

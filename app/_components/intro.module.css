@@ -1,0 +1,75 @@
+.main {
+  display:block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+
+.scrambleGrid {
+  display: grid;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-template-columns: repeat(7, auto);
+  gap: 2rem 0;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  font-family: Cascadia Mono;
+  font-size: 2rem;
+}
+
+/* .pop {
+  font-weight: bold;
+  font-family: var(--font-mono);
+  font-size: x-large;
+  max-width: 8ch; 
+} */
+
+.decodedGridNormal {
+  display: grid;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-template-columns: repeat(7, auto);
+  gap: 2rem 0;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  font-family: Cascadia Mono;
+  font-size: 2rem;
+}
+
+.decodedGridFadeOut {
+  display: grid;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-template-columns: repeat(7, auto);
+  gap: 2rem 0;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  font-family: Cascadia Mono;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.decodedGridSquished {
+  display: grid;
+  width: 100%;
+  padding-left: 30%;
+  padding-right: 30%;
+  grid-template-columns: repeat(1, auto);
+  gap: 2rem 0;
+  align-items: center;
+  font-family: Cascadia Mono;
+  font-size: 2rem;
+  transition: all 2000ms ease-out;
+}

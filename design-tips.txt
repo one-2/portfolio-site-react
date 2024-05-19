@@ -2,7 +2,13 @@ Inspo:
 Jesse's Ramen - https://jesse-zhou.com/
 Car game - https://bruno-simon.com/
 Arty course - https://threejs-journey.com/?c=p1#summary
-Many great portfolios - https://www.behance.net/vanschneider
+Many great sites - https://www.behance.net/vanschneider
+
+Art: 
+(https://www.theycallmegiulio.com/)
+
+Writing:
+(https://wonderland.studio/)
 
 
 (https://www.reddit.com/r/webdev/comments/x1c3ut/some_cool_tips_for_my_portfolio_site/)

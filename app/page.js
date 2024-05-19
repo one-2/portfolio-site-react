@@ -1,18 +1,26 @@
+'use client'
 import styles from './page.module.css';
+import Intro from './_components/intro';
+import MainNavGrid from './_components/mainNavGrid';
 
-import Grid from './_components/grid';
+// TODO:
+// - add resume link to linkedin
+// - fix centering of the main content 
+// - unify logic for rendering the card menus
+// - add the contact page as an overlay in the bottom right
+// - finish neural net map
+// - add 3411 project
+// - go live
 
-// TODO: add live decoding/rendering on hover.
-
-export default function Home() {
-  // Hex code: 57 65 20 6C 69 76 65 20 69 6E 20 61 20 66 75 74 75 72 65 20 66 65 77 20 69 6D 61 67 69 6E 65 64 20 70 6F 73 73 69 62 6C 65 2E
+export default function landingPage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}
+    <div className={styles.main}>
+      {/* <div className={styles.description}
         style={{ paddingLeft: '3%', paddingTop: '1%', paddingBottom: '1%' }}>
         <h1>Hello.</h1>
-      </div>
-      <Grid />
-    </main>
+      </div> */}
+      <Intro />
+      {/* <MainNavGrid /> */}
+    </div>
   );
 }

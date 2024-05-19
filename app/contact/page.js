@@ -1,6 +1,9 @@
 // The design of this page + children was heavily inspired by (https://codepen.io/jangajdosik/pen/BOmYRm),
 // and some code was borrowed. The program was modified to fit the framework.
 
+
+// TODO: add as a box in the bottom right, over all pages.
+
 'use client'
 import styles from './page.module.css'
 import Link from 'next/link'

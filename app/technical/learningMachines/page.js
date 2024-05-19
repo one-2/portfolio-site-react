@@ -17,7 +17,7 @@
 import styles from './page.module.css';
 import ProjectsGrid from './_components/projectsGrid';
 
-export default function LearningMachines() {
+export default function Technical() {
   return (
     <div className={styles.main}>
       <div className={styles.description}>
