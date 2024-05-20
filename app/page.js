@@ -12,15 +12,11 @@ import MainNavGrid from './_components/mainNavGrid';
 // - add 3411 project
 // - go live
 
-export default function landingPage() {
+export default function landing() {
   return (
     <div className={styles.main}>
-      {/* <div className={styles.description}
-        style={{ paddingLeft: '3%', paddingTop: '1%', paddingBottom: '1%' }}>
-        <h1>Hello.</h1>
-      </div> */}
       <Intro />
-      {/* <MainNavGrid /> */}
+      <MainNavGrid />
     </div>
   );
 }

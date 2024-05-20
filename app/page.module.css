@@ -1,10 +1,10 @@
 .main {
+  /* background-color: #008000; */
+
   display:block;
   width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  font-size: 0.85rem;
+  min-height: 100vh; 
+  /* ^ vh ie viewport height */
+  align-content: center;
   font-family: var(--font-mono);
 }

@@ -1,93 +1,64 @@
 'use client'
 import styles from './intro.module.css';
 import React, { useState, useEffect } from 'react';
+import UnScrambler from './unscrambler.js';
 
 // Hex code: 57 65 20 6C 69 76 65 20 69 6E 20 61 20 66 75 74 75 72 65 20 66 65 77 20 69 6D 61 67 69 6E 65 64 20 70 6F 73 73 69 62 6C 65 2E
 
 export default function Intro() {
-  const [content, setContent] = useState('movingHex');
-  const [fadeOut, setFadeOut] = useState(false);
+  const [content, setContent] = useState('encodedHex');
 
-  const handleFirstClick = () => {
-    setContent('stillHex');
+  const timeout = 0; // TODO prod 2000
+  const handleClick = () => {
+    if (content === 'encodedHex') {
+      setTimeout(() => {
+        // Prevents too-rapid clicking
+        // Would transitions to run if any were tied to the state
+        setContent('decodedHex');
+      }, timeout);
+    } else if (content === 'decodedHex') {
+      setTimeout(() => {
+        setContent('menu');
+      }, timeout);
+    }
   };
 
-  const handleSecondClick = () => {
-    // Start the fade-out transition
-    setFadeOut(true);
-    // After the transition duration, change the content
-    setTimeout(() => {
-      setContent('decodedHex');
-      setFadeOut(false); // Reset fadeOut state
-    }, 500); // Match this duration to your CSS transition
-  };
-
-  const handleThirdClick = () => {
-    setContent('none');
-  };
-
-  // Render the initial content or the new content based on the state
-  if (content === 'movingHex') {
-    return (
-      <div className={styles.scrambleGrid} onClick={handleFirstClick}>
-        {scramblingGrid()}
-      </div>
-    );
-  }
+  // let decodedParagraphStyle = decodedTextFadeIn ? styles.decodedTextBox : styles.decodedTextBoxInvisible;
+  // let menuStyle = menuFadeIn ? styles.menu : styles.menuInvisible;
 
   // Update render based on state
   // TODO: improve animation between states
-  let componentToRender;
-  if (content === 'stillHex') {
-    componentToRender = (
-      <div className={fadeOut ? styles.decodedGridFadeOut : styles.decodedGridNormal} onClick={handleSecondClick}>
-        {decodedGrid()}
+  let allComponents = (
+    <div className={styles.main} onClick={handleClick}>
+      <div className={styles.contentContainer}>
+        <div className={styles.subContainer}>
+          <div className={styles.grid}>
+            {scramblingGrid()}
+          </div>
+        </div>
+        <div className={styles.subContainer}>
+          {content != 'encodedHex' ? decodedParagraph() : null}
+        </div>
       </div>
-    );
-  } else if (content === 'decodedHex') {
-    // TODO add animation
-    componentToRender = (
-      <div className={styles.decodedGridSquished} onClick={handleThirdClick}>
-        {decodedParagraph()}
-      </div>
-    );
-  } else if (content === 'none') {
-    componentToRender = null;
-  }
-
-  return (
-    <div className={styles.main}>{componentToRender}</div>
+    </div>
   );
+
+  if (content === 'menu') {
+    return null;
+  } else {
+    return <div> {allComponents} </div>;
+  }
 }
 
 
 function scramblingGrid() {
-  // Get the hex and route data
-  return buildGridElements('scrambling');
-}
-
-function buildGridElements(mode) {
-  // 'We live in a future few imagined possible.'
-  // const hexEncoded = ['57', '65', '20', '6C', '69', '76', '65', '20', '69', '6E', '20', '61', '20', '66', '75', '74', '75', '72', '65', '20', '66', '65', '77', '20', '69', '6D', '61', '67', '69', '6E', '65', '64', '20', '70', '6F', '73', '73', '69', '62', '6C', '65', '2E'];
   const hexEncoded = ['5765', '206C', '6976', '6520', '696E', '2061', '2066', '7574', '7572', '6520', '6665', '7720', '696D', '6167', '696E', '6564', '2070', '6F73', '7369', '626C', '652E'];
-  // const decoded = ['We live in a future few imagined possible.']
-  const decoded = ['We', ' l', 'iv', 'e ', 'in', ' a', ' f', 'ut', 'ur', 'e ', 'fe', 'w ', 'im', 'ag', 'in', 'ed', ' p', 'os', 'si', 'bl', 'e.']
-
-
-  let gridElements;
-  if (mode === 'scrambling') {
-    gridElements = hexEncoded.map((val) => (
-      <ScrambleText initialValue='0000' finalValue={val} />
-    ));
-  } else if (mode === 'decoding') {
-    gridElements = decoded.map((val) => (
-      <p>{val}</p>
-    ));
-  }
-  return gridElements;
+  return hexEncoded.map((val) => (
+    scrambleText('0000', val)
+  ))
 }
 
-const ScrambleText = ({ initialValue, finalValue }) => {
+function scrambleText(initialValue, finalValue) {
   const [text, setText] = useState(initialValue);
 
   const stepDuration = 500;
@@ -119,17 +90,22 @@ const ScrambleText = ({ initialValue, finalValue }) => {
   return <p>{text}</p>;
 };
 
-function decodedGrid() {
-  // Get the hex and route data
-  return buildGridElements('decoding');
-}
+// function decodedGrid() {
+//   // 'We live in a future few imagined possible.'
+//   const decoded = ['We', ' l', 'iv', 'e ', 'in', ' a', ' f', 'ut', 'ur', 'e ', 'fe', 'w ', 'im', 'ag', 'in', 'ed', ' p', 'os', 'si', 'bl', 'e.']
+//   return decoded.map((val) => (
+//     <p>{val}</p>
+//   ));
+// }
 
 function decodedParagraph() {
   // We live in a future few imagined possible.
-  const squished = [<p>We live in a</p>, <p>future few </p>, <p>imagined possible.</p>]
-
-  return squished
+  return <UnScrambler text='We live in a future few imagined possible.' />;
 }
+
+
+
+
 
 
 
