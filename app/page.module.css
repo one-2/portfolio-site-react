@@ -1,8 +1,8 @@
 .main {
-  /* background-color: #008000; */
-
-  display:block;
-  width: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  overflow: hidden;
+  display: block;
+  min-width: 100vw;
   min-height: 100vh; 
   /* ^ vh ie viewport height */
   align-content: center;

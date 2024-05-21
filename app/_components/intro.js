@@ -8,28 +8,30 @@ import UnScrambler from './unscrambler.js';
 export default function Intro() {
   const [content, setContent] = useState('encodedHex');
 
-  const timeout = 0; // TODO prod 2000
+  const overclickPrevention = 300;
+  const transitionDelay = 2000; // TODO prod 2000
   const handleClick = () => {
     if (content === 'encodedHex') {
       setTimeout(() => {
-        // Prevents too-rapid clicking
-        // Would transitions to run if any were tied to the state
         setContent('decodedHex');
-      }, timeout);
+      }, overclickPrevention);
     } else if (content === 'decodedHex') {
       setTimeout(() => {
+        // Start the derender transition
         setContent('menu');
-      }, timeout);
+        setTimeout(() => {
+          // Derender the page
+          setContent('none');
+        }, transitionDelay);
+      }, overclickPrevention);
     }
   };
 
   // let decodedParagraphStyle = decodedTextFadeIn ? styles.decodedTextBox : styles.decodedTextBoxInvisible;
-  // let menuStyle = menuFadeIn ? styles.menu : styles.menuInvisible;
+  let mainStyle = ((content === 'menu') ? styles.mainInvisible : styles.main);
 
-  // Update render based on state
-  // TODO: improve animation between states
-  let allComponents = (
-    <div className={styles.main} onClick={handleClick}>
+  let allContent = (
+    <div className={mainStyle} onClick={handleClick}>
       <div className={styles.contentContainer}>
         <div className={styles.subContainer}>
           <div className={styles.grid}>
@@ -41,13 +43,20 @@ export default function Intro() {
         </div>
       </div>
     </div>
-  );
-
-  if (content === 'menu') {
+  )
+  // Update render by state
+  if (content === 'none') {
+    // Derender so the menu behind becomes clickable
     return null;
   } else {
-    return <div> {allComponents} </div>;
+    // Render content in front of the nav menu
+    return (
+      <div>
+        {allContent}
+      </div>
+    );
   }
+
 }
 
 
