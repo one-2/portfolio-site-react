@@ -17,7 +17,7 @@ export default function ProjectsGrid() {
           <p>Discover classical AI technology and play a game of nine-board tic tac toe.</p>
         </div>
         <div className={styles.card}>
-          <h2><Link href='musicGenre'>Music Genre Classification</Link></h2>
+          <h2><Link href='musicGenre'>Musical Genre Classification</Link></h2>
           <p>Read our music genre classification project report, from my introductory neural networks course.</p>
         </div>
       </div>

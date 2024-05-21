@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './nav.module.css'
+import styles from './mainNavGrid.module.css'
 
 export default function MainNavGrid() {
   return (
