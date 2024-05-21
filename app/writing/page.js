@@ -1,33 +1,31 @@
-// TODO:
-// - Write blog posts
-// - Add blog posts to page
-// - Make the blog posts generate from data. Save data as json and then import
-//    it to a generating function to build the component at build time. (Will
-//    this build at build time as desired? Don't want it building at runtime.)
-// - Turn this page into a nextjs template and have the blog posts pop out into
-//    it from the rhs.
-// Extension:
-// - RAG search
+import styles from './page.module.css';
 
-export default function Blog() {
+import Link from 'next/link';
+
+export default function writing() {
   return (
-    <div>
-      <div>
-        <h1>Blog</h1>
-      </div>
-      <div style={{ alignContent: end }}>
-        <div>
-          <ul>
-            <li><Link href=''>Going Over the Falls.</Link></li> 
-            {/* ^Commitment, courage, meditation, foolishness, obsession. */}
-            <li><Link href=''>Shannon, Neumann, Yeager.</Link></li>
-            {/* ^Characteristics of the greats. */}
-            <li><Link href=''>A Road Cut from Silicon.</Link></li>
-            {/* ^The path of a young industrialist. */}
-            <li><h3>MMXXIV</h3></li>
-          </ul>
-        </div>
+    <div className={styles.main}>
+      <div className={styles.grid}>
+        <Link href='writing/technicalEssays'>
+          <div className={styles.card}>
+            <h2>Technical Essays</h2>
+            <p><span>Learning From Machines</span></p>
+            <p><span>Achilles' Spear</span></p>
+            <p><span>Mathematical Recall</span></p>
+            <p><span>Is Machine Learning Science?</span></p>
+            <p><span>... more</span></p>
+          </div>
+        </Link>
+        <Link href='writing/blogs'>
+          <div className={styles.card}>
+            <h2>Blogs</h2>
+            <p><span>Shannon, Neumann, Yeager</span></p>
+            <p><span>Going Over The Falls</span></p>
+            <p><span>A Road Cut From Silicon</span></p>
+            <p><span>MMXXIV</span></p>
+          </div>
+        </Link>
       </div>
     </div>
-  )
+  );
 }
