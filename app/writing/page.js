@@ -1,31 +1,48 @@
-import styles from './page.module.css';
-
-import Link from 'next/link';
+import NavPageBuilder from "../_components/navPageBuilder";
 
 export default function writing() {
-  return (
-    <div className={styles.main}>
-      <div className={styles.grid}>
-        <Link href='writing/technicalEssays'>
-          <div className={styles.card}>
-            <h2>Technical Essays</h2>
-            <p><span>Learning From Machines</span></p>
-            <p><span>Achilles' Spear</span></p>
-            <p><span>Mathematical Recall</span></p>
-            <p><span>Is Machine Learning Science?</span></p>
-            <p><span>... more</span></p>
-          </div>
-        </Link>
-        <Link href='writing/blogs'>
-          <div className={styles.card}>
-            <h2>Blogs</h2>
-            <p><span>Shannon, Neumann, Yeager</span></p>
-            <p><span>Going Over The Falls</span></p>
-            <p><span>A Road Cut From Silicon</span></p>
-            <p><span>MMXXIV</span></p>
-          </div>
-        </Link>
-      </div>
-    </div>
-  );
+  const data = {
+    header: {
+      title: "Writing",
+    },
+    grid: [
+      {
+        title: 'Technical Essays',
+        href: 'writing/technicalEssays',
+        projects: [
+          {
+            title: 'Learning From Machines',
+          },
+          {
+            title: 'Total (Statistical) Recall',
+          },
+          {
+            title: 'Achilles\' Spear',
+          },
+          {
+            title: '... more',
+          }
+        ]
+      },
+      {
+        title: 'Blogs',
+        href: 'writing/blogs',
+        projects: [
+          {
+            title: 'Shannon, Neumann, Yeager',
+          },
+          {
+            title: 'Going Over The Falls',
+          },
+          {
+            title: 'A Road Cut From Silicon',
+          },
+          {
+            title: 'MMXXIV',
+          }
+        ]
+      }
+    ]
+  }
+  return <NavPageBuilder data={data} />;
 }
