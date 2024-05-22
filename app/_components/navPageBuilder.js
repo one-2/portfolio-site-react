@@ -23,8 +23,8 @@ function convertDataToGrid(data) {
       <Link href={section.href}>
         <div className={styles.card}>
           <h2>{section.title}</h2>
-          {section.projects.map((project) => {
-            return (<p><span>{project.title}</span></p>)
+          {section.data.map((string, _) => {
+            return <p>{string}</p>
           }
           )}
         </div>

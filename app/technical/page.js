@@ -9,37 +9,26 @@ export default function technical() {
       {
         title: 'Software',
         href: 'technical/software',
-        projects: [
-          {
-            title: 'Maze Search',
-          },
-          {
-            title: 'Portfolio Site',
-          }
+        data: [
+          'Maze Search',
+          'Portfolio Site',
         ]
       },
       {
         title: 'Learning Machines',
         href: 'technical/learningMachines',
-        projects: [
-          {
-            title: 'Tic Tac Toe vs AI',
-          },
-          {
-            title: 'Musical Genre Classification',
-          }
+        data: [
+          'Tic Tac Toe vs AI',
+          'Musical Genre Classification',
         ]
       },
       {
         title: 'Modeling',
         href: 'technical/modeling',
-        projects: [
-          {
-            title: 'Exxon Mobil Security Returns',
-          },
-          {
-            title: 'Cellular Automata',
-          }
+        data: [
+          'Exxon Mobil Security Returns',
+          'Cellular Automata',
+          'ABMs',
         ]
       }
     ]

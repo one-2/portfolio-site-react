@@ -9,37 +9,21 @@ export default function writing() {
       {
         title: 'Technical Essays',
         href: 'writing/technicalEssays',
-        projects: [
-          {
-            title: 'Learning From Machines',
-          },
-          {
-            title: 'Total (Statistical) Recall',
-          },
-          {
-            title: 'Achilles\' Spear',
-          },
-          {
-            title: '... more',
-          }
+        data: [
+          'Learning From Machines',
+          'Total (Statistical) Recall',
+          'Achilles\' Spear',
+          '... more',
         ]
       },
       {
         title: 'Blogs',
         href: 'writing/blogs',
-        projects: [
-          {
-            title: 'Shannon, Neumann, Yeager',
-          },
-          {
-            title: 'Going Over The Falls',
-          },
-          {
-            title: 'A Road Cut From Silicon',
-          },
-          {
-            title: 'MMXXIV',
-          }
+        data: [
+          'Shannon, Neumann, Yeager',
+          'Going Over The Falls',
+          'A Road Cut From Silicon',
+          'MMXXIV',
         ]
       }
     ]

@@ -13,17 +13,29 @@
 // TODO: pull out the page generation to a separate file. Unify frontend for 
 //       software and learning machines 'projects' pages.
 
+import NavPageBuilder from "../../_components/navPageBuilder";
 
-import styles from './page.module.css';
-import ProjectsGrid from './_components/projectsGrid';
-
-export default function Technical() {
-  return (
-    <div className={styles.main}>
-      <div className={styles.description}>
-        <h1>Learning Machines.</h1>
-      </div>
-      <ProjectsGrid />
-    </div>
-  )
+export default function learningMachines() {
+  const data = {
+    header: {
+      title: 'Learning Machines'
+    },
+    grid: [
+      {
+        title: 'Tic Tac Toe',
+        href: 'ticTacToe',
+        data: [
+          'Discover classical AI technology and play a game of nine-board tic tac toe.'
+        ]
+      },
+      {
+        title: 'Musical Genre Classification',
+        href: 'musicGenre',
+        data: [
+          'Read our music genre classification project report, from my introductory neural networks course.'
+        ]
+      }
+    ]
+  }
+  return <NavPageBuilder data={data} />;
 }

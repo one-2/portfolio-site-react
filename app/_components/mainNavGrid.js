@@ -1,3 +1,5 @@
+// TODO Fix styling - in the single-element case, the element isn't centered.
+
 import Link from 'next/link'
 import styles from './mainNavGrid.module.css'
 

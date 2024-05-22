@@ -40,24 +40,26 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
   width: 380px;
-  height: auto;
+  height: 200px;
 
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  text-align: center;
 
-  transition: background 200ms, border 200ms;
+  box-shadow: 0 0 10px cadetblue;
+
+  transition: transform 0.2s ease-in-out;
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
+.card:hover {
+  transform: scale(1.01);
 }
+
 
 .card h2 {
   font-weight: 600;
