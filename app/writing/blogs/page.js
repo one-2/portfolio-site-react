@@ -9,33 +9,10 @@
 // Extension:
 // - RAG search
 
-import Link from 'next/link';
-import styles from './page.module.css';
+import BlogSidebar from './blogSidebar';
 
 export default function Blog() {
   return (
-    <div className={styles.main}>
-      <div className={styles.sidebar}>
-        <div className={styles.header}>
-          <h1>Blog</h1>
-        </div>
-        <div className={styles.body}>
-          <div className={styles.listContainer}>
-            <ul>
-              <li><Link href=''>Going Over the Falls</Link></li>
-              {/* ^Commitment, courage, meditation, foolishness, obsession */}
-              <li><Link href=''>Shannon, Neumann, Yeager</Link></li>
-              {/* ^Characteristics of the greats */}
-              <li><Link href=''>A Road Cut from Silicon</Link></li>
-              {/* ^The path of a young industrialist */}
-              <li><Link href=''>MMXXIV</Link></li>
-              {/* ^Our recent progress in information technology and artificial intelligence against a historical backdrop. */}
-              {/* Alt title: 'Unix Time' */}
-              <h3>T+54</h3>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <BlogSidebar />
   )
 }
