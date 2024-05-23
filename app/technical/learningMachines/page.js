@@ -16,26 +16,29 @@
 import NavPageBuilder from "../../_components/navPageBuilder";
 
 export default function learningMachines() {
-  const data = {
-    header: {
-      title: 'Learning Machines'
-    },
-    grid: [
-      {
-        title: 'Tic Tac Toe',
-        href: 'ticTacToe',
-        data: [
-          'Discover classical AI technology and play a game of nine-board tic tac toe.'
-        ]
-      },
-      {
-        title: 'Musical Genre Classification',
-        href: 'musicGenre',
-        data: [
-          'Read our music genre classification project report, from my introductory neural networks course.'
-        ]
-      }
-    ]
-  }
+  const data = [
+    {
+      id: 0,
+      title: 'Learning Machines',
+      data: [
+        {
+          title: 'Musical Genre Classification',
+          description: 'Read our music genre classification project report, from my introductory neural networks course..',
+          date: '23T3',
+          href: '/technical/learningMachines/musicGenreClassification',
+          data: {
+              text: 'We trained a neural network to classify music genres. The network achieved an accuracy of 80% on the test set.',
+          }
+        },
+        {
+          title: 'Tic Tac Toe',
+          description: 'Play tic tac toe against a classic artificial intelligence.',
+          date: '24T1',
+          href: '/technical/learningMachines/ticTacToe',
+        }
+      ]
+    }
+  ]
+  
   return <NavPageBuilder data={data} />;
 }

@@ -8,19 +8,26 @@ const Sidebar = ({ data }) => {
         <h1>Blog</h1>
       </div>
       <div className={styles.body}>
-        <div className={styles.listContainer}>
-          <ul>
-            {data.map((post) => (
-              <li>
-                <span><p className={styles.title}>Title: </p><Link href={post.href}><h3>{post.title}</h3></Link></span>
-                <p>Info: {post.description}</p>
-                <p>Date: {post.date}</p>
-                <p>-</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {data.map((section) => buildSection(section))}
       </div>
+    </div>
+  )
+}
+
+function buildSection(data) {
+  return (
+    <div className={styles.listContainer}>
+      <h2>{data.title}</h2>
+      <ul>
+        {data.data.map((post) => (
+          <li>
+            <span><p className={styles.title}>Title: </p><Link href={post.href}><h3>{post.title}</h3></Link></span>
+            <p>Info: {post.description}</p>
+            <p>Date: {post.date}</p>
+            <p>-</p>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
