@@ -4,7 +4,7 @@ import Intro from './_components/intro';
 import MainNavGrid from './_components/mainNavGrid';
 
 // TODO:
-// - add resume link to linkedin
+// - add cv link to linkedin
 // - fix centering of the main content 
 // - unify logic for rendering the card menus
 // - add the contact page as an overlay in the bottom right

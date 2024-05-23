@@ -18,47 +18,57 @@
 // - AMCharts ((https://www.amcharts.com/demos-v4/highlighting-line-chart-series-on-legend-hover-v4/)
 
 import NavPageBuilder from "../../_components/navPageBuilder";
+import { metadata } from "../../layout";
 
 export default function econModeling() {
   const data = {
-    header: {
-      title: 'Modeling'
-    },
-    grid: [
+    title: 'Modeling',
+    sections: [
       {
-        title: 'Exxon Mobil Security Returns',
-        href: 'exxonMobil',
-        data: [
-          '...'
-        ]
+        metadata: {
+          href: '/technical/modeling/exxonMobil',
+        },
+        data: {
+          title: 'Exxon Mobil Security Returns',
+          summaryText: '...'
+        
+        }
+      },
+      {
+        metadata: {
+          href: '/technical/modeling/cellularAutomata',
+        },
+        data: {
+          title: 'Cellular Automata',
+          summaryText: '...'
+        }
       },
       // {
-      //   title: 'Cellular Automata',
-      //   href: 'cellularAutomata',
-      //   data: [
-      //     '...'
-      //   ]
+      //   metadata: {
+      //     href: '/technical/modeling/agentBasedModels',
+      //   },
+      //   data: {
+      //     title: 'ABMs',
+      //     summaryText: '...'
+      //   }
       // },
       // {
-      //   title: 'ABMs',
-      //   href: 'agentBasedModels',
-      //   data: [
-      //     '...'
-      //   ]
+      //   metadata: {
+      //     href: '/technical/modeling/naturalSimulations',
+      //   },
+      //   data: {
+      //     title: 'Natural Systems Simulations',
+      //     summaryText: '...'
+      //   }
       // },
       // {
-      //   title: 'Natural Systems Simulations',
-      //   href: 'naturalSimulations',
-      //   data: [
-      //     '...'
-      //   ]
-      // },
-      // {
-      //   title: 'Visualising Pure Statistics',
-      //   href: 'pureStatistics',
-      //   data: [
-      //     '...'
-      //   ]
+      //   metadata: {
+      //     href: '/technical/modeling/pureStatistics',
+      //   },
+      //   data: {
+      //     title: 'Visualising Pure Statistics',
+      //     summaryText: '...'
+      //   }
       // }
     ]
   }

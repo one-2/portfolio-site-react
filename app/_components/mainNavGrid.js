@@ -12,7 +12,7 @@ export default function MainNavGrid() {
             <h2>TECH</h2>
           </div>
         </Link>
-        <Link href='resume'>
+        <Link href='cv'>
           <div className={styles.card}>
             <h2>CV</h2>
           </div>

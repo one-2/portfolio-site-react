@@ -12,6 +12,6 @@
 //
 // Also: RAG chatbot for CV and site exploration.
 
-export default function Resume() {
-    return <div>Resume</div>
+export default function cv() {
+    return null;
 }

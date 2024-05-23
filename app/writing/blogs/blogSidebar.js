@@ -1,5 +1,5 @@
 
-import Sidebar from '../_components/sidebar.js';
+import Sidebar from '../_components/sidebar.js/index.js';
 import styles from './page.module.css';
 
 const BlogSidebar = () => {

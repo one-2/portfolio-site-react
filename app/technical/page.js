@@ -1,47 +1,51 @@
 import NavPageBuilder from "../_components/navPageBuilder"
+import { metadata } from "../layout";
 
 export default function technical() {
-  const data = [
-    {
-      title: 'Software',
-      href: 'technical/software',
-      data: [
-        {
-          title: 'Maze Search',
+  const data = {
+    title: 'Technical',
+    sections: [
+      {
+        metadata: {
+          href: '/technical/software/',
         },
-        {
-          title: 'Portfolio Site',
+        data: {
+          title: 'Software',
+          list: [
+            'Maze Search',
+            'Portfolio Site'
+          ]
         }
-      ]
-    },
-    {
-      title: 'Learning Machines',
-      href: 'technical/learningMachines',
-      data: [
-        {
-          title: 'Tic Tac Toe vs AI',
+      },
+
+      {
+        metadata: {
+          href: '/technical/learningMachines',
         },
-        {
-          title: 'Musical Genre Classification',
+        data: {
+          title: 'Learning Machines',
+          list: [
+            'Tic Tac Toe vs AI',
+            'Musical Genre Classification'
+          ]
         }
-      ]
-    },
-    {
-      title: 'Modeling',
-      href: 'technical/modeling',
-      data: [
-        {
-          title: 'Exxon Mobil Security Returns',
+      },
+
+      {
+        metadata: {
+          href: '/technical/modeling',
         },
-        {
-          title: 'Cellular Automata',
-        },
-        {
-          title: 'ABMs',
+        data: {
+          title: 'Modeling',
+          list: [
+            'Exxon Mobil Security Returns',
+            'Cellular Automata',
+            'ABMs'
+          ]
         }
-      ]
-    }
-  ];
+      }
+    ]
+  };
 
   return <NavPageBuilder data={data} />;
 }

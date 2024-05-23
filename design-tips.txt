@@ -35,7 +35,7 @@ List skills and tech, list projects and detail the tech used in them, provide gi
 
 Provide all the basic, overall detail on a single page that's not too long. Perhaps make other pages with links to go into them. For example, a project section with one image, description, and tech used--with three buttons, Github, Live Site, and Learn More. The Learn More button would be a separate page explaining the project in greater detail. But you can leverage the Github readme for this as well, and keep everything single page.
 
-Provide LinkedIn (or whatever is popular in your area), Github, email, and resume on your portfolio as a contact section, maybe sidebar, and in your menu. Resume should a link to a Google drive PDF, not a download button.
+Provide LinkedIn (or whatever is popular in your area), Github, email, and cv on your portfolio as a contact section, maybe sidebar, and in your menu. cv should a link to a Google drive PDF, not a download button.
 
 Overall, try to make an impression on someone. Make them want to have a chat with you.
 
