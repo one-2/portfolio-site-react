@@ -1,0 +1,89 @@
+FromId,ToId
+Computational learning theory,Algorithmic optimisation
+,
+Algorithmic optimisation,Gradient methods
+Algorithmic optimisation,Non-gradient methods
+Algorithmic optimisation,Learning rules
+,
+Gradient methods,Backpropagation
+Gradient methods,Gradient descent
+,
+Non-gradient methods,Evolutionary algorithms
+Evolutionary algorithms,Genetic algorithms
+Non-gradient methods,Analytic optimisation
+Analytic optimisation,Perceptrons
+,
+Gradient descent,Mini-batch
+Gradient descent,Batch
+Gradient descent,Stochastic-Online
+Gradient descent,First-order optimisation
+Gradient descent,Second-order optimisation
+,
+Second-order optimisation,Natural gradients
+Second-order optimisation,Conjugate gradients
+,
+,
+Learning rules,Loss function
+Learning rules,Learning rate
+Learning rules,Dropout
+,
+Loss function,Regularisation
+Loss function,Cross entropy
+Loss function,Differentiability
+,
+Differentiability,Continuity
+Differentiability,Smoothness
+,
+Learning rate,Parameters
+,
+Dropout,Parameters
+,
+Parameters,Overparameterisation
+,
+Overparameterisation,Generalisation
+Overparameterisation,Overfitting
+,
+Exploration-exploitation tradeoff,
+Exploration-exploitation tradeoff,Exploration
+Exploration-exploitation tradeoff,Exploitation
+Exploration-exploitation tradeoff,Overfitting
+Exploration-exploitation tradeoff,Underfitting
+Exploration-exploitation tradeoff,Generalisation
+,
+Fit,Underfitting
+Fit,Overfitting
+Fit,Learning rules
+Fit,Algorithmic optimisation
+,
+Regularisation,Fit
+Regularisation,L1
+Regularisation,L2
+Regularisation,Implicit regularisation
+,
+Implicit regularisation,Dropout
+,
+Weight space,Parameters
+Weight space,Connections
+,
+Regularisation,Generalisation
+,
+Backpropagation,Vanishing and exploding gradients problem
+Vanishing and exploding gradients,Transfer functions
+,
+Transfer functions,Linear transfer functions
+Transfer functions,Non-linear transfer functions
+Transfer functions,Piecewise linear transfer function
+,
+Linear transfer functions,Heaviside function
+,
+Piecewise linear transfer function,Rectified linear unit function
+Piecewise linear transfer function,Leaky rectified linear unit function
+,
+Non-linear transfer functions,Sigmoid function
+Non-linear transfer functions,Hyperbolic tangent function
+Non-linear transfer functions,Vanishing and exploding gradients problem
+,
+Exploration,Momentum
+,
+Momentum,Adaptive algorithms
+Momentum,Physics

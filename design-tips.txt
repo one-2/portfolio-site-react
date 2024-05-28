@@ -1,0 +1,55 @@
+Inspo:
+Jesse's Ramen - https://jesse-zhou.com/
+Car game - https://bruno-simon.com/
+Arty course - https://threejs-journey.com/?c=p1#summary
+Many great sites - https://www.behance.net/vanschneider
+
+Art: 
+(https://www.theycallmegiulio.com/)
+
+Writing:
+(https://wonderland.studio/)
+
+
+(https://www.reddit.com/r/webdev/comments/x1c3ut/some_cool_tips_for_my_portfolio_site/)
+- Come up with a design philosophy. Colors, shapes, transitions, and overall aesthetics that stands out as uniquely you.
+
+- Having your name and contact clear from the start, list of skills so recruiters can match them, projects page a few of your best works, and contact form. Fundamentals of UI design should be there... spacing, color and contrast, clean typography. Leave out anything unrelated like personal details or hobbies.
+
+- People who have fancy animated portfolios typically are more on UI UX or even graphic design side. Dont feel the need to do something flashy, leave that for your second iteration.
+
+- Best tip (trying to implement myself rn) is to have a project that people actually want to have a go with. Obviously games are fun, but an app like fun type of IQ test or just something that would make a recruiter check it out for it’s purpose rather than purely to see what you used etc. If it is well done I think that is the most impressive thing.
+
+- The portfolio itself should just showcase your personality, doesn’t have to be too fancy
+
+
+
+(https://www.reddit.com/r/webdev/comments/112r7m5/whats_the_best_portfolio_website_youve_ever_seen/)
+To me, this is what I'd recommend:
+
+Have an aesthetic. Doesn't have to be wild. Simple is fine. But work with it. Focus on keeping things refined and simple because people get caught up too much in the bells and whistles. Folks screw up margin/padding and placement stuff ALL THE TIME, so don't. And make sure it's mobile friendly.
+
+Tell me about yourself, equally professionally and personally. Add a photo, smile. Give me an impression of yourself as a person so I'd want to even talk to you for 5 minutes.
+
+List skills and tech, list projects and detail the tech used in them, provide github and live project links.
+
+Provide all the basic, overall detail on a single page that's not too long. Perhaps make other pages with links to go into them. For example, a project section with one image, description, and tech used--with three buttons, Github, Live Site, and Learn More. The Learn More button would be a separate page explaining the project in greater detail. But you can leverage the Github readme for this as well, and keep everything single page.
+
+Provide LinkedIn (or whatever is popular in your area), Github, email, and cv on your portfolio as a contact section, maybe sidebar, and in your menu. cv should a link to a Google drive PDF, not a download button.
+
+Overall, try to make an impression on someone. Make them want to have a chat with you.
+
+(https://www.itsnicethat.com/features/the-graduates-2017-advice-portfolio-tips-from-top-studios-040517)
+Great design connects with you almost immediately, so this is what a portfolio should also do. Does the work stop you? Does it make you feel something? Do you want to find out more? It’s really that simple.
+
+Once you’re looking on a deeper level then that’s when you get a real sense of the designer, and who they are. What is their point of view on design? What is their approach? How do they describe their work? What are they passionate about? All of this comes across in the work and how it’s put together.
+
+Don't lead with a picture of yourself.
+
+Focus on your strongest work, and tell its story
+
+A clean, clear portfolio will always stand out to me. One which focuses on relevant highlights. Remember quality over quantity.
+
+tailor your portfolio by focusing on your strongest projects. Giving a good level of detail into two or three of your best projects, and why they are significant.
+
+Work that feels brave, visceral and packed with good taste. And not necessarily overly specialised, or honed to a specific style.

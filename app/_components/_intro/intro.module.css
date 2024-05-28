@@ -1,0 +1,117 @@
+.main {
+  background-color: black;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  font-family: Cascadia Mono;
+}
+
+.mainInvisible {
+  background-color: black;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  font-family: Cascadia Mono;
+
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.3rem;
+  position: absolute;
+  color: white;
+
+  /* border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  background-color: rgba(var(--card-bg-rgb), 0.15); */
+}
+
+.grid {
+  /* background-color: #77d9a390; */
+
+  display: grid;
+  width: 100%;
+  min-height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-template-columns: repeat(7, auto);
+  gap: 2rem 0;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.decodedTextBox {
+  /* background-color: #29d476d5; */
+  display: block;
+  width: 100%;
+
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+
+  transition: opacity 0.5s ease-out;
+}
+
+.decodedTextBox p {
+  background-color: #560ca5;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+/* 
+.decodedTextBoxInvisible {
+  display: block;
+  width: 100%;
+
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+
+  opacity: 0;
+} */
+
+.contentContainer .subContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  
+  /* border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  background-color: rgba(var(--card-bg-rgb), 0.15); */
+}

@@ -1,0 +1,55 @@
+.sidebar {
+    /* background-color: rgba(0, 136, 255, 0.353); */
+
+    position: absolute;
+    left: 0;
+
+    max-width: 22.5%;
+    min-height: 100%;
+
+    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 1.4rem;
+
+    border-right: 3px ridge #7DFDFE;
+}
+
+.header {
+    /* background-color: rgba(0, 255, 195, 0.353); */
+
+    min-width: 100%;
+
+    display: block;
+
+    text-align: start;
+    font-family: inherit;
+}
+
+.body {
+    padding: 1rem 0;
+}
+
+.body .listContainer {
+    /* background-color: brown; */
+
+    font-family: inherit;
+    text-align: start;
+}
+
+.listContainer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listContainer ul li {
+    padding: 0.3rem 0;
+}
+
+.listContainer h3 {
+    display: inline;
+}
+
+.listContainer .title {
+    display: inline;
+}

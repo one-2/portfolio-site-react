@@ -1,3 +1,5 @@
+// TODO: add metadata by page. (https://nextjs.org/learn/dashboard-app/adding-metadata)
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 

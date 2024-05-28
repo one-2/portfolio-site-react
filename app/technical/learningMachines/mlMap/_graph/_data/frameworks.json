@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {"id": "Learning", "group": 1},
+
+    {"id": "Supervised Learning", "group": 2},
+    {"id": "Regression", "group": 2},
+    {"id": "Linear Regression", "group": 2},
+    {"id": "Logistic Regression", "group": 2},
+    {"id": "Classifier Learning", "group": 2},
+    {"id": "Decision Trees", "group": 2},
+    {"id": "Neural Networks", "group": 2},
+
+    {"id": "Unsupervised Learning", "group": 3},
+    {"id": "k-Nearest Neighbours Clustering", "group": 3},
+    {"id": "Voronoi Clustering", "group": 3},
+
+    {"id": "Reinforcement Learning", "group": 4},
+    {"id": "Policy Learning", "group": 4},
+    {"id": "Value Function Learning", "group": 4},
+    {"id": "Reward Function Learning", "group": 4},
+    {"id": "Temporal Difference Learning", "group": 4},
+
+    {"id": "Policy Function", "group": 4},
+    {"id": "Reward Function", "group": 4},
+    {"id": "Value Function", "group": 4},
+    {"id": "Q Function", "group": 4}
+
+
+  ],
+  "links": [
+    {"source": "Learning", "target": "Supervised Learning", "value": 1},
+    {"source": "Learning", "target": "Unsupervised Learning", "value": 1},
+    {"source": "Learning", "target": "Reinforcement Learning", "value": 1},
+
+    {"source": "Supervised Learning", "target": "Regression", "value": 1},
+    {"source": "Regression", "target": "Linear Regression", "value": 1},
+    {"source": "Regression", "target": "Logistic Regression", "value": 1},
+    {"source": "Supervised Learning", "target": "Classifier Learning", "value": 1},
+    {"source": "Supervised Learning", "target": "Decision Trees", "value": 1},
+
+    {"source": "Unsupervised Learning", "target": "k-Nearest Neighbours Clustering", "value": 1},
+    {"source": "Supervised Learning", "target": "Neural Networks", "value": 1},
+
+    {"source": "k-Nearest Neighbours Clustering", "target": "Voronoi Clustering", "value": 1},
+
+    {"source": "Reinforcement Learning", "target": "Policy Learning", "value": 1},
+    {"source": "Reinforcement Learning", "target": "Value Function Learning", "value": 1},
+    {"source": "Reinforcement Learning", "target": "Reward Function Learning", "value": 1},
+
+    {"source": "Policy Learning", "target": "Policy Function", "value": 1},
+    {"source": "Policy Learning", "target": "Reward Function", "value": 1},
+
+    {"source": "Reward Function Learning", "target": "Reward Function", "value": 1},
+
+    {"source": "Value Function Learning", "target": "Value Function", "value": 1},
+    {"source": "Value Function Learning", "target": "Temporal Difference Learning", "value": 1},
+
+    {"source": "Temporal Difference Learning", "target": "Q Function", "value": 1},
+
+    {"source": "Policy Learning", "target": "Policy Function", "value": 1}
+
+  ]
+}
+  

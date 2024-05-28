@@ -1,0 +1,139 @@
+FromId,ToId
+Mathematics,Algebra
+,
+Algebra,Geometric algebra
+Algebra,Linear algebra
+,
+Geometric algebra,Weight space
+,
+Mathematics,Common concepts in mathematics
+,
+Common concepts in mathematics,Function spaces
+,
+Function spaces,Linear algebra
+Function spaces,Set theory
+,
+Linear algebra,Numerical linear algebra
+,
+Mathematics,Probability theory
+,
+Probability theory,Statistics
+,
+Statistics,Statistical learning theory
+Statistics,Bayesian statistics
+Statistics,Frequentist statistics
+,
+Statistical learning theory,Computational learning theory
+,
+Computational learning theory,Learnability
+,
+Probability,Probability distribution
+,
+Probability distributions,Standard normal distribution / Gaussian distribution
+Probability distributions,Joint probability distribution
+Probability distributions,Conditional probability distribution
+,
+Joint probability distribution,Joint probability
+,
+Conditional probability distribution,Conditional probability
+,
+Conditional probability,Bayesian statistics
+,
+Linear algebra,Linear independence / linear separability
+Linear algebra,Linear dependence
+,
+Learnability,Input variables
+Learnability,Function spaces
+,
+Computational learning theory,Spline theory of neural networks
+,
+Input variable,Continuous variable
+Input variable,Discrete variable
+Input variable,Variable
+Input variable,Data
+,
+Discrete variables,Categorical variable
+,
+Discrete variables,Binary variable
+,
+Probability distribution,Frequency histogram
+,
+Continuous variable,Discretisation
+,
+Discretisation,Storage
+,
+Storage,Computation science
+,
+Data,Data types
+,
+Data types,Audio data
+Data types,Vision data
+Data types,Text data
+Data types,Numerical data
+,
+Vision data,Image data
+Vision data,Video data
+,
+Image data,Video data
+,
+Data,Sample
+,
+Sample,Sampling
+,
+Sampling,Sampling technique
+,
+Sampling technique,Statistical bias
+,
+Statistical bias,Non-representative sample
+,
+Observation,Sampling
+,
+Sample,Probability distribution
+,
+Sample,Representative sample
+Sample,Non-representative sample
+,
+Statistical bias,Bias-variance tradeoff
+,
+Data,Data generating process
+Data,Output data
+Data,Input data
+,
+Output data,Output variable
+,
+Input data,Input variable
+,
+Data generating process,Temporal continuity
+,
+Data generating process,Stochastic process
+,
+Stochastic process,Statistics
+Stochastic process,Random variable
+,
+Random variable,Probability distribution
+Random variable,Statistics
+,
+Stochastic process,Statistical noise
+,
+Statistical noise,Error
+,
+Error,Measurement error
+,
+Statistical noise,Regularisation
+Statistical noise,Overfitting
+,
+,
+Statistics,Shrinkage / regularisation
+,
+Data,Data pre-processing
+,
+Data pre-processing,Simplification
+Data pre-processing,Augmentation
+Data pre-processing,Summary
+,
+Simplification,Grayscaling
+Simplification,Edge detection algorithms
+,
+Augmentation,Rotation
+Augmentation,Noising
+Augmentation,Masking
