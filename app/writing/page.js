@@ -1,4 +1,4 @@
-import NavPageBuilder from "../_components/navPageBuilder";
+import NavPageBuilder from "../_components/_navPageBuilder/navPageBuilder";
 
 export default function writing() {
   const data = {

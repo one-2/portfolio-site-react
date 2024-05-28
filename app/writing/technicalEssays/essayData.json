@@ -1,0 +1,75 @@
+{
+  "title": "Essays",
+  "data": [
+    {
+      "id": 0,
+      "title": "(coming soon)",
+      "data": [
+        {
+          "title": "Teaching Machines",
+          "description": "How can we teach a machine by example?",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "Learning From Machines",
+          "description": "Can we use machines to discover new things about our world?",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "The Mystery of Generalisation",
+          "description": "How is it possible for machines to succeed in tasks they have not previously seen?",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "Achilles' Spear",
+          "description": "What sort of tasks can learning machines do well?",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "Mathematical Recall",
+          "description": "How can we use mathematical constructs to store behavioural information, and recount these behaviours when the moment is right?",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "The Sobering History of Artificial Intelligence",
+          "description": "Trace the development of machine learning techniques, from the whispers of artificial intelligence in anthropomorphic automata to contemporary massive algorithmic learners - some of the most sophisticated technology we have invented.",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "Is Machine Learning Science?",
+          "description": "Explore where machine learning lifts away from the rigour of computer science.",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        },
+        {
+          "title": "Algorithmic Bias",
+          "description": "Find out what it means for an algorithm to be 'unfair' at a moral and mathematical level, and discuss some techniques for improving algorithm fairness.",
+          "href": "",
+          "data": {
+            "text": "defaultFullText"
+          }
+        }
+      ]
+    }
+  ]
+}

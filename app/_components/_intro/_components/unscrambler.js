@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styles from './intro.module.css';
+import styles from '../intro.module.css';
 
-
-export default function UnScrambler({text}) {
+export default function UnScrambler({ text }) {
   const scramble = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const [scrambleText, setScrambleText] = useState('');
   const [counter, setCounter] = useState(0);
@@ -18,9 +17,9 @@ export default function UnScrambler({text}) {
     }
     setScrambleText(newScrambleText);
     if (counter < text.length) {
-      setTimeout(() => setCounter(counter + 1), 100); // Adjust delay as needed
+      setTimeout(() => setCounter(counter + 1), 100); // delay time
     }
-  }, [counter]);
+  }, [text, counter]); // dependency array
 
   return <p className={styles.decodedTextBox}>{scrambleText}</p>;
 };

@@ -13,7 +13,7 @@
 // TODO: pull out the page generation to a separate file. Unify frontend for 
 //       software and learning machines 'projects' pages.
 
-import NavPageBuilder from "../../_components/navPageBuilder";
+import NavPageBuilder from "../../_components/_navPageBuilder/navPageBuilder";
 import { metadata } from "../../layout";
 
 export default function learningMachines() {
@@ -22,37 +22,28 @@ export default function learningMachines() {
     sections: [
       {
         metadata: {
-          href: '/technical/learningMachines/musicGenreClassification',
+          href: ''
+          // href: '/technical/learningMachines/musicGenreClassification',
         },
         data: {
           title: 'Music Genre Classification',
           date: '23T3',
           summaryText: '(coming soon) Read about the unique challenges of processing and interpreting audio data.',
-          fullText: '...',
+          fullText: 'defaultFullText'
         }
       },
       {
         metadata: {
-          href: '/technical/learningMachines/ticTacToe',
+          href: ''
+          // href: '/technical/learningMachines/ticTacToe',
         },
         data: {
           title: 'Tic Tac Toe',
           date: '23T3',
           summaryText: '(coming soon) Play tic tac toe against a classic artificial intelligence.',
-          fullText: '.',
+          fullText: 'defaultFullText',
         }
       },
-      {
-        metadata: {
-          href: '/technical/software',
-        },
-        data: {
-          title: 'My Portfolio Site',
-          date: '23T3',
-          summaryText: '(coming soon) Learn about the design and engineering of this website.',
-          fullText: '...',
-        }
-      }
     ]
   };
   return <NavPageBuilder data={data} />;

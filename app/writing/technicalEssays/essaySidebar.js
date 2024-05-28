@@ -2,7 +2,7 @@
 import Sidebar from '../_components/sidebar.js';
 import styles from '../sidebar.module.css';
 
-const BlogSidebar = ({ data }) => {
+const EssaySidebar = ({ data }) => {
   return (
     <div className={styles.main}>
       <Sidebar rootDataObject={data} />
@@ -10,4 +10,4 @@ const BlogSidebar = ({ data }) => {
   )
 }
 
-export default BlogSidebar;
+export default EssaySidebar;

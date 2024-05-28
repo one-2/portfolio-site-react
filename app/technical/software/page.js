@@ -4,7 +4,7 @@
 // Extension:
 // - mazeSearcher
 
-import NavPageBuilder from "../../_components/navPageBuilder"
+import NavPageBuilder from "../../_components/_navPageBuilder/navPageBuilder"
 
 export default function software() {
   const data = {
@@ -24,16 +24,7 @@ export default function software() {
           href: '/technical/software/',
         },
         data: {
-          title: 'Tic Tac Toe',
-          summaryText: '(coming soon) Discover classical AI technology and play a game of nine-board tic tac toe.'
-        },
-      },
-      {
-        metadata: {
-          href: '/technical/software/',
-        },
-        data: {
-          title: 'My Portfolio Site',
+          title: 'This Site',
           summaryText: '(coming soon) Learn about the design and engineering of this website.'
         },
       }

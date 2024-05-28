@@ -89,14 +89,20 @@ function ForceDirectedGraph() {
       event.subject.fy = null;
     }
 
-    // Clean up function to remove SVG
-    // DEV: Should be able to remove in prod. Used to work around strict mode
-    // double-invocation.
-    return () => {
-      // Clear the SVG to prevent duplicates
-      d3.select(svgRef.current).selectAll('*').remove();
-    };
-  }, []);
+  // cleanup function to remove SVG
+  // - cleanup functions needed when using timers, calling DOM manipulations,
+  //    using external data sources, or external data sources, which can cause
+  //    side effects and memory leaks.
+  // capture the current value of svgRef. avoids errors caused by calling cleanup on
+  // the current component value.
+  const currentSVG = svgRef.current; // ?required since svg creation manipulates the DOM directly?
+  return () => {
+    if (currentSVG) {
+      d3.select(currentSVG).selectAll('*').remove();
+    }
+  };
+  }, [] // dependency array empty since the svg does not need to trigger page updates
+);
 
   console.log('Rendering graph') // DEV: Remove in prod
   return (

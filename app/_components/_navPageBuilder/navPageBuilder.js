@@ -22,8 +22,8 @@ function buildSection(section) {
   if (section.data.summaryText != undefined) {
     body = section.data.summaryText;
   } else {
-    body = section.data.list.map((item) => (
-      <p>{item}</p>
+    body = section.data.list.map((item, index) => (
+      <p key={index}>{item}</p>
     ));
   }
 

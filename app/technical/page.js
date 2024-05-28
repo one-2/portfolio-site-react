@@ -1,4 +1,4 @@
-import NavPageBuilder from "../_components/navPageBuilder"
+import NavPageBuilder from "../_components/_navPageBuilder/navPageBuilder"
 import { metadata } from "../layout";
 
 export default function technical() {
