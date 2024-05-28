@@ -1,0 +1,17 @@
+Note: Some extension of this experiment could be used as
+- Carousel display
+- Curved wall, itself an extension of the carousel display
+Adaptive styling in the carousel/wall will be very challenging
+to write in hcj. Would probably be a lot easier in a purpose-built
+3D library. However, much less performant.
+
+Should start with a simpler version as a stopgap and come back to this
+later. 
+- Landing menu: Full-page card grid with some white squares to display 
+    all the collections together.
+- 2nd level: Click-through carousel for individual collections.
+  - Layout: collection title and notes across top of page. Images
+            clickable for full-screen focus. Left/right buttons at 
+            screen bottom edges transition between photos.
+- Should photos be fetched from a server to avoid sending too much data
+  to the client?

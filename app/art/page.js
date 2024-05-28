@@ -1,4 +1,9 @@
-
+// Possible stopgap solutions:
+// - Hilbert curve gallery (https://github.com/ClementCariou/virtual-art-gallery)
+// - Horizontal spotlighting gallery (https://github.com/cynthiachiu/3D-Art-Gallery?tab=readme-ov-file)
+//      - No licence but good inspiration
+// - Clean and polished museum gallery (https://github.com/adriannaderkacz/virtual-art-gallery)
+// - 
 
 export default function art() {
     return (
