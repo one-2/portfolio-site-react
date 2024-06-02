@@ -1,11 +1,11 @@
-* backend integration with Vercel postgres:   (new branch for this)
-  + (https://vercel.com/storage/postgres)
-  + build tool for me to extract this info from the db
+* backend integration with MongoDB Atlas:
+  + build tool to extract records from the db 
+  + set up github secrets. must be done before prod build. (high pri)
 
-* v3 interface  (new branch for this)
+* v3 interface
+  + implement interface from my notebook
   + contact terminal overlay via Next Layouts
-  + rework routing for blog posts via Dynamic Routing
-  + set up json imports
-  + update readme
+  + improve json structure (low pri)
+  + update readme (low pri)
 
 * art gallery  (new branch for this)
