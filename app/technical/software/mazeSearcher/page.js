@@ -1,4 +1,7 @@
-
+export const metadata = {
+  title: 'Maze Searcher',
+  description: '...',
+}
 
 export default function mazeSearcher() {
   return (

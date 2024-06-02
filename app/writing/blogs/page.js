@@ -8,13 +8,8 @@
 // Extension:
 // - RAG search
 
-import BlogSidebar from './blogSidebar';
-
 export default function Blog() {
-  // Import the data
-  const blogData = require('./blogData.json');
-
   return (
-    <BlogSidebar data={blogData} />
+    null
   )
 }

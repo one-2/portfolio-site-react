@@ -1,0 +1,11 @@
+* backend integration with Vercel postgres:   (new branch for this)
+  + (https://vercel.com/storage/postgres)
+  + build tool for me to extract this info from the db
+
+* v3 interface  (new branch for this)
+  + contact terminal overlay via Next Layouts
+  + rework routing for blog posts via Dynamic Routing
+  + set up json imports
+  + update readme
+
+* art gallery  (new branch for this)

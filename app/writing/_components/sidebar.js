@@ -21,9 +21,11 @@ function buildSection(sectionData) {
       <ul>
         {sectionData.data.map((post, index) => (
           <li key ={index}>
-            <span><p className={styles.title}>Title: </p><Link href={post.href}><h3>{post.title}</h3></Link></span>
+            <Link href={post.href}>
+            <span><p className={styles.title}>Title: </p><h3>{post.title}</h3></span>
             <p>Info: {post.description}</p>
             <p>Date: {post.date}</p>
+            </Link>
             <p>-</p>
           </li>
         ))}
