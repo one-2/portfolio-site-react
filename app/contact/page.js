@@ -17,6 +17,11 @@ import React from 'react';
 
 let messageStartString = 'PS C:\\> ' // Duplicate code
 
+export const metadata = {
+  title: 'Contact',
+  description: '...',
+}
+
 export default function Contact() {
   return (
     <div className={styles.terminalContainer}>

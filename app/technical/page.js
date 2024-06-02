@@ -1,5 +1,9 @@
 import NavPageBuilder from "../_components/_navPageBuilder/navPageBuilder"
-import { metadata } from "../layout";
+
+export const metadata = {
+  title: 'Technical',
+  description: '...',
+}
 
 export default function technical() {
   const data = {

@@ -3,9 +3,8 @@
   + build tool for me to extract this info from the db
 
 * v3 interface  (new branch for this)
-  + contact terminal overlay
-  + page metadata
-  + index.js
+  + contact terminal overlay via Next Layouts
+  + rework routing for blog posts via Dynamic Routing
   + update readme
 
 * art gallery  (new branch for this)

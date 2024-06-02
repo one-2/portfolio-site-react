@@ -1,6 +1,11 @@
 import NavPageBuilder from "../_components/_navPageBuilder/navPageBuilder";
 
-export default function writing() {
+export const metadata = {
+title: 'Writing',
+  description: '...',
+}
+
+export default function Writing() {
   const data = {
     title: 'Writing',
     sections: [

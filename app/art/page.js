@@ -5,7 +5,12 @@
 // - Clean and polished museum gallery (https://github.com/adriannaderkacz/virtual-art-gallery)
 // - 
 
-export default function art() {
+export const metadata = {
+    title: 'Art',
+    description: '...',
+}
+
+export default function Art() {
     return (
         <div style={{ height: '100vh', display: 'flex',
         flexDirection: 'column', alignItems: 'center',
