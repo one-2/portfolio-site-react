@@ -1,9 +1,7 @@
 .sidebar {
     /* background-color: rgba(0, 136, 255, 0.353); */
 
-    position: absolute;
-    left: 0;
-
+    display: block;
     max-width: 22.5%;
     min-height: 100%;
 
