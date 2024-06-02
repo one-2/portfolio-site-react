@@ -9,7 +9,7 @@ export const metadata = {
   description: '...',
 }
 
-const BlogSidebar = ({ children }) => {
+const BlogLayout = ({ children }) => {
   return (  
     <div className={styles.main}>
       <Sidebar rootDataObject={blogData} />
@@ -18,4 +18,4 @@ const BlogSidebar = ({ children }) => {
   )
 }
 
-export default BlogSidebar;
+export default BlogLayout;
