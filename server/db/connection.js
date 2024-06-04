@@ -3,28 +3,50 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
 import { key } from "./secret.js";
-const uri = key; // TODO: set up github secrets.
+const uri = key;
 
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
+// Name the databases
+const userDbName = "user";
+const writingDbName = "writing";
+
+// Create separate connections for each database
+const userDbUri = `${uri}/${userDbName}`; // Construct the URI for the primary database
+const writingDbUri = `${uri}/${writingDbName}`; // Construct the URI for the secondary database
+
+const connectToDatabase = async (uri) => {
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+
+  try {
+    // Connect to the server
+    await client.connect();
+    console.log(`Connected to ${uri}`);
+    return client;
+  } catch (err) {
+    console.error(`Error connecting to ${uri}:`, err);
+    throw err;
+  }
+};
+
+// Connect to the primary and secondary databases
+const userDbClient = await connectToDatabase(userDbUri);
+const writingDbClient = await connectToDatabase(writingDbUri);
+
+// Now you can use the clients to interact with their respective databases
+const userDb = userDbClient.db(`${userDbName}`);
+const writingDb = writingDbClient.db(`${writingDbName}`);
+
+// Close connections when your application shuts down
+process.on("SIGINT", () => {
+  userDbClient.close();
+  writingDbClient.close();
+  console.log("Database connections closed.");
+  process.exit(0);
 });
 
-try {
-  // Connect the client to the server
-  await client.connect();
-  // Send a ping to confirm a successful connection
-  await client.db("admin").command({ ping: 1 });
-  console.log(
-   "Pinged your deployment. You successfully connected to MongoDB!"
-  );
-} catch(err) {
-  console.error(err);
-}
-
-let db = client.db("employees");
-
-export default db;
+export { userDb, writingDb };

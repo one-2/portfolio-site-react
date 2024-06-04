@@ -1,6 +1,9 @@
 * backend integration with MongoDB Atlas:
-  + build tool to extract records from the db 
-  + set up github secrets. must be done before prod build. (high pri)
+  + build+test database for user contacts and email signups
+  + integrate database api calls into frontend
+  + set up MDB trigger to email me new submissions. ideally once per day.
+  + set up github secrets. (must be done before prod build)
+  + put github back on public
 
 * v3 interface
   + implement interface from my notebook

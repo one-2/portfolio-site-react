@@ -1,16 +1,21 @@
 // Code from (https://www.mongodb.com/resources/languages/mern-stack-tutorial)
-// Runs the express server middleware
+// Runs the (Express) router as middleware between Node and MongoDB.
 
 import express from "express";
 import cors from "cors";
-import records from "./routes/record.js";
+import user from "./routes/user.js";
+import writing from "./routes/writing.js";
 
 const PORT = 5050;
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/record", records);
+
+// Define routes
+app.use("/user", user);
+app.use("/writing", writing)
+
 
 // start the Express server
 app.listen(PORT, () => {
