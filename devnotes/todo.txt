@@ -1,0 +1,22 @@
+* backend integration with MongoDB Atlas:
+  + finalise the writing db schema
+  + put writing json in new format and move to mongo, onedrive
+  + update post reqs for writing db for the new schema
+  + integrate backend into frontend
+    - essays, blogs, mailing list, contact page using fetch
+  + set up a mongo trigger to email me new messages
+  + set up env var and github secret for Atlas API key (must be done before prod build)
+  + cancel api key
+  + add dot points to devlog notes
+  + update readme - simplify, dot points on major features.
+  + push
+  + change repo to public
+  
+* v3 interface
+  + add mailing list signup button to wireframe
+  + implement interface from my notebook
+  + add contact overlay via Next Layouts
+  + implement backend on contact and mailing list pages
+  + update readme
+
+* art gallery  (new branch for this)

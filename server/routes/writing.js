@@ -9,14 +9,7 @@ function validCollectionName(collectionName) {
   return collectionName === "blogs" || collectionName === "essays";
 }
 
-
 const buildCollectionNotFoundError = (res) => res.status(404).send("Collection not found");
-
-// Helper function to get a list of documents from a collection
-async function getDocuments(collectionName) {
-  let collection = writingDb.collection(collectionName);
-  return await collection.find({}).toArray();
-}
 
 // Helper function to create a new document in a collection
 async function createDocument(collectionName, document) {
@@ -31,8 +24,16 @@ router.get("/:collection", async (req, res) => {
   if (!(validCollectionName(collectionName))) {
     return buildCollectionNotFoundError(res);
   }
-  const documents = await getDocuments(collectionName);
-  res.send(documents).status(200);
+  // Attempt to retrieve the document requested
+  const collection = db.collection(collectionName);
+  const document = collection.findOne({ slug: req.params.slug }); // search by url slug
+  // If the document is not found, return a 404 status code
+  if (document == null) {
+    return res.status(404).send("Document not found");
+  } else {
+    // Else return the document with status code 200
+    res.send(document).status(200);
+  }
 });
 
 router.post("/:collection", async (req, res) => {
@@ -44,9 +45,7 @@ router.post("/:collection", async (req, res) => {
 
   try {
     let newDocument = {
-      name: req.body.name,
-      position: req.body.position,
-      level: req.body.level,
+      // TODO fill with schema
     };
     let result = await createDocument(collectionName, newDocument);
     res.send(result).status(204);
@@ -55,9 +54,5 @@ router.post("/:collection", async (req, res) => {
     res.status(500).send(`Error adding to ${collectionName} collection.`);
   }
 });
-
-// Routes for specific collections:
-// Routes for "blogs" collection
-// Routes for "essays" collection
 
 export default router;
