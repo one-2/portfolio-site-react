@@ -31,9 +31,7 @@ router.get("/testMessages", async (_, res) => { // TEST: remove in prod
 router.post("/messages", async (req, res) => {
   try {
     let newDocument = {
-      name: req.body.name,
-      email: req.body.email,
-      message: req.body.message,
+      ...req.body,
       date: new Date(), // Creates a MongoDB BSON Date object set to the current Unix time.
     };
     let result = await createDocument("messages", newDocument);

@@ -2,9 +2,13 @@
   "collection": [
     {
       "section": {
-        "title": "Blogs",
-        "subtitle": "(coming soon)",
-        "href": "/writing/blogs/"
+        "data": {
+          "title": "Blogs",
+          "subtitle": "(coming soon)"
+        },
+        "metadata": {
+          "href": "/writing/blogs/"
+        }
       },
       "post": {
         "metadata": {
@@ -28,9 +32,13 @@
     },
     {
       "section": {
-        "title": "Blogs",
-        "subtitle": "(coming soon)",
-        "href": "/writing/blogs/"
+        "data": {
+          "title": "Blogs",
+          "subtitle": "(coming soon)"
+        },
+        "metadata": {
+          "href": "/writing/blogs/"
+        }
       },
       "post": {
         "metadata": {
@@ -49,9 +57,13 @@
     },
     {
       "section": {
-        "title": "Blogs",
-        "subtitle": "(coming soon)",
-        "href": "/writing/blogs/"
+        "data": {
+          "title": "Blogs",
+          "subtitle": "(coming soon)"
+        },
+        "metadata": {
+          "href": "/writing/blogs/"
+        }
       },
       "post": {
         "metadata": {
@@ -70,9 +82,13 @@
     },
     {
       "section": {
-        "title": "Blogs",
-        "subtitle": "(coming soon)",
-        "href": "/writing/blogs/"
+        "data": {
+          "title": "Blogs",
+          "subtitle": "(coming soon)"
+        },
+        "metadata": {
+          "href": "/writing/blogs/"
+        }
       },
       "post": {
         "metadata": {

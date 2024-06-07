@@ -38,20 +38,38 @@ router.get("/:collection", async (req, res) => {
 
 router.post("/:collection", async (req, res) => {
   let collectionName = req.params.collection;
+  
   // Ensure that only valid collection names are used
   if (!(validCollectionName(collectionName))) {
     return buildCollectionNotFoundError(res);
   }
 
   try {
-    let newDocument = {
-      // TODO fill with schema
-    };
-    let result = await createDocument(collectionName, newDocument);
+    let result = await createDocument(collectionName, req.body);
+    // Better to avoid specific field declarations to improve future flexibility (a key advantage of non-relational DBMSs)
     res.send(result).status(204);
   } catch (err) {
     console.error(err);
     res.status(500).send(`Error adding to ${collectionName} collection.`);
+  }
+});
+
+router.delete("/:collection", async (req, res) => {
+  let collectionName = req.params.collection;
+
+  // Ensure that only valid collection names are used
+  if (!validCollectionName(collectionName)) {
+    return buildCollectionNotFoundError(res);
+  }
+
+  try {
+    // Delete all documents in the "blogs" collection
+    const collection = writingDb.collection(collectionName);
+    await collection.deleteMany({});
+    res.status(204).send("All records deleted successfully");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error deleting records");
   }
 });
 
