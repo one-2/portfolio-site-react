@@ -1,6 +1,7 @@
 * backend integration with MongoDB Atlas:
-  + put writing json in new format and move to mongo, onedrive
-  + update post reqs for writing db for the new schema
+  + add mongoose to enforce a first-level schema on database writes (currently you can write nonsense)
+  + add express-validator on server side for user input sanitisation
+    - eg check('username').trim().escape().isEmail()
   + integrate backend into frontend
     - essays, blogs, mailing list, contact page using fetch
   + set up a mongo trigger to email me new messages

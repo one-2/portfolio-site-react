@@ -46,7 +46,8 @@ router.post("/:collection", async (req, res) => {
 
   try {
     let result = await createDocument(collectionName, req.body);
-    // Better to avoid specific field declarations to improve future flexibility (a key advantage of non-relational DBMSs)
+    // TODO: Add validation, this currently accepts anything
+    //       Sometimes etter to avoid specific field declarations to improve future flexibility (a key advantage of non-relational DBMSs)
     res.send(result).status(204);
   } catch (err) {
     console.error(err);

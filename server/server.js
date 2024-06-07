@@ -2,6 +2,7 @@
 // Runs the (Express) router as middleware between Node and MongoDB.
 
 import express from "express";
+import helmet from "helmet";
 import cors from "cors";
 import user from "./routes/user.js";
 import writing from "./routes/writing.js";
@@ -9,7 +10,8 @@ import writing from "./routes/writing.js";
 const PORT = 5050;
 const app = express();
 
-app.use(cors());
+app.use(helmet()); // Adds security headers
+app.use(cors()); // TODO unclear if needed; appeared in the mongo tute
 app.use(express.json());
 
 // Define routes
