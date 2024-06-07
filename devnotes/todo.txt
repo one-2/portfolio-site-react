@@ -1,5 +1,4 @@
 * backend integration with MongoDB Atlas:
-  + finalise the writing db schema
   + put writing json in new format and move to mongo, onedrive
   + update post reqs for writing db for the new schema
   + integrate backend into frontend

@@ -1,130 +1,172 @@
 {
-  "title": "Essays",
-  "data": [
+  "collection": [
     {
-      "title": "(coming soon)",
-      "data": [
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/teachingMachines",
-            "slug": "teachingMachines",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "Teaching Machines",
-            "description": "How can we teach a machine by example?"
-          },
-          "body": {
-            "text": "The minds we have constructed in machines are fundamentally unlike our own. So far, we have created machines which are only able to learn by memorisation of facts or probability distributions. We force them to learn one thing or another by the mathematical operations we define to alter the machine's memory. A human learns very differently."
-          }
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "teachingMachines",
+          "date": "T+54",
+          "tags": []
         },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/learningFromMachines",
-            "slug": "learningFromMachines",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "Learning From Machines",
-            "description": "Can we use machines to discover new things about our world?"
-          },
-          "body": {
-            "text": "Much of the recent interest in AI has been toward applying it to learn to replace humans, in one way or another. However, it is possible not only to use AI to improve efficiency in human tasks, but also to go further: to use these machines to learn new things about our world."
-          }
+        "header": {
+          "title": "Teaching Machines",
+          "description": "How can we teach a machine by example?"
         },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/theMysteryOfGeneralisation",
-            "slug": "theMysteryOfGeneralisation",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "The Mystery of Generalisation",
-            "description": "How is it possible for machines to succeed in tasks they have not previously seen?"
-          },
-          "body": {
-            "text": "The question of generalisation in massively overparameterised networks is open. It is unclear why models which are designed and trained toward a single data set can perform well on similar tasks in completely new environemnts. Given the amount of storage these machines are given, we might expect them to simply memorise their input data."
-          }
-        },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/achillesSpear",
-            "slug": "achillesSpear",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "Achilles' Spear",
-            "description": "What sort of tasks can learning machines do well?"
-          },
-          "body": {
-            "text": "Machines are not equally useful in all domains. Some obstacles are practical: robotics is a challenging area due to the specificity to which AI learns. Moving a sensor may destroy past learning, making physical innovations expensive. Other obstacles are theoretical. Tasks with very complex mathematical representations, like natural human language, have been a tough nut to crack."
-          }
-        },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/mathematicalRecall",
-            "slug": "mathematicalRecall",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "Mathematical Recall",
-            "description": "How can we use mathematical constructs to store behavioural information, and recount these behaviours when the moment is right?"
-          },
-          "body": {
-            "text": "How does a machine remember, really? How does it give the right information back when it's needed?"
-          }
-        },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/soberingHistoryOfAI",
-            "slug": "soberingHistoryOfAI",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "The Sobering History of Artificial Intelligence",
-            "description": "Trace the development of machine learning techniques, from the whispers of artificial intelligence in anthropomorphic automata to contemporary massive algorithmic learners - some of the most sophisticated technology we have invented."
-          },
-          "body": {
-            "text": "The history of AI is short and storied with fervour, failure, fever and triumph."
-          }
-        },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/isMachineLearningScience",
-            "slug": "isMachineLearningScience",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "Is Machine Learning Science?",
-            "description": "Explore where machine learning lifts away from the rigour of computer science."
-          },
-          "body": {
-            "text": "Machine learning was created by scientists, and spent many years incubating in an academic culture. Recently, research and applications of such technologies have exploded. An engineering culture fixated on pushing the 'state-of-the-art' has become dominant. This culture has led AI to many breakthroughs in recent years, but the future of the field may rest in laboratories."
-          }
-        },
-        {
-          "metadata": {
-            "href": "/writing/technicalEssays/algorithmicBias",
-            "slug": "algorithmicBias",
-            "date": "T+54",
-            "tags": []
-          },
-          "header": {
-            "title": "Algorithmic Bias",
-            "description": "Find out what it means for an algorithm to be 'unfair' at a moral and mathematical level, and discuss some techniques for improving algorithm fairness."
-          },
-          "body": {
-            "text": "When, why and how can these algorithms go wrong, and do we really have any method of preventing it?"
-          }
+        "body": {
+          "text": "The minds we have constructed in machines are fundamentally unlike our own. So far, we have created machines which are only able to learn by memorisation of facts or probability distributions. We force them to learn one thing or another by the mathematical operations we define to alter the machine's memory. A human learns very differently."
         }
-      ]
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "learningFromMachines",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "Learning From Machines",
+          "description": "Can we use machines to discover new things about our world?"
+        },
+        "body": {
+          "text": "Much of the recent interest in AI has been toward applying it to learn to replace humans, in one way or another. However, it is possible not only to use AI to improve efficiency in human tasks, but also to go further: to use these machines to learn new things about our world."
+        }
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "theMysteryOfGeneralisation",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "The Mystery of Generalisation",
+          "description": "How is it possible for machines to succeed in tasks they have not previously seen?"
+        },
+        "body": {
+          "text": "The question of generalisation in massively overparameterised networks is open. It is unclear why models which are designed and trained toward a single data set can perform well on similar tasks in completely new environemnts. Given the amount of storage these machines are given, we might expect them to simply memorise their input data."
+        }
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "achillesSpear",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "Achilles' Spear",
+          "description": "What sort of tasks can learning machines do well?"
+        },
+        "body": {
+          "text": "Machines are not equally useful in all domains. Some obstacles are practical: robotics is a challenging area due to the specificity to which AI learns. Moving a sensor may destroy past learning, making physical innovations expensive. Other obstacles are theoretical. Tasks with very complex mathematical representations, like natural human language, have been a tough nut to crack."
+        }
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "mathematicalRecall",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "Mathematical Recall",
+          "description": "How can we use mathematical constructs to store behavioural information, and recount these behaviours when the moment is right?"
+        },
+        "body": {
+          "text": "How does a machine remember, really? How does it give the right information back when it's needed?"
+        }
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "soberingHistoryOfAI",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "The Sobering History of Artificial Intelligence",
+          "description": "Trace the development of machine learning techniques, from the whispers of artificial intelligence in anthropomorphic automata to contemporary massive algorithmic learners - some of the most sophisticated technology we have invented."
+        },
+        "body": {
+          "text": "The history of AI is short and storied with fervour, failure, fever and triumph."
+        }
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "isMachineLearningScience",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "Is Machine Learning Science?",
+          "description": "Explore where machine learning lifts away from the rigour of computer science."
+        },
+        "body": {
+          "text": "Machine learning was created by scientists, and spent many years incubating in an academic culture. Recently, research and applications of such technologies have exploded. An engineering culture fixated on pushing the 'state-of-the-art' has become dominant. This culture has led AI to many breakthroughs in recent years, but the future of the field may rest in laboratories."
+        }
+      }
+    },
+    {
+      "section": {
+        "title": "Essays",
+        "subtitle": "(coming soon)",
+        "href": "/writing/technicalEssays/"
+      },
+      "post": {
+        "metadata": {
+          "slug": "algorithmicBias",
+          "date": "T+54",
+          "tags": []
+        },
+        "header": {
+          "title": "Algorithmic Bias",
+          "description": "Find out what it means for an algorithm to be 'unfair' at a moral and mathematical level, and discuss some techniques for improving algorithm fairness."
+        },
+        "body": {
+          "text": "When, why and how can these algorithms go wrong, and do we really have any method of preventing it?"
+        }
+      }
     }
   ]
 }
