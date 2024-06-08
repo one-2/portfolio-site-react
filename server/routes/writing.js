@@ -1,5 +1,6 @@
 import express from "express";
 import { writingDb } from "../db/connection.js";
+import validateRequest from "../validators/writing/writingSchemeValidator.js";
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ async function createDocument(collectionName, document) {
 // Routes for all collections
 router.get("/:collection", async (req, res) => {
   let collectionName = req.params.collection;
-  // Ensure that only valid collection names are used
+  // Ensure that only valid collection names are used TODO: MOVE TO VALIDATION FILE
   if (!(validCollectionName(collectionName))) {
     return buildCollectionNotFoundError(res);
   }
@@ -39,9 +40,14 @@ router.get("/:collection", async (req, res) => {
 router.post("/:collection", async (req, res) => {
   let collectionName = req.params.collection;
   
+  // Validation
+  // TODO: pull out functions
   // Ensure that only valid collection names are used
   if (!(validCollectionName(collectionName))) {
     return buildCollectionNotFoundError(res);
+  }
+  if (Object.keys(validateRequest(req)).length != 0) { // TODO do something useful with the validation report
+    return res.status(400).send("Invalid request");
   }
 
   try {

@@ -1,55 +1,26 @@
 # Server design
-## Notes
+## Migrating away from CRA
 I tried to create an Express server. It turns out Create React App, which I used to initialise this project, is no longer being maintained properly. The upgrade from Webpack 4 to 5 has broken CRA, and I can't run the server. I tried downgrading to Webpack 4 and the top fix on the bug's GitHub issue, but both methods broke other dependencies.
 
 I don't want to delve into the configuration nightmare involved in ejecting from CRASince I'm new to this, I want to focus on the large-scale concepts at play in web development. I want to develop general skills like API development, database design, and frontend. I want to avoid getting bogged down in framework-specific tasks like configuration and package management.
 
 Therefore, I've decided to migrate the app to the officially recommended framework - NextJS. The migration needs to be done over a weekend. I'll continue with my current server design/testing tasks in a new NextJS environment. When I have a couple of days free, I'll migrate the project completely.
 
+## Frontend update
+I updated the frontend to V2 after migrating from CRA. I included some more sophisticated features like dynamic page generation and page templating using React components to simplify the rest of the build and practice some more advanced features. It still doesn't look how I want it so I have been considering improvements. I think it would help to do some basic design courses on youtube but that is pretty low on the priority list for now. Once the backend is done I will have a final, informed crack at the UI design.
+
+## Using MongoDB
+I decided to learn to use the MongoDB framework because it's a flexible structure which will be generally useful in future projects. They also offer a free tier on their hosting service, Atlas, which is a plus.
 
 ## API design and Express routes
-We need methods to serve database queries from our website. Our website queries
-1. Projects db.
-    - Retrieve Project information for render.
-    // inside the MongoDb 'run' function:
-        app.get('/Project/:projectId', (req, res)) => {
-            try {
-                // Access Id with req.params
-                const projectId = req.params.projectId;
-                // Pass the projectId to collection.find
-                const project = await collection.find({mykey:1}).toArray();
-                res.send(docs);
-            } catch (err) {
-                // Log an error.
-                console.log(err.stack);
-                res.status(500).send('An error occurred');
-            }
-        }
+Our website queries a blogs and user database. For admin, we can manually query the user signups db collection with curl for now. I might build an admin panel to handle this when I have set up some basic request logging. Right now, there's not much to put on there.
 
-2. Blogs db.
-    - Retrieve Blog information for render.
-
-3. BugReports db.
-    - Add a new BugReport.
-
-4. Subscriber db.
-    - Add a subscriber.
-    - Retrieve a list of subscribers.
-
-5. AdminLog db.
-    - Add a log.
-
-6. SubscriberLog db.
-    - Add a log.
-
-7. ErrorLog db.
-    - Add a log.
-
+I considered using Mongoose and specced out an update to the backend to integrate this system. After a night of prototyping, I decided it was obscuring too much of the logic and that I will build the request validation myself. It is a good opportunity to work with regular expression parsing, request objects, and API design. I will probably write some validation myself and then use express-validator to sanitise and validate it, for the security benefits.
 
 
 ## References
 ### Notes
-* The Creact React App issue I faced - https://github.com/facebook/create-react-app/issues/11756
+* The Create React App issue I faced - https://github.com/facebook/create-react-app/issues/11756
 * Top recommended framework is NextJS - https://react.dev/learn/start-a-new-react-project
 
 ### Building the API
