@@ -1,6 +1,6 @@
 import express from "express";
 import { writingDb } from "../db/connection.js";
-import validateRequest from "../validators/writing/writingSchemeValidator.js";
+import { validateWriting } from "../validators/writingContentValidator.js";
 
 const router = express.Router();
 
@@ -20,11 +20,12 @@ async function createDocument(collectionName, document) {
 
 // Routes for all collections
 router.get("/:collection", async (req, res) => {
-  let collectionName = req.params.collection;
-  // Ensure that only valid collection names are used TODO: MOVE TO VALIDATION FILE
-  if (!(validCollectionName(collectionName))) {
+  // Check collection name validity
+  const collectionName = req.params.collection;
+  if (!validCollectionName(collectionName)) {
     return buildCollectionNotFoundError(res);
   }
+
   // Attempt to retrieve the document requested
   const collection = db.collection(collectionName);
   const document = collection.findOne({ slug: req.params.slug }); // search by url slug
@@ -37,23 +38,22 @@ router.get("/:collection", async (req, res) => {
   }
 });
 
-router.post("/:collection", async (req, res) => {
-  let collectionName = req.params.collection;
-  
-  // Validation
-  // TODO: pull out functions
-  // Ensure that only valid collection names are used
-  if (!(validCollectionName(collectionName))) {
-    return buildCollectionNotFoundError(res);
+router.post("/:collection", validateWriting, async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    // Return a 400 status with the validation errors
+    return res.status(400).json({ errors: errors.array() });
   }
-  if (Object.keys(validateRequest(req)).length != 0) { // TODO do something useful with the validation report
-    return res.status(400).send("Invalid request");
+
+  // Check collection name validity
+  const collectionName = req.params.collection;
+  if (!validCollectionName(collectionName)) {
+    return buildCollectionNotFoundError(res);
   }
 
   try {
     let result = await createDocument(collectionName, req.body);
-    // TODO: Add validation, this currently accepts anything
-    //       Sometimes etter to avoid specific field declarations to improve future flexibility (a key advantage of non-relational DBMSs)
     res.send(result).status(204);
   } catch (err) {
     console.error(err);
@@ -62,9 +62,8 @@ router.post("/:collection", async (req, res) => {
 });
 
 router.delete("/:collection", async (req, res) => {
-  let collectionName = req.params.collection;
-
-  // Ensure that only valid collection names are used
+  // Check collection name validity
+  const collectionName = req.params.collection;
   if (!validCollectionName(collectionName)) {
     return buildCollectionNotFoundError(res);
   }

@@ -1,5 +1,6 @@
 import express from "express";
 import { userDb } from "../db/connection.js";
+import { validateContactForm, validateMailingListSignup } from "../validators/userContentValidator.js";
 
 const router = express.Router();
 
@@ -16,7 +17,7 @@ async function createDocument(collectionName, document) {
   return await collection.insertOne(document);
 }
 
-// Test routes TODO REMOVE IN PROD
+// DEV ROUTE TODO REMOVE IN PROD
 router.get("/testMessages", async (_, res) => { // TEST: remove in prod
   try {
     let results = await getDocuments("messages");
@@ -28,9 +29,16 @@ router.get("/testMessages", async (_, res) => { // TEST: remove in prod
 });
 
 // Routes for the "messages" collection
-router.post("/messages", async (req, res) => {
+router.post("/messages", validateContactForm, async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    // Return a 400 status with the validation errors
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   try {
-    let newDocument = { // TODO: Add validation, this currently accepts anything
+    let newDocument = {
       ...req.body,
       date: new Date(), // Creates a MongoDB BSON Date object set to the current Unix time.
     };
@@ -43,9 +51,16 @@ router.post("/messages", async (req, res) => {
 });
 
 // Routes for the "mailing list" collection
-router.post("/mailingList", async (req, res) => {
+router.post("/mailingList", validateMailingListSignup, async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    // Return a 400 status with the validation errors
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   try {
-    let newDocument = { // TODO: Add validation, this currently accepts anything
+    let newDocument = {
       email: req.body.email,
       date: new Date(),
     };
@@ -57,7 +72,7 @@ router.post("/mailingList", async (req, res) => {
   }
 });
 
-// Delete route for both collections 
+// DEV ROUTE Delete route for both collections - TODO REMOVE IN PROD, replace with id-based delete 
 router.delete("/:collection", async (req, res) => {
   let collectionName = req.params.collection;
 

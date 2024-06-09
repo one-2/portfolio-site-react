@@ -15,7 +15,7 @@ I decided to learn to use the MongoDB framework because it's a flexible structur
 ## API design and Express routes
 Our website queries a blogs and user database. For admin, we can manually query the user signups db collection with curl for now. I might build an admin panel to handle this when I have set up some basic request logging. Right now, there's not much to put on there.
 
-I considered using Mongoose and specced out an update to the backend to integrate this system. After a night of prototyping, I decided it was obscuring too much of the logic and that I will build the request validation myself. It is a good opportunity to work with regular expression parsing, request objects, and API design. I will probably write some validation myself and then use express-validator to sanitise and validate it, for the security benefits.
+I considered using Mongoose and specced out an update to the backend to integrate this system. After a night of prototyping, I decided it was too much debt for not much gain. I wrote some validator prototypes myself and finally decided to use express-validator for security and simplicity without the extra debt.
 
 
 ## References
