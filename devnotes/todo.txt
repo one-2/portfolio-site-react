@@ -1,9 +1,4 @@
 * backend integration with MongoDB Atlas:
-  + wrap request validators in sanitisation with express-validator
-      - eg check('username').trim().escape)_. then do email regex.
-      - report a sanitised version of the user input to the server for entry into the db
-  + generate tests for validators and sanitisers
-  + integrate validators into routes
   + integrate backend into frontend
     - essays, blogs, mailing list, contact page using fetch
   + set up a mongo trigger to email me new messages

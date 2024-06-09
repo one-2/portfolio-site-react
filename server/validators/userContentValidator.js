@@ -1,7 +1,7 @@
-// Validation middleware
+// Validation and sanitisation middleware for the user collection routes.
 import { check } from 'express-validator';
 
-// Helper
+// Helper array to validate and sanitise email addresses.
 const checkEmail = () => {
   return ([
     check('email')

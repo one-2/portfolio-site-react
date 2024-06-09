@@ -1,6 +1,6 @@
+// Validation and sanitisation middleware for the writing collection routes.
 import { body } from 'express-validator';
 
-// Validation middleware
 const validateWriting = [
   // Section object
   body('section.data.title').not().isEmpty().withMessage('Title is required'),

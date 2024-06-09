@@ -1,5 +1,5 @@
 // Code from (https://www.mongodb.com/resources/languages/mern-stack-tutorial)
-// Runs the (Express) router as middleware between Node and MongoDB.
+// Runs the Express router as middleware between Node and MongoDB.
 
 import express from "express";
 import helmet from "helmet";

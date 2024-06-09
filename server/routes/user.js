@@ -1,3 +1,8 @@
+/**
+ * Express router for handling user-related routes.
+ * @module userRouter
+ */
+
 import express from "express";
 import { userDb } from "../db/connection.js";
 import { validateContactForm, validateMailingListSignup } from "../validators/userContentValidator.js";
@@ -5,30 +10,54 @@ import { validateContactForm, validateMailingListSignup } from "../validators/us
 const router = express.Router();
 
 // Helper functions
-// Helper function to get a list of documents from a collection
-async function getDocuments(collectionName) {
-  let collection = userDb.collection(collectionName);
-  return await collection.find({}).toArray();
-}
 
-// Helper function to create a new document in a collection
+/**
+ * Helper function to create a new document in a collection.
+ * @async
+ * @function createDocument
+ * @param {string} collectionName - The name of the collection.
+ * @param {object} document - The document to be inserted.
+ * @returns {Promise<object>} - The result of the document insertion.
+ */
 async function createDocument(collectionName, document) {
   let collection = userDb.collection(collectionName);
   return await collection.insertOne(document);
 }
 
-// DEV ROUTE TODO REMOVE IN PROD
-router.get("/testMessages", async (_, res) => { // TEST: remove in prod
+/**
+ * Retrieves a collection from the user database.
+ *
+ * @async
+ * @function getCollection
+ * @param {string} collectionName - The name of the collection to retrieve.
+ * @returns {object} The retrieved collection or validation errors.
+ */
+router.get("/:collection", async (req, res) => {
   try {
-    let results = await getDocuments("messages");
-    res.send(results).status(200);
+    const collectionName = req.params.collection;
+    const collection = userDb.collection(collectionName);
+    const documents = await collection.find().toArray();
+    if (documents.length === 0) {
+      return res.status(404).json({ error: "Collection is empty" });
+    }
+    res.json(documents);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error retrieving messages");
+    res.status(500).send("Error retrieving collection");
   }
 });
 
-// Routes for the "messages" collection
+// Messages collection
+
+/**
+ * Route for handling contact form submissions.
+ * @name POST /messages
+ * @function
+ * @param {function} validateContactForm - Middleware function to validate the contact form data.
+ * @param {object} req - Express request object.
+ * @param {object} res - Express response object.
+ * @returns {object} - The result of the document insertion or validation errors.
+ */
 router.post("/messages", validateContactForm, async (req, res) => {
   // Check for validation errors
   const errors = validationResult(req);
@@ -50,7 +79,17 @@ router.post("/messages", validateContactForm, async (req, res) => {
   }
 });
 
-// Routes for the "mailing list" collection
+// Mailing list collection
+
+/**
+ * Route for handling mailing list signups.
+ * @name POST /mailingList
+ * @function
+ * @param {function} validateMailingListSignup - Middleware function to validate the mailing list signup data.
+ * @param {object} req - Express request object.
+ * @param {object} res - Express response object.
+ * @returns {object} - The result of the document insertion or validation errors.
+ */
 router.post("/mailingList", validateMailingListSignup, async (req, res) => {
   // Check for validation errors
   const errors = validationResult(req);
@@ -69,20 +108,6 @@ router.post("/mailingList", validateMailingListSignup, async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send("Error adding message");
-  }
-});
-
-// DEV ROUTE Delete route for both collections - TODO REMOVE IN PROD, replace with id-based delete 
-router.delete("/:collection", async (req, res) => {
-  let collectionName = req.params.collection;
-
-  try {
-    let collection = userDb.collection(collectionName);
-    await collection.deleteMany({});
-    res.status(204).send(`All documents in ${collectionName} collection deleted.`);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send(`Error deleting all documents in ${collectionName} collection.`);
   }
 });
 
