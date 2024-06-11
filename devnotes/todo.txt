@@ -1,35 +1,54 @@
 * backend integration with MongoDB Atlas:
-  + Integrate backend into Writing sidebar generator (fetch)
+  1) Integrate backend
+  + watch some backend youtube primers
+  + integrate backend into Writing sidebar generator
+    - fetch article list
+    - render each article
   + manually unit and integration test writing backend
-      - save working sample tests to a txt file
-      - click thru everything
+    - save working sample tests to a txt file
+    - click thru everything
   + integrate backend into mailing list, contact page
   + manually unit and integration test user backend
-      - save working sample tests to a txt file
-      - click thru everything
-  + set up a mongodb trigger to email me new messages as they come in
-  + host the backend on Heroku
-    - cancel old / get new credentials for MongoDB and add to Heroku env vars
+    - save working sample tests to a txt file
+    - click thru everything
   + run integration tests locally
-  + fork backend, remove from frontend (vercel) project
-  + adapt server into serverless functions for Vercel, upload serverless functions
+  
+  2) Host backend
+  + fork backend
+  + remove server from frontend repo and replace with serverless Vercel functions
   + integration testing and debug
+  + generate new mongo key. delete previous key
+  + make repos public
+
+  3) Cleaning house
+  + set up a mongodb trigger to email me new messages as they come in
   + add to devlog notes and condense them
   + update readme - simplify, dot points on major features.
-  + push
-  + change repo to public
+  + collect screenshots of v0, v1, v2 for dev notes
+  + upload aisoc writing to db
+  + clean up packages
+  + document backend repo
+  + push to main
   
+
+Extension
 * v3 interface
-  + do a ui course
   + add mailing list signup button
   + implement interface from my notebook wireframe
-  + add contact overlay via Next Layouts
+  + add contact overlay (layout.js)
   + implement backend on contact and mailing list pages
+  + make responsive
   + update readme
 
-* art gallery  (new branch for this)
+* do a ui course
 
-* Backend
-  + add a state variable to catch blocks in the backend
-  + add logging
-  + learn jest and use to write unit tests for backend.
+* basic seo
+
+* 3d art gallery
+
+* enhance the backend twin
+  + host on heroku
+  + add security (firewalls, certificates, backups)
+  + add a state variable to catch blocks in the backend to render some loading/error ui
+  + add logging to node backend (is this already handled by vercel in the serverless version?)
+  + learn jest and use to write unit tests for node backend.
