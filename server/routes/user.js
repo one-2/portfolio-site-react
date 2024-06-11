@@ -39,11 +39,12 @@ router.get("/:collection", async (req, res) => {
     const documents = await collection.find().toArray();
     if (documents.length === 0) {
       return res.status(404).json({ error: "Collection is empty" });
+    } else {
+      res.json(documents);
     }
-    res.json(documents);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error retrieving collection");
+    return res.status(500).send("Error retrieving collection");
   }
 });
 
@@ -72,10 +73,10 @@ router.post("/messages", validateContactForm, async (req, res) => {
       date: new Date(), // Creates a MongoDB BSON Date object set to the current Unix time.
     };
     let result = await createDocument("messages", newDocument);
-    res.send(result).status(204);
+    return res.send(result).status(204);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error adding message");
+    return res.status(500).send("Error adding message");
   }
 });
 
@@ -104,10 +105,10 @@ router.post("/mailingList", validateMailingListSignup, async (req, res) => {
       date: new Date(),
     };
     let result = await createDocument("mailingList", newDocument);
-    res.send(result).status(204);
+    return res.send(result).status(204);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error adding message");
+    return res.status(500).send("Error adding message");
   }
 });
 

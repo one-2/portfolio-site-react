@@ -48,7 +48,7 @@ router.get("/:collection", async (req, res) => {
   if (documents.length === 0) {
     return res.status(404).send("Collection is empty");
   } else {
-    res.send(documents).status(200);
+    return res.send(documents).status(200);
   }
 });
 
@@ -72,7 +72,7 @@ router.get("/:collection/:slug", async (req, res) => {
   if (document == null) {
     return res.status(404).send("Document not found");
   } else {
-    res.send(document).status(200);
+    return res.send(document).status(200);
   }
 });
 
@@ -97,10 +97,10 @@ router.post("/:collection", validateWriting, async (req, res) => {
   }
   try {
     let result = await createDocument(collectionName, req.body);
-    res.send(result).status(204);
+    return res.send(result).status(204);
   } catch (err) {
     console.error(err);
-    res.status(500).send(`Error adding to ${collectionName} collection.`);
+    return (`Error adding to ${collectionName} collection.`);
   }
 });
 
@@ -124,7 +124,7 @@ router.delete("/:collection/:slug", async (req, res) => {
   if (document == null) {
     return res.status(404).send("Document not found");
   } else {
-    res.send(document).status(200);
+    return res.send(document).status(200);
   }
 });
 

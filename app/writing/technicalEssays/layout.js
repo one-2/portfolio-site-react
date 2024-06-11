@@ -1,8 +1,5 @@
-
 import styles from './page.module.css';
 import Sidebar from '../_components/sidebar';
-
-const essayData = require('./essayData.json');
 
 export const metadata = {
   title: 'Technical Essays',
@@ -12,7 +9,7 @@ export const metadata = {
 const EssaysLayout = ({ children }) => {
   return (  
     <div className={styles.main}>
-      <Sidebar rootDataObject={essayData} />
+      <Sidebar rootDataObject={undefined} />
       {children}
     </div>
   )

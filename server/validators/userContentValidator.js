@@ -7,7 +7,7 @@ const checkEmail = () => {
     check('email')
       .trim()
       .escape()
-      .isEmail().withMessage('Please provide a valid email')
+      .isEmail().withMessage('Email must be valid')
       .normalizeEmail(),
   ])
 }

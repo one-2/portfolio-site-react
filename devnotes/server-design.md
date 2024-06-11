@@ -15,7 +15,13 @@ I decided to learn to use the MongoDB framework because it's a flexible structur
 ## API design and Express routes
 Our website queries a blogs and user database. For admin, we can manually query the user signups db collection with curl for now. I might build an admin panel to handle this when I have set up some basic request logging. Right now, there's not much to put on there.
 
-I considered using Mongoose and specced out an update to the backend to integrate this system. After a night of prototyping, I decided it was too much debt for not much gain. I wrote some validator prototypes myself and finally decided to use express-validator for security and simplicity without the extra debt.
+I considered using Mongoose and specced out an update to the backend to integrate this system. After a night of prototyping, I decided it was too much debt for not much gain. I wrote some validator prototypes myself and finally decided to use express-validator for security and simplicity without the extra debt. Similarly, I experimented with automated testing of the backend, but it was too much extra learning and tech debt to justify for my limited use case. I will save Jest testing for an extension task and do it manually for the V2 of the site.
+
+## Want to learn (backend)
+* Jest for testing
+* NPM configurations (package, espec package.scripts; package-lock) for understanding
+* Running a dedicated backend eg on Heroku rather than in the serverless scheme provided by Vercel
+* Better ui design
 
 
 ## References

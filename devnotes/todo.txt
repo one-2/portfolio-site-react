@@ -1,19 +1,35 @@
 * backend integration with MongoDB Atlas:
-  + integrate backend into frontend
-    - essays, blogs, mailing list, contact page using fetch
-  + set up a mongo trigger to email me new messages
-  + set up env var and github secret for Atlas API key (must be done before prod build)
-  + cancel api key
-  + add dot points to devlog notes
+  + Integrate backend into Writing sidebar generator (fetch)
+  + manually unit and integration test writing backend
+      - save working sample tests to a txt file
+      - click thru everything
+  + integrate backend into mailing list, contact page
+  + manually unit and integration test user backend
+      - save working sample tests to a txt file
+      - click thru everything
+  + set up a mongodb trigger to email me new messages as they come in
+  + host the backend on Heroku
+    - cancel old / get new credentials for MongoDB and add to Heroku env vars
+  + run integration tests locally
+  + fork backend, remove from frontend (vercel) project
+  + adapt server into serverless functions for Vercel, upload serverless functions
+  + integration testing and debug
+  + add to devlog notes and condense them
   + update readme - simplify, dot points on major features.
   + push
   + change repo to public
   
 * v3 interface
-  + add mailing list signup button to wireframe
-  + implement interface from my notebook
+  + do a ui course
+  + add mailing list signup button
+  + implement interface from my notebook wireframe
   + add contact overlay via Next Layouts
   + implement backend on contact and mailing list pages
   + update readme
 
 * art gallery  (new branch for this)
+
+* Backend
+  + add a state variable to catch blocks in the backend
+  + add logging
+  + learn jest and use to write unit tests for backend.

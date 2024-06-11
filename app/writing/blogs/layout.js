@@ -1,8 +1,5 @@
-
 import Sidebar from '../_components/sidebar.js';
 import styles from './page.module.css';
-
-const blogData = require('./blogData.json');
 
 export const metadata = {
   title: 'Blogs',
@@ -12,7 +9,7 @@ export const metadata = {
 const BlogLayout = ({ children }) => {
   return (  
     <div className={styles.main}>
-      <Sidebar rootDataObject={blogData} />
+      <Sidebar rootDataObject={undefined} />
       {children}
     </div>
   )
