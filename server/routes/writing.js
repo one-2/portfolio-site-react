@@ -38,17 +38,18 @@ async function createDocument(collectionName, document) {
  * @returns {object} - Returns the documents in the collection with status code 200 if successful, otherwise returns a 404 status code.
  */
 router.get("/:collection", async (req, res) => {
-  const collectionName = req.params.collection;
-  if (!validCollectionName(collectionName)) {
-    return res.status(404).send("Collection not found");
-  }
-
-  const collection = db.collection(collectionName);
-  const documents = collection.find({}).toArray();
-  if (documents.length === 0) {
-    return res.status(404).send("Collection is empty");
-  } else {
-    return res.send(documents).status(200);
+  try {
+    const collectionName = req.params.collection;
+    const collection = writingDb.collection(collectionName);
+    const documents = await collection.find().toArray();
+    if (documents.length === 0) {
+      return res.status(404).json({ error: "Collection is empty" });
+    } else {
+      res.json(documents);
+    }
+  } catch (err) {
+    console.error(err);
+    return res.status(500).send("Error retrieving collection");
   }
 });
 
@@ -67,7 +68,7 @@ router.get("/:collection/:slug", async (req, res) => {
     return res.status(404).send("Collection not found");
   }
 
-  const collection = db.collection(collectionName);
+  const collection = writingDb.collection(collectionName);
   const document = collection.findOne({ slug: req.params.slug });
   if (document == null) {
     return res.status(404).send("Document not found");
@@ -119,7 +120,7 @@ router.delete("/:collection/:slug", async (req, res) => {
     return res.status(404).send("Collection not found");
   }
 
-  const collection = db.collection(collectionName);
+  const collection = writingDb.collection(collectionName);
   const document = await collection.deleteOne({ slug: req.params.slug });
   if (document == null) {
     return res.status(404).send("Document not found");
