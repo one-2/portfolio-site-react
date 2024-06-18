@@ -1,17 +1,12 @@
 * backend integration with MongoDB Atlas:
   1) Integrate backend
-  + watch some backend youtube primers
-  + integrate backend into Writing sidebar generator
-    - fetch article list
-    - render each article
-  + manually unit and integration test writing backend
-    - save working sample tests to a txt file
-    - click thru everything
+  + watch some youtube
+  + debug double-listing situation with essays db return (different data types in db?)
+  + debug async rendering of blog/essay data pages
+  + save working backend unit tests to a txt file
   + integrate backend into mailing list, contact page
-  + manually unit and integration test user backend
-    - save working sample tests to a txt file
-    - click thru everything
-  + run integration tests locally
+  + save working unit tests to a txt file
+  + click thru everything I coulda done broke (writing, user, contact)
   
   2) Host backend
   + fork backend
