@@ -17,6 +17,11 @@ Our website queries a blogs and user database. For admin, we can manually query 
 
 I considered using Mongoose and specced out an update to the backend to integrate this system. After a night of prototyping, I decided it was too much debt for not much gain. I wrote some validator prototypes myself and finally decided to use express-validator for security and simplicity without the extra debt. Similarly, I experimented with automated testing of the backend, but it was too much extra learning and tech debt to justify for my limited use case. I will save Jest testing for an extension task and do it manually for the V2 of the site.
 
+## Notes v2
+* Push it as soon as it works
+* Read the relevant docs earlier, espec for new frameworks. I forgot you needed to pass children to layouts and deleted the {children} prop, which broke something I'd just finished and not yet pushed. In my sleepy state I was baffled.
+* 
+
 ## Want to learn (backend)
 * Jest for testing
 * NPM configurations (package, espec package.scripts; package-lock) for understanding

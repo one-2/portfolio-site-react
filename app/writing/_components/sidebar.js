@@ -36,8 +36,7 @@ function buildSection(section) {
 }
 
 const buildLinkHref = (item) => {
-  const href = item.section.metadata.href + item.post.metadata.slug;
-  return href;
+  return item.section.metadata.href + item.post.metadata.slug;
 }
 
 export default Sidebar;

@@ -1,23 +1,28 @@
 'use client'
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import fetchWritingData from './fetchParticularWritingData';
 
 const WritingPage = ({ siteSection, slug, styles }) => {
   const [bigSluggy, setBigSluggy] = useState(null);
 
-  console.log('hello')
-  
-  const fetchData = async () => {
-    try {
-      const data = await fetchWritingData(siteSection, slug);
-      setBigSluggy(data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await fetchWritingData(siteSection, slug);
+        setBigSluggy(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     }
-  };
 
-  fetchData();
+    fetchData();
+  }, [siteSection, slug]); // Trigger fetch on component mount or when siteSection or slug changes
+
+  if (!bigSluggy) {
+    // Render loading state while data is being fetched
+    console.log('Loading...')
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.entry}>

@@ -2,12 +2,9 @@ import Sidebar from './_components/sidebar.js';
 import getWritingData from './fetchAllWritingData.js';
 
 const WritingLayout = async ({ collection, styles }) => {
-  let data = await getWritingData(collection);
-  if (collection === 'essays') data = data[0]; // hack fix to weird double-listing bug in essays case
+  let data = await getWritingData(collection); // TODO Pass into children as param to reduce the number of calls and latency
   return (
-    <div className={styles.main}>
       <Sidebar rootDataObject={data} />
-    </div>
   );
 }
 

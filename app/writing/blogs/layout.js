@@ -6,8 +6,13 @@ export const metadata = {
   description: '...',
 }
 
-async function BlogLayout() {
-  return <WritingLayout collection='blogs' styles={styles} />;
+function BlogLayout({ children }) { // NB layouts require children props for dynamic routing to work
+  return (
+    <div className={styles.main}>
+      <WritingLayout collection='blogs' styles={styles} />
+      {children}
+    </div>
+  );
 }
 
 export default BlogLayout;

@@ -1,14 +1,19 @@
 import styles from './page.module.css';
-import WritingLayout from '../writingLayout';
+import WritingLayout from '../writingLayout.js';
 
 export const metadata = {
   title: 'Technical Essays',
   description: '...',
 }
 
-async function BlogLayout() {
-  return <WritingLayout collection='essays' styles={styles} />;
+function EssayLayout({ children }) { // NB layouts require children props for dynamic routing to work
+  return (
+    <div className={styles.main}>
+      <WritingLayout collection='essays' styles={styles} />
+      {children}
+    </div>
+  );
 }
 
-export default BlogLayout;
+export default EssayLayout;
 
