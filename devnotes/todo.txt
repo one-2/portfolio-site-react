@@ -1,49 +1,50 @@
-* backend integration with MongoDB Atlas:
+Backend integration with MongoDB Atlas:
   1) Integrate backend
-  + watch some youtube
-  + debug double-listing situation with essays db return (different data types in db?)
-  + debug async rendering of blog/essay data pages
-  + save working backend unit tests to a txt file
+  + refactor requests so a single fetch gets distributed to blogs/essays children
+  + add mailing list button to blogs layout
+  + add contact form button to main layout
   + integrate backend into mailing list, contact page
-  + save working unit tests to a txt file
-  + click thru everything I coulda done broke (writing, user, contact)
-  
-  2) Host backend
-  + fork backend
-  + remove server from frontend repo and replace with serverless Vercel functions
-  + integration testing and debug
-  + generate new mongo key. delete previous key
-  + make repos public
+  + save curl unit tests to a txt file
+  + click thru everything backend I coulda done broke (writing, user, contact)
+
+
+  2) Go serverless
+  + push backend to new repo, with a recent commit of the site in a second dir, for future demo purposes
+  + replace backend with serverless Vercel functions
+  + do integration testing
+
 
   3) Cleaning house
+  + document backend repo (README, comments)
+  + generate new mongo key. delete previous key
   + set up a mongodb trigger to email me new messages as they come in
+  + clean up file structure
+  + push to main
+  + make repos public
+
+
+Next steps
+* v3 interface
+  + run on a weekly sprint schedule with other-daily pushes
+  + whiteboard task tracking of some description
+  + sign up for the devsoc fair
+  + watch more ui, seo, optimisation yt
+  + figma my notebook wireframes
+  + implement interfaces from my notebook wireframe
+  + integrate backend
+  + add backend/db logging
+  + add animations
+  + make responsive
+  + update readme
+  + add current content
+  + SEO
+
+Extensions:
+* 3d art gallery
+
+* from v2
+  + debug double-listing situation with essays db return (different data types in db?)
   + add to devlog notes and condense them
   + update readme - simplify, dot points on major features.
   + collect screenshots of v0, v1, v2 for dev notes
   + upload aisoc writing to db
-  + clean up packages
-  + document backend repo
-  + push to main
-  
-
-Extension
-* v3 interface
-  + add mailing list signup button
-  + implement interface from my notebook wireframe
-  + add contact overlay (layout.js)
-  + implement backend on contact and mailing list pages
-  + make responsive
-  + update readme
-
-* do a ui course
-
-* basic seo
-
-* 3d art gallery
-
-* enhance the backend twin
-  + host on heroku
-  + add security (firewalls, certificates, backups)
-  + add a state variable to catch blocks in the backend to render some loading/error ui
-  + add logging to node backend (is this already handled by vercel in the serverless version?)
-  + learn jest and use to write unit tests for node backend.
