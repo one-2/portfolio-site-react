@@ -7,7 +7,6 @@
 //    - homepage background fades to black on the way in and white on the way out
 //    - tune terminal appearance time
 
-'use client'
 import styles from './page.module.css'
 import Link from 'next/link'
 import EntryForm from './_userForm/entryForm';
@@ -37,7 +36,7 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.content}>
-          <p className={styles.user}>{messageStartString}run(promptForContactInformation)</p>
+          <p className={styles.user}>{messageStartString}run(promptContactInfo)</p>
           <EntryForm />
         </div>
       </div>

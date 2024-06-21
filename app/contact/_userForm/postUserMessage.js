@@ -1,13 +1,15 @@
-// TODO: implement as context to reduce latency
-
-export default async function getWritingData(stub) {
+export default async function postUserMessage(email, message) {
   let data;
   try {
-    const response = await fetch('http://localhost:5050/writing/' + stub, {
-      method: 'GET', // Default option, stated for practice
+    const response = await fetch('http://localhost:5050/user/messages', {
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json' // Default option, stated for practice
-      }
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'email': email,
+        'message': message
+      })
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -16,7 +18,7 @@ export default async function getWritingData(stub) {
     if (!contentType || !contentType.includes('application/json')) {
       throw new TypeError("Oops, we haven't got JSON!");
     }
-    data = await response.json();
+    data = await response.json()
   } catch (error) {
     console.error('Fetch error: ', error);
   }
