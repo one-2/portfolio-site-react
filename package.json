@@ -20,17 +20,14 @@
     "helmet": "^7.1.0",
     "mongodb": "^6.7.0",
     "next": "14.2.3",
-    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
-    "validator": "^13.12.0",
-    "vercel": "^34.2.7"
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@vercel/node": "^3.1.7",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3",
-    "typescript": "^5.5.2"
+    "eslint-config-next": "14.2.3"
   },
   "description": "I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.",
   "main": "index.js",

@@ -1,9 +1,9 @@
 // Code from: (https://www.mongodb.com/resources/languages/mern-stack-tutorial)
-// TODO Convert into a function for serverless config
 
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const uri = process.env.MONGODB_URI_KEY;
+import { key } from "./secret.js";
+const uri = key;
 
 // Name the databases
 const userDbName = "user";
@@ -33,12 +33,20 @@ const connectToDatabase = async (uri) => {
   }
 };
 
-// Create clients to interact with each collection
+// Connect to the primary and secondary databases
 const userDbClient = await connectToDatabase(userDbUri);
 const writingDbClient = await connectToDatabase(writingDbUri);
 
-// Retrieve collections
+// Now you can use the clients to interact with their respective databases
 const userDb = userDbClient.db(`${userDbName}`);
 const writingDb = writingDbClient.db(`${writingDbName}`);
+
+// Close connections when your application shuts down
+process.on("SIGINT", () => {
+  userDbClient.close();
+  writingDbClient.close();
+  console.log("Database connections closed.");
+  process.exit(0);
+});
 
 export { userDb, writingDb };
