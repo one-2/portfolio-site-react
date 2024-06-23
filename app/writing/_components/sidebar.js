@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styles from './sidebar.module.css';
 
 const Sidebar = ({ rootDataObject }) => {
+  console.log(rootDataObject)
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>

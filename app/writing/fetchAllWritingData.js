@@ -1,9 +1,12 @@
 // TODO: implement as context to reduce latency
-
 export default async function getWritingData(stub) {
   let data;
+  const route = 'http://localhost:5050/api/writing/users'
+  console.log('wowie: ', route)
+
   try {
-    const response = await fetch('http://localhost:5050/writing/' + stub, {
+    const response = await fetch(route, {
+      
       method: 'GET', // Default option, stated for practice
       headers: {
         'Content-Type': 'application/json' // Default option, stated for practice
@@ -17,8 +20,10 @@ export default async function getWritingData(stub) {
       throw new TypeError("Oops, we haven't got JSON!");
     }
     data = await response.json();
+
   } catch (error) {
     console.error('Fetch error: ', error);
   }
+  console.log('return: ', data)
   return data;
 }
