@@ -1,10 +1,11 @@
 'use client';
 
 import styles from '../page.module.css'
+
 import isEmail from 'validator/lib/isEmail';
 import normalizeEmail from 'validator/lib/isEmail';
-import React, { useEffect, useState } from 'react';
-import postUserMessage from './postUserMessage';
+
+import React, { useState } from 'react';
 
 export default function EntryForm() {
   // State variables.
@@ -39,33 +40,14 @@ export default function EntryForm() {
     }
 
     // Check whether to submit the form.
-    if (inputType === 'message' && userMessageInput.length > 0) {
-      console.log('DEV: message input box filled.', userMessageInput, 'Submitting form...');
-
-      postUserMessage(userEmailInput, userMessageInput) // validation done in Express
-        .then((response) => {
-          console.log('DEV: Form submitted.');
-          console.log('response: ', response);
-          setIsFormSubmitted(true);
-        })
-        .catch((error) => {
-          console.error('DEV: Form submission failed.', error);
-        });
+    else if (inputType === 'message' && userMessageInput.length > 0) {
+      console.log('DEV: message input box filled.', userMessageInput, ' Submitting form...');
+      const email = normalizeEmail(userEmailInput);
+      const message = userMessageInput; // We don't need to validate the message: (https://stackoverflow.com/questions/33644499/what-does-it-mean-when-they-say-react-is-xss-protected)
+      // TODO: implement backend form submission.
+      setIsFormSubmitted(true);
     }
-    
   };
-
-  // Handles resizing of message textarea with user input. From (https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize) ( thank you )
-  // const tx = document.getElementsByTagName("textarea");
-  // for (let i = 0; i < tx.length; i++) {
-  //   tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
-  //   tx[i].addEventListener("input", OnInput, false);
-  // }
-  
-  // function OnInput() {
-  //   this.style.height = 'auto';
-  //   this.style.height = (this.scrollHeight) + "px";
-  // }
 
 
   return (
@@ -73,33 +55,34 @@ export default function EntryForm() {
       {/* Render email prompt first. */}
       <p className={styles.system}>Please enter your email address:</p>
       <p className={styles.user}>
-      <input
-        className={styles.input}
-        value={userEmailInput}
-        onChange={(e) => handleInputChange(e, 'email')}
-        onKeyDown={(e) => handleKeyDown(e, 'email')}
-        autoFocus={true}
-        readOnly={isSecondInputVisible}
-      />
-
+        <input
+          input className={styles.input}
+          type='text'
+          value={userEmailInput}
+          onChange={(e) => handleInputChange(e, 'email')}
+          onKeyDown={(e) => handleKeyDown(e, 'email')}
+          autoFocus={true}
+          readOnly={isSecondInputVisible} // Email input becomes read-only when
+        // the message input is visible.
+        />
       </p>
 
       {// Render message prompt after a valid email's entered.
-        // TODO change second input to textarea to allow auto-=expand wiht user inpu
         isSecondInputVisible && (
           <div>
             <p className={styles.system}>Validating...</p>
             <p className={styles.system}>Address valid.</p>
             <p className={styles.system}>Please enter your message:</p>
             <p className={styles.user}>
-            <input
-              input className={styles.input}
-              type='text'
-              value={userMessageInput}
-              onChange={(e) => handleInputChange(e, 'message')}
-              onKeyDown={(e) => handleKeyDown(e, 'message')}
-              autoFocus={true}
-              readOnly={isFormSubmitted}
+              <input
+                input className={styles.input}
+                type='text'
+                value={userMessageInput}
+                onChange={(e) => handleInputChange(e, 'message')}
+                onKeyDown={(e) => handleKeyDown(e, 'message')}
+                autoFocus={true}
+                readOnly={isFormSubmitted} // Message input becomes read-only when
+              // the form has been submitted.
               />
             </p>
           </div>

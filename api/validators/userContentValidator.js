@@ -2,15 +2,22 @@
 import { check } from 'express-validator';
 
 // Helper array to validate and sanitise email addresses.
-const checkEmail = check('email')
-                    .trim()
-                    .escape()
-                    .isEmail().withMessage('Email must be valid')
-                    .normalizeEmail()
+const checkEmail = () => {
+  return ([
+    check('email')
+      .trim()
+      .escape()
+      .isEmail().withMessage('Email must be valid')
+      .normalizeEmail(),
+  ])
+}
 
 // Validators
 const validateContactForm = [
-  checkEmail,
+  ...checkEmail(),
+  check('name')
+    .trim()
+    .escape(),
   check('message')
     .not().isEmpty().withMessage('Message cannot be empty')
     .trim()
@@ -19,7 +26,7 @@ const validateContactForm = [
 ];
 
 const validateMailingListSignup = [
-  checkEmail
+  ...checkEmail()
 ]
 
 export { validateContactForm, validateMailingListSignup };

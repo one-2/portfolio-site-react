@@ -1,8 +1,7 @@
-
-"use client"
 // Code modified from MatrixRainingLetters module at (https://github.com/FullStackWithLawrence/react-mdr) under MIT licence
 // Thank you!
 
+"use strict";
 var e = require("react");
 
 function t(e) {

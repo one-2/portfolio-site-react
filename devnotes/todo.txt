@@ -1,4 +1,13 @@
 Backend integration with MongoDB Atlas:
+  1) Integrate backend
+  + refactor requests so a single fetch gets distributed to blogs/essays children
+  + add mailing list button to blogs layout
+  + add contact form button to main layout
+  + integrate backend into mailing list, contact page
+  + save curl unit tests to a txt file
+  + click thru everything backend I coulda done broke (writing, user, contact)
+
+
   2) Go serverless
   + clone this demo repo for experimentation (https://github.com/vercel/examples/blob/main/solutions/express/api/index.ts)
   + Continue integration according to (https://github.com/vercel/examples/tree/main/solutions/express) (https://vercel.com/guides/using-express-with-vercel)
@@ -10,83 +19,42 @@ Backend integration with MongoDB Atlas:
 
   3) Cleaning house
   + delete previous mongo key. generate new key. add new to env.
+  + push backend to new repo, with a recent commit of the site in a second dir, for future demo purposes
+  + replace backend with serverless Vercel functions
+  + do integration testing
+
+
+  3) Cleaning house
+  + document backend repo (README, comments)
+  + generate new mongo key. delete previous key
+  + set up a mongodb trigger to email me new messages as they come in
+  + clean up file structure
   + push to main
   + make repo public
 
 
 Next steps
 * v3 interface
-  + run on a weekly sprint schedule with pushes on a regular schedule.
-
-  + write a task tracker on a whiteboard.
-    - take photos for writeup.
-
-  + sign up for the devsoc fair?
-
+  + run on a weekly sprint schedule with other-daily pushes
+  + whiteboard task tracking of some description
+  + sign up for the devsoc fair
+  + watch more ui, seo, optimisation yt
   + figma my notebook wireframes
-    - watch some more ui yt.
-
-  + plan the app architecture.
-    - watch some yt on optimal design patterns for frontend.
-    - put some thought into optimal file structure and design of each component. write a sketch plan of each
-    implementation and then discuss with chatgpt.
-    - watch a yt video on each unfamiliar tech I will implemenet to ensure I am doing it sensibly. take notes. try to
-    understand alternatives between vanilla js, react, and next implementations of new features.
-    - notes on design decisions will help in the writeup as well.
-    - might be worth starting from scratch in some places.
-
-  + implement (static) interfaces from my notebook wireframe.
-    - follow the plan made earlier.
-    - animation is a whole new skillset, so save that for later.
-
-  + make the app talky.
-    - put console.log on everything to enable future debugging.
-
-  + integrate serverless functions into frontend.
-    - refactor backend requests so writing data is stored in context.
-
-  + add animations.
-    - study framer on yt.
-    - reuse others' code where possible to save time. limit custom animations.
-
-  + make screens responsive.
-    - see best practices for translating a desktop-first site on yt.
-
-  + clean it up.
-    - fix PROD/DEV tags.
-    - document everything.
-
-  + build basic admin panel.
-    - for posting, amending and deleting writing and art content.
-    - for retrieving messages and the mailing list.
-    - save curl unit tests to a text file as a starting point.
-
-  + update readme.
-    - explain project.
-    - brief writeup with pictures, covering:
-      - feature demo video
-      - motivation
-      - timeline and events (v0.0,1,2,3, to 1.0)
-      - skills learned
-      - tech stack
-      - project management tools used
-      - reflections for next time
-
-  + add recent writings and favourite art.
-    - crop up a few demo images.
-    - edit my aisoc writing.
-    - creative writing can go up later.
-
-
+  + implement interfaces from my notebook wireframe
+  + integrate backend
+  + add backend/db logging
+  + add animations
+  + make responsive
+  + update readme
+  + add current content
+  + SEO
 
 Extensions:
 * 3d art gallery
 
-* from v3
-  + add backend/db logging on vercel or to a text file
-  + do some SEO
-
 * from v2
   + debug double-listing situation with essays db return (different data types in db?)
-  + transition from React context API to Nodejs data fetching mechanisms (higher level, easy caching )
-  + document backend repo (README, comments)
+  + add to devlog notes and condense them
+  + update readme - simplify, dot points on major features.
+  + collect screenshots of v0, v1, v2 for dev notes
+  + upload aisoc writing to db

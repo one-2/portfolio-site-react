@@ -101,13 +101,10 @@ NOTE: class inheritance syntax:
 
 /* Input form */
 .content .form .input {
-  min-width: 100%;
-  max-width: 100%;
-  height: max-content;
-  background: black;
-  resize: none; /* disables the draggable corner */
   border: none !important;
+  background: transparent;
   caret-color: white;
+  /* Sets the cursor color */
   outline: none;
   color: inherit;
   font-family: inherit;

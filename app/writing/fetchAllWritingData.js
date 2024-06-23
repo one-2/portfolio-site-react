@@ -1,4 +1,6 @@
-// TODO: implement as context to reduce latency
+// DEV TEST REMOVE IN PROD: turn this into an admin-only function
+// GET requests should be as specific as possible on client to reduce latency
+
 export default async function getWritingData(stub) {
   let data;
   const route = 'http://localhost:5050/api/writing/users'

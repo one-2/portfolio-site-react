@@ -5,10 +5,11 @@
 
 import express from "express";
 import { writingDb } from "../db/connection.js";
-import { validateWriting } from "../validators/writingContentValidator.js";
+import { validateWriting } from "./validators/writingContentValidator.js";
 
-const router = express.Router();
+import app from "./index.js";
 
+const router = app.Router();
 /**
  * Helper function to validate collection names.
  * @param {string} collectionName - The name of the collection.
@@ -37,7 +38,8 @@ async function createDocument(collectionName, document) {
  * @param {object} res - The response object.
  * @returns {object} - Returns the documents in the collection with status code 200 if successful, otherwise returns a 404 status code.
  */
-router.get("/:collection", async (req, res) => {
+app.get("/:collection", async (req, res) => {
+  console.log('made it to the server')
   try {
     const collectionName = req.params.collection;
     const collection = writingDb.collection(collectionName);

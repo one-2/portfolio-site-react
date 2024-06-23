@@ -6,7 +6,6 @@
 import express from "express";
 import { userDb } from "../db/connection.js";
 import { validateContactForm, validateMailingListSignup } from "../validators/userContentValidator.js";
-import { validationResult } from "express-validator";
 
 const router = express.Router();
 
@@ -64,17 +63,17 @@ router.post("/messages", validateContactForm, async (req, res) => {
   // Check for validation errors
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    console.log('errors: ', errors.array());
+    // Return a 400 status with the validation errors
     return res.status(400).json({ errors: errors.array() });
   }
 
   try {
     let newDocument = {
       ...req.body,
-      date: new Date(), // MongoDB BSON Date object set to the current Unix time.
+      date: new Date(), // Creates a MongoDB BSON Date object set to the current Unix time.
     };
-    let response = await createDocument("messages", newDocument);
-    return res.send(response).status(204);
+    let result = await createDocument("messages", newDocument);
+    return res.send(result).status(204);
   } catch (err) {
     console.error(err);
     return res.status(500).send("Error adding message");
