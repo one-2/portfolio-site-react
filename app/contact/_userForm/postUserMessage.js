@@ -1,7 +1,7 @@
 export default async function postUserMessage(email, message) {
   let data;
   try {
-    const response = await fetch('http://localhost:5050/user/messages', {
+    const response = await fetch('api/routes/user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

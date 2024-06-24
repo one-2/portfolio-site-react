@@ -1,4 +1,5 @@
 
+
 function main() {
   console.log('Running delete script')
   // deleteAllBlogs();
@@ -8,13 +9,13 @@ function main() {
 // Delete all functions
 function deleteAllBlogs() {
   console.log('Deleting all blogs')
-  const url = 'http://localhost:5050/writing/blogs'
+  const url = 'writing/blogs'
   deleteAllOf(url)
 }
 
 function deleteAllEssays() {
   console.log('Deleting all essays')
-  const url = 'http://localhost:5050/writing/essays'
+  const url = 'writing/essays'
   deleteAllOf(url)
 }
 
