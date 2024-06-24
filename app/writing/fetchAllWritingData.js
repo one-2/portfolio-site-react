@@ -20,5 +20,8 @@ export default async function getWritingData(stub) {
   } catch (error) {
     console.error('Fetch error: ', error);
   }
+  if (data) {
+    console.log('SERVER: Server fetched the data')
+  }
   return data;
 }

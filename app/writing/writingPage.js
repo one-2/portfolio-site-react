@@ -1,35 +1,22 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import fetchWritingData from './fetchParticularWritingData';
+import getWritingData from './fetchAllWritingData';
 
-const WritingPage = ({ siteSection, slug, styles }) => {
-  const [bigSluggy, setBigSluggy] = useState(null);
+const WritingPage = async ({ siteSection, slug, styles }) => {
+  let data = await getWritingData(siteSection); 
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await fetchWritingData(siteSection, slug);
-        setBigSluggy(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
-
-    fetchData();
-  }, [siteSection, slug]); // Trigger fetch on component mount or when siteSection or slug changes
-
-  if (!bigSluggy) {
-    // Render loading state while data is being fetched
-    console.log('Loading...')
-    return <div>Loading...</div>;
-  }
+  // TODO refactor into its own function for blogs and essays
+  // TODO add to blogs 
+  // TODO save data to context for reduced latency
+  if (data.length === 1) data = data[0]; // Hack fix for weird bug where the data is doubly listed on the return, while the Blogs data is singly
+    data = data.find(item => item.post.metadata.slug === slug);
 
   return (
     <div className={styles.entry}>
-      <h1>{bigSluggy.post.header.title}</h1>
-      <h4>{bigSluggy.post.metadata.date}</h4>
-      <h4>{bigSluggy.post.header.description}</h4>
-      <p>{bigSluggy.post.body.text}</p>
+      <h1>{data.post.header.title}</h1>
+      <h4>{data.post.metadata.date}</h4>
+      <h4>{data.post.header.description}</h4>
+      <p>{data.post.body.text}</p>
     </div>
   );
 };
