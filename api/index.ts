@@ -15,8 +15,8 @@ app.use(express.static('public'));
 
 // Routes
 // Import routes
-import user from "./user.js";
-import writing from "./writing.js";
+import user from "./routes/user.js";
+import writing from "./routes/writing.js";
 
 // Define routes
 app.use("/user", user);
