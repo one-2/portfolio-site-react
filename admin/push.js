@@ -16,7 +16,7 @@ function pushAllBlogs() {
 }
 
 function pushBlog(blog) {
-  pushIt('http://localhost:5050/writing/blogs', blog)
+  pushIt('http://localhost:' + PORT + '/writing/blogs', blog)
 }
 
 function pushAllEssays() {
@@ -29,7 +29,7 @@ function pushAllEssays() {
 }
 
 function pushEssay(essay) {
-  pushIt('http://localhost:5050/writing/essays', essay)
+  pushIt('http://localhost:' + PORT + '/writing/essays', essay)
 }
 
 function pushIt(url, data) {

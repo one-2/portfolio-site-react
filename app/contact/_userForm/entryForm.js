@@ -2,9 +2,11 @@
 
 import styles from '../page.module.css'
 import isEmail from 'validator/lib/isEmail';
-import normalizeEmail from 'validator/lib/isEmail';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import postUserMessage from './postUserMessage';
+
+// BUGGED, perhaps because use client interferes with the fetch call in postUserMessage.js.
+// TODO Rewrite this function iaw best practices for conditional rendering, form submission.
 
 export default function EntryForm() {
   // State variables.

@@ -2,8 +2,7 @@
 
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-import { key } from "./secret.js";
-const uri = key;
+const uri = process.env.MONGODB_URI_KEY;
 
 // Name the databases
 const userDbName = "user";

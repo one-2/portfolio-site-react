@@ -36,8 +36,9 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.content}>
-          <p className={styles.user}>{messageStartString}run(promptContactInfo)</p>
-          <EntryForm />
+        <p className={styles.user}>{messageStartString}run(promptContactInfo)</p>
+        <p className={styles.system}>SYSTEM ERROR. PLEASE VISIT LINKEDIN FROM THE MAIN PAGE.</p>
+          {/* <EntryForm /> BUGGED */}
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import cors from "cors";
 import user from "./routes/user.js";
 import writing from "./routes/writing.js";
 
-const PORT = 5050;
+const PORT = process.env.EXPRESS_PORT;
 const app = express();
 
 app.use(helmet()); // Adds security headers

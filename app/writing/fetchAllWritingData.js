@@ -1,9 +1,11 @@
 // TODO: implement as context to reduce latency
 
+const PORT = process.env.EXPRESS_PORT;
+
 export default async function getWritingData(stub) {
   let data;
   try {
-    const response = await fetch('http://localhost:5050/writing/' + stub, {
+    const response = await fetch('http://localhost:' + PORT + '/writing/' + stub, {
       method: 'GET', // Default option, stated for practice
       headers: {
         'Content-Type': 'application/json' // Default option, stated for practice

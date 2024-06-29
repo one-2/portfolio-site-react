@@ -8,13 +8,13 @@ function main() {
 // Delete all functions
 function deleteAllBlogs() {
   console.log('Deleting all blogs')
-  const url = 'http://localhost:5050/writing/blogs'
+  const url = 'http://localhost:' + PORT + '/writing/blogs'
   deleteAllOf(url)
 }
 
 function deleteAllEssays() {
   console.log('Deleting all essays')
-  const url = 'http://localhost:5050/writing/essays'
+  const url = 'http://localhost:' + PORT + '/writing/essays'
   deleteAllOf(url)
 }
 
