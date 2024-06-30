@@ -1,15 +1,7 @@
+
+import WritingPage from '../../writingPage.js';
 import styles from '../page.module.css';
 
-const essayData = require('../essayData.json');
-
-export default function EssayPage({ params }) {
-  const post = essayData.data[0].data.find(item => item.slug === params.slug);
-  return (
-    <div className={styles.entry}>
-      <h1>{post.title}</h1>
-      <h4>{post.date}</h4>
-      <h4>{post.description}</h4>
-      <p>{post.data.text}</p>
-    </div>
-  )
+export default function Page({params: {slug}}) {
+  return <WritingPage siteSection='essays' slug={slug} styles={styles} />
 }

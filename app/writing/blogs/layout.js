@@ -1,21 +1,19 @@
-
-import Sidebar from '../_components/sidebar.js';
 import styles from './page.module.css';
-
-const blogData = require('./blogData.json');
+import WritingLayout from '../writingLayout';
 
 export const metadata = {
   title: 'Blogs',
   description: '...',
 }
 
-const BlogLayout = ({ children }) => {
-  return (  
+function BlogLayout({ children }) { // NB layouts require children props for dynamic routing to work
+  return (
     <div className={styles.main}>
-      <Sidebar rootDataObject={blogData} />
+      <WritingLayout collection='blogs' styles={styles} />
       {children}
     </div>
-  )
+  );
 }
 
 export default BlogLayout;
+

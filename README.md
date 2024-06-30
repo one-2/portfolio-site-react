@@ -27,11 +27,11 @@ I am using the MERN stack for this project. I chose this stack because it has
 | Name          | Usage             | Implemented yet?  |
 |:-             |-                  |:-:                |
 | React         | Frontend          | Yes               |
-| Next.js       | React Framework   | No                |
+| Next.js       | React Framework   | Yes               |
 | Bootstrap     | Styling           | Yes               |
 | Node JS       | Backend           | Yes               |
-| Express JS    | Backend API       | No                |
-| MongoDB       | Database          | No                |
+| Express JS    | Backend API       | Yes               |
+| MongoDB       | Database          | Yes               |
 
 ### Development cycle
 I'm following the Waterfall development cycle for a couple of reasons:
@@ -41,111 +41,35 @@ I'm following the Waterfall development cycle for a couple of reasons:
 4. I want to give myself time to explore, evaluate, test, and implement these unfamiliar technologies. Efficiency is not a primary goal this time around.
 
 ## Project Plan
-### Stage 1: Setup, Design and Placeholder Implementation
+### Version 0.1: Setup, Design, Draft Frontend Implementation. ✅
 1. Find some frontend design inspiration. ✅
 2. Build the app structure. ✅
-3. Draft the app's key pages and components: ✅
-    - Landing page. ✅
-    - Header component. ✅
-    - Footer component. ✅
-    - Projects page. ✅
-    - Contact page. ✅
+3. Draft the app's key pages and components. ✅
 4. Add internal navigation/routing using React Router. ✅
-5. Complete some basic interface improvements: ✅
-    - Write example content for the Blog page and Contact page. ✅
-    - Add placeholder shapes, logos, and links to all components. ✅
+5. Add example content and a placeholder/draft UI. ✅
 6. Take blog notes on the development process, particularly focusing on: problems I've faced during development; how I've overcome them; and what I learned through these challenges. ✅
 7. Write a formal project plan and README. ✅
-8. Refactor my Stage 1 work, to implement
-    - SOLID design principles. ✅ - This will require more reviews as we go. It looks OK for now.
-    - Newest, minimal Bootstrap syntax. ❌ - Decided not to, for now. It would obscure the interface I am programming to.
-    - Self-documenting, or docstring'd, code. ✅
-    - Particularly, refactor:
-        - Blogs. ✅
-        - Contact. ✅
-        - Header. ✅
-        - Footer. ✅
-        - Landing. ✅
-        - Nav panel. ✅
-        - Projects. ✅
+8. Refactor to implement cleaner and more readable code. ✅
 
-### Stage 2: Backend and Content Addition
+### Version 0.2: Draft Backend Implementation. ✅
 1. Design and build a MERN backend to retrieve data for the Projects, Blogs, and Email List pages.
-    - Design the databases. ✅
-        - Specify the database requirements. Justify your choices. ✅
-        - Choose a technology. Justify your choice. ✅
-        - Design a NoSQL database structure for user services. ✅
-        - Design a second NoSQL database structure for logging. ✅
-    - Design the backend.
-        - Design the API using the ExpressJS framework on NodeJS, following the database structure and
-            - Observer pattern for user subscription and termination.
-            - Chain of Responsibility pattern for logging.
-        - Write failing unit tests for the API.
-        - Write failing integration tests.
-            - Backend-server interaction.
-            - Routing.
-            - Error handling.
-            - Logging.
-        - Implement the API using NodeJS.
-            - Mock up in PostMan.
-            - Make unit tests pass.
-        - Implement the server.
-            - Upload test data.
-            - Make integration tests pass.
-    - Secure the backend.
-        - Research backend security issues.
-        - Design security features.
-        - Implement security features.
-2. Add data to the Projects database.
-    - UniMate.
-    - This site.
-    - Sumobots.
-3. Add to the Blogs database.
-4. Add a Professional Experience page.
-    - Embed a non-scrapable CV, or LinkedIn.
-    - Link my GitHub.
-5. Take blog notes on the development process so far.
+    - Design and implement the MongoDB databases and collection schemas. ✅
+    - Design, implement and secure the Node-Express backend. ✅
+2. Add test data to the Writing database collections. ✅
+3. Add a Professional Experience page. ✅
+4. Take blog notes on the development process so far. ✅
 
-### Stage 3: User Interface and User Experience
-1. You're (kind-of) half-way through! Make a social media post about the development process so far.
-2. Implement a responsive interface.
-3. Order a professional design review (cowboy-themed!).
-4. Add a bug reporting feature.
-5. Add a search feature to the Blogs and Projects pages.
-6. Add a blog mailing list, including
-    - User contact data collection and storage.
-    - Simple mailing list mass-contact method.
-7. Implement the professional design review's recommendations.
-8. Create a simple, interesting animation for the landing page.
-9. Start promoting the site launch on social media.
-10. Add user interactivity to the projects page, including
-    - Embedded Jupyter notebooks.
-    - System diagrams with onHover popouts.
-    - Algorithm demonstrations, akin to the phone apps I have.
-11. Take blog notes on the development process so far.
+### Version 0.3: Upgrade the Full Stack.
+See devnotes/todo.txt for more info.
 
-### Stage 4: Deployment and Maintenance
-1. Set up a basic monitoring system.
-2. Set up a basic analytics system.
-3. Promote the project some more on social media.
-4. Set up CI/CD, including
-    - Use generative AI to write Jest tests.
-5. Review security and patch any vulnerabilities.
-    - Get a friend or freelancer to pen test the site.
-6. Promote the launch on social media.
-7. Buy a domain (see GitHub deals) and hosting service.
-8. Go live.
-    - Announce the launch on social media.
-    - Promote user-interactive elements.
-9. Write a capstone blog about the development process, including
-    - How I like the new technologies I've used.
-    - What I did well.
-    - What I could do better.
-    - What are my next steps with this project.
-    - What did I want to do but skipped, and why.
+### Version 0.4: Upgrade the Frontend.
+See devnotes/todo.txt for more info.
+
+### Version 1.0: Write Up, Add Content, Polish.
+See devnotes/todo.txt for more info.
 
 ## References
-Thank you to the authors and maintainers of these resources!
+Thank you to the authors and maintainers of these resources, as well as all packages credited in the codebase (I will add those here soon).
 
 ### Courses
 https://www.coursera.org/professional-certificates/meta-front-end-developer

@@ -1,21 +1,19 @@
-
 import styles from './page.module.css';
-import Sidebar from '../_components/sidebar';
-
-const essayData = require('./essayData.json');
+import WritingLayout from '../writingLayout.js';
 
 export const metadata = {
   title: 'Technical Essays',
   description: '...',
 }
 
-const EssaysLayout = ({ children }) => {
-  return (  
+function EssayLayout({ children }) { // NB layouts require children props for dynamic routing to work
+  return (
     <div className={styles.main}>
-      <Sidebar rootDataObject={essayData} />
+      <WritingLayout collection='essays' styles={styles} />
       {children}
     </div>
-  )
+  );
 }
 
-export default EssaysLayout;
+export default EssayLayout;
+

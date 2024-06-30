@@ -5,26 +5,27 @@ const Sidebar = ({ rootDataObject }) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
-        <h1>{rootDataObject.title}</h1>
+        <h1>{rootDataObject[0].section.title}</h1>
+        <h3>{rootDataObject[0].section.subtitle}</h3>  
       </div>
       <div className={styles.body}>
-        {rootDataObject.data.map((section) => buildSection(section))}
+        {buildSection(rootDataObject)}
       </div>
     </div>
   )
 }
 
-function buildSection(sectionData) {
+function buildSection(section) {
   return (
     <div className={styles.listContainer}>
-      <h2>{sectionData.title}</h2>
+      {/* <h2>{sectionData.title}</h2> */}
       <ul>
-        {sectionData.data.map((post, index) => (
+        {section.map((item, index) => (
           <li key ={index}>
-            <Link href={post.href}>
-            <span><p className={styles.title}>Title: </p><h3>{post.title}</h3></span>
-            <p>Info: {post.description}</p>
-            <p>Date: {post.date}</p>
+            <Link href={buildLinkHref(item)}>
+            <span><p className={styles.title}>Title: </p><h3>{item.post.header.title}</h3></span>
+            <p>Info: {item.post.header.description}</p>
+            <p>Date: {item.post.metadata.date}</p>
             </Link>
             <p>-</p>
           </li>
@@ -32,6 +33,10 @@ function buildSection(sectionData) {
       </ul>
     </div>
   )
+}
+
+const buildLinkHref = (item) => {
+  return item.section.metadata.href + item.post.metadata.slug;
 }
 
 export default Sidebar;

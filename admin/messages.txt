@@ -1,0 +1,2 @@
+Sample request:
+curl -X POST -H "Content-Type: application/json" -d '{"name": "test", "email":"example@email.com", "message": "yo hello"}' http://localhost:' + PORT + '/user/messages

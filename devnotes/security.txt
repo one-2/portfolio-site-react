@@ -1,0 +1,6 @@
+SECURITY PRECAUTIONS CHECKLIST
+Y helmetjs running on express app, modifies http headers to prevent common web exploits
+Y react has input sanitisation on the frontend
+x express-validator set up on server side, performs more sanitisation
+x express routes limited to the bare minimum
+x prod contains no dead or test code

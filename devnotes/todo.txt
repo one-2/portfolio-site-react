@@ -1,0 +1,117 @@
+Remember, 
+- at each step, watch a yt video on each unfamiliar tech I will implemenet to ensure I am doing it sensibly. take notes. try to understand alternatives between vanilla js, react, and next implementations of new features.
+
+To do
+* v0.3 - Upgrade the full stack.
+  + note thoughts on v2 process, progress, things learned, struggles, changed plans, favourite bits.
+
+  + set up some project management.
+    - run on a task-by-task basis with mandatory weekly pushes.
+    - task tracker on a whiteboard.
+    - host the prototype site on a dedicated server with access protection.
+    - push to the prototype server at each step along the way.
+
+  + figma my notebook wireframes
+    - watch some more ui yt.
+    - host on cloud and add to Readme.
+
+  + redesign the frontend structure.
+    - watch some yt on optimal design patterns for frontend.
+    - put some thought into optimal file structure and design of each component. write a sketch plan of each
+    implementation and then discuss with chatgpt.
+    - write a structural wireframe for the site and component structure.
+    - write a technical spec by stubbing the main functions required.
+    - notes on design decisions will help in the writeup as well.
+    - might be worth starting from scratch in some places.
+
+  + implement static interfaces from my notebook wireframe.
+    - follow the plan made earlier. animation is a whole new skillset, so save that for later.
+    - focus on clean, readable, well-factored, best-practice code.
+
+  + upgrade the backend to fit my redesigned frontend and better work with Next.
+    - hard refactor the backend to fit Next/static best practices. Currently I am dodging pre-building the writing pages due to incompatability between Express and Next. Was a useful learning exercise but time to fix.
+    - add meaningful error logging to the backend.
+    - write unit tests for the backend.
+    - document the backend.
+    - 'lock' the backend - no more touching.
+
+  * integrate the backend.
+    - debug the double-nesting and user contact submission issues.
+    - refactor requests so writing data is stored in / accessed from context.
+    - write integration tests for the backend-frontend integration.
+
+  * add user interactivity such as forms and search bars.
+    - avoid modifying the static interfaces.
+    - minimise complexity.
+    - follow best practices around conditional rendering and encapsulation to avoid the issues I faced with CONTACT in V2.
+
+* v0.4 - Upgrade the frontend.
+  + add animations.
+    - study framer on yt.
+    - reuse others' code where possible to save time. limit custom animations.
+
+  + make all screens responsive.
+    - see best practices for translating a desktop-first site on yt.
+  
+  + perform a full wet run, testing all site functions on several devices. debug any broken features.
+
+  + clean it up.
+    - fix remaining PROD/DEV tags.
+    - remove console.logs.
+    - remove dead code.
+    - document loose ends.
+    - remove dev files and dev comments.
+    - clean up the node packages.
+    - re-read the codebase.
+    - push to prod.
+
+* v1.0 - Write up, add content, and polish.
+  + build a basic admin panel.
+    - for:
+      - posting, amending and deleting writing and art content.
+      - retrieving user submitted data.
+      - emailing user database quickly/easily.
+    - create a simple CLI app to make curl-requesting more facile.
+
+  + update the readme.
+    - explain project.
+    - brief writeup with pictures, covering:
+      - feature demo video
+      - motivation
+      - timeline and events (v0.0,1,2,3, to 1.0)
+      - skills learned
+      - tech stack
+      - project management tools used
+      - reflections for next time
+  
+  + add a licence.
+
+  + add thanks to main readme.
+  
+  + do some basic SEO.
+    - benchmark for LCP etc.
+
+  + add analytics.
+
+  + improve accessibility.
+
+  + add recent writings and favourite art.
+    - crop up a few demo images.
+    - edit my aisoc writing.
+    - creative writing can go up later.
+  
+  + add a comprehensive list of tasks completed to the repo, based on the original TODO. include all the tricks and stumbles along the way.
+
+
+
+Extensions:
+* 3d art gallery
+
+* from v2
+  + debug double-listing situation with essays db return (different data types in db?)
+  + transition from React context API to Nodejs data fetching mechanisms (higher level, easy caching )
+
+* search writing feature
+* admin mail all feature
+* bug report feature
+* link my github

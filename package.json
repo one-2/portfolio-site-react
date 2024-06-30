@@ -6,10 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "d3": "^7.9.0",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "mongodb": "^6.7.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
@@ -18,5 +27,18 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.3"
-  }
+  },
+  "description": "I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-2/portfolio-site-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/one-2/portfolio-site-react/issues"
+  },
+  "homepage": "https://github.com/one-2/portfolio-site-react#readme"
 }
