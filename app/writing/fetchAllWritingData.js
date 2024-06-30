@@ -1,5 +1,4 @@
 // TODO: implement as context to reduce latency
-
 const PORT = process.env.EXPRESS_PORT;
 
 export default async function getWritingData(stub) {

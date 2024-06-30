@@ -9,7 +9,7 @@
 
 import styles from './page.module.css'
 import Link from 'next/link'
-import EntryForm from './_userForm/entryForm';
+// import EntryForm from './_userForm/entryForm';
 import { MatrixRainingLetters } from './_userForm/_rain/rain';
 import React from 'react';
 
@@ -37,7 +37,7 @@ export default function Contact() {
         </div>
         <div className={styles.content}>
         <p className={styles.user}>{messageStartString}run(promptContactInfo)</p>
-        <p className={styles.system}>SYSTEM ERROR. PLEASE VISIT LINKEDIN FROM THE MAIN PAGE.</p>
+        <p className={styles.system}>SYSTEM ERROR. ALT CONTACT: CLICK <Link href='https://www.linkedin.com/in/stephen-elliott231/'>HERE</Link>.</p>
           {/* <EntryForm /> BUGGED */}
         </div>
       </div>

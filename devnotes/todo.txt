@@ -29,15 +29,16 @@ To do
     - focus on clean, readable, well-factored, best-practice code.
 
   + upgrade the backend to fit my redesigned frontend and better work with Next.
-    - hard refactor the backend.
+    - hard refactor the backend to fit Next/static best practices. Currently I am dodging pre-building the writing pages due to incompatability between Express and Next. Was a useful learning exercise but time to fix.
     - add meaningful error logging to the backend.
     - write unit tests for the backend.
     - document the backend.
     - 'lock' the backend - no more touching.
 
   * integrate the backend.
-   - refactor requests so writing data is stored in / accessed from context.
-   - write integration tests for the backend-frontend integration.
+    - debug the double-nesting and user contact submission issues.
+    - refactor requests so writing data is stored in / accessed from context.
+    - write integration tests for the backend-frontend integration.
 
   * add user interactivity such as forms and search bars.
     - avoid modifying the static interfaces.

@@ -1,12 +1,7 @@
-'use client'
-import React, { useState, useEffect } from 'react';
 import getWritingData from './fetchAllWritingData';
 
 const WritingPage = async ({ siteSection, slug, styles }) => {
   let data = await getWritingData(siteSection); 
-
-  // TODO refactor into its own function for blogs and essays
-  // TODO add to blogs 
   // TODO save data to context for reduced latency
   if (data.length === 1) data = data[0]; // Hack fix for weird bug where the data is doubly listed on the return, while the Blogs data is singly
     data = data.find(item => item.post.metadata.slug === slug);
