@@ -4,9 +4,13 @@
 I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
 
 ### Status
-I'm now **moving my site to Next.js.** The framework I started on, Create React App, has been deprecated and was breaking my builds.
+I'm now **upgrading the full website stack from my v0.2 first draft.** I've completed a draft frontend and backend in v0.1 and v0.2 respectively. Now I want to add personality, polish, and best-practice programming throughout my project. That means
+* Designing a new UI,
+* Adjusting the project module structure,
+* Finishing the transition from Express/Node to Next.js serverless, and
+* Adding advanced features like accessibility/animations/SEO/responsive interfaces.
 
-Once I'm finished rebuilding, I'll move on to  **Stage 2.1**: "Implement a MERN backend to retrieve data for the Projects and Blogs pages."
+See dev-notes/todo for more info.
 
 ### Goals
 My ambitions for this project are to:
