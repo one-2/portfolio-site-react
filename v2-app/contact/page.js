@@ -7,10 +7,9 @@
 //    - homepage background fades to black on the way in and white on the way out
 //    - tune terminal appearance time
 
-'use client'
 import styles from './page.module.css'
 import Link from 'next/link'
-import EntryForm from './_userForm/entryForm';
+// import EntryForm from './_userForm/entryForm';
 import { MatrixRainingLetters } from './_userForm/_rain/rain';
 import React from 'react';
 
@@ -37,8 +36,9 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.content}>
-          <p className={styles.user}>{messageStartString}run(promptForContactInformation)</p>
-          <EntryForm />
+        <p className={styles.user}>{messageStartString}run(promptContactInfo)</p>
+        <p className={styles.system}>SYSTEM ERROR. ALT CONTACT: CLICK <Link href='https://www.linkedin.com/in/stephen-elliott231/'>HERE</Link>.</p>
+          {/* <EntryForm /> BUGGED */}
         </div>
       </div>
     </div>

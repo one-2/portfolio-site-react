@@ -12,11 +12,6 @@ export default function MainNavGrid() {
             <h2>TECH</h2>
           </div>
         </Link>
-        <Link href='https://www.linkedin.com/in/stephen-elliott231/'>
-          <div className={styles.card}>
-            <h2>CV</h2>
-          </div>
-        </Link>
         <Link href='writing'>
           <div className={styles.card}>
             <h2>WRITING</h2>
@@ -25,6 +20,16 @@ export default function MainNavGrid() {
         <Link href='art'>
           <div className={styles.card}>
             <h2>ART</h2>
+          </div>
+        </Link>
+        <Link href='https://www.linkedin.com/in/stephen-elliott231/'>
+          <div className={styles.card}>
+            <h2>CV</h2>
+          </div>
+        </Link>
+        <Link href='contact'>
+          <div className={styles.card}>
+            <h2>CONTACT</h2>
           </div>
         </Link>
       </div >

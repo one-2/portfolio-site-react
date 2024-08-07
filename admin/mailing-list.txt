@@ -1,0 +1,2 @@
+// Sample curl:
+// curl -X POST -H "Content-Type: application/json" -d '{"email":"example@email.com"}' http://localhost:' + PORT + '/user/mailingList

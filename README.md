@@ -4,9 +4,13 @@
 I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
 
 ### Status
-I'm now **moving my site to Next.js.** The framework I started on, Create React App, has been deprecated and was breaking my builds.
+I'm now **upgrading the full website stack from my v0.2 first draft.** I've completed a draft frontend and backend in v0.1 and v0.2 respectively. Now I want to add personality, polish, and best-practice programming throughout my project. That means
+* Designing a new UI,
+* Adjusting the project module structure,
+* Finishing the transition from Express/Node to Next.js serverless, and
+* Adding advanced features like accessibility/animations/SEO/responsive interfaces.
 
-Once I'm finished rebuilding, I'll move on to  **Stage 2.1**: "Implement a MERN backend to retrieve data for the Projects and Blogs pages."
+See dev-notes/todo for more info.
 
 ### Goals
 My ambitions for this project are to:
@@ -27,11 +31,11 @@ I am using the MERN stack for this project. I chose this stack because it has
 | Name          | Usage             | Implemented yet?  |
 |:-             |-                  |:-:                |
 | React         | Frontend          | Yes               |
-| Next.js       | React Framework   | No                |
+| Next.js       | React Framework   | Yes               |
 | Bootstrap     | Styling           | Yes               |
 | Node JS       | Backend           | Yes               |
-| Express JS    | Backend API       | No                |
-| MongoDB       | Database          | No                |
+| Express JS    | Backend API       | Yes               |
+| MongoDB       | Database          | Yes               |
 
 ### Development cycle
 I'm following the Waterfall development cycle for a couple of reasons:
@@ -41,35 +45,17 @@ I'm following the Waterfall development cycle for a couple of reasons:
 4. I want to give myself time to explore, evaluate, test, and implement these unfamiliar technologies. Efficiency is not a primary goal this time around.
 
 ## Project Plan
-### Stage 1: Setup, Design and Placeholder Implementation
+### Version 0.1: Setup, Design, Draft Frontend Implementation. ✅
 1. Find some frontend design inspiration. ✅
 2. Build the app structure. ✅
-3. Draft the app's key pages and components: ✅
-    - Landing page. ✅
-    - Header component. ✅
-    - Footer component. ✅
-    - Projects page. ✅
-    - Contact page. ✅
+3. Draft the app's key pages and components. ✅
 4. Add internal navigation/routing using React Router. ✅
-5. Complete some basic interface improvements: ✅
-    - Write example content for the Blog page and Contact page. ✅
-    - Add placeholder shapes, logos, and links to all components. ✅
+5. Add example content and a placeholder/draft UI. ✅
 6. Take blog notes on the development process, particularly focusing on: problems I've faced during development; how I've overcome them; and what I learned through these challenges. ✅
 7. Write a formal project plan and README. ✅
-8. Refactor my Stage 1 work, to implement
-    - SOLID design principles. ✅ - This will require more reviews as we go. It looks OK for now.
-    - Newest, minimal Bootstrap syntax. ❌ - Decided not to, for now. It would obscure the (HCJ) interface I am programming to.
-    - Self-documenting, or docstring'd, code. ✅
-    - Particularly, refactor:
-        - Blogs. ✅
-        - Contact. ✅
-        - Header. ✅
-        - Footer. ✅
-        - Landing. ✅
-        - Nav panel. ✅
-        - Projects. ✅
+8. Refactor to implement cleaner and more readable code. ✅
 
-### Stage 2: Backend and Content Addition
+### Version 0.2: Draft Backend Implementation. ✅
 1. Design and build a MERN backend to retrieve data for the Projects, Blogs, and Email List pages.
     - Design the databases. ✅
         - Specify the database requirements. Justify your choices. ✅
@@ -87,7 +73,7 @@ I'm following the Waterfall development cycle for a couple of reasons:
         - Research backend security issues. ✅
         - Design + implement basic security features. ✅
 
-### Stage 3: Frontend and backend re-design
+### Version 0.3: Frontend and backend re-design
 1. I want to learn some design skills by making a frontend from scratch. Since this isn't a portfolio, I can go a bit wild.
     - Design on Figma. ✅
     - Iterate until you're happy with it. ✅ (this took ages!)
@@ -114,24 +100,22 @@ I'm following the Waterfall development cycle for a couple of reasons:
 5. Add animations
 6. Simplify for mobile and implement a mobile UI, or add a blocker to prevent people from viewing on mobile
 
-### Stage 4: Launch prep
+### Version 0.4: Launch prep
 1. Integrate Vercel monitoring and analytics
 2. Go live. Run final click-through tests
-3. Promote the launch on social media
-
-### Stage 5: Writeup
-9. Write a capstone blog about the development process, including
+3. Write a capstone blog about the development process, including
     - How I like the new technologies I've used.
     - What I did well.
     - What I could do better.
     - What are my next steps with this project.
     - What did I want to do but skipped, and why.
 
-### Stage 6: Enhancement
-1. Build some interactive features and promote them via socials to get traffic
+### Version 0.5: Launch
+1. Promote the site on social media
+2. Build some interactive features and promote them via socials to get traffic
 
 ## References
-Thank you to the authors and maintainers of these resources!
+Thank you to the authors and maintainers of these resources, as well as all packages credited in the codebase (I will add those here soon).
 
 ### Courses
 https://www.coursera.org/professional-certificates/meta-front-end-developer
