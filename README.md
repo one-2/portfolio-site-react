@@ -58,7 +58,7 @@ I'm following the Waterfall development cycle for a couple of reasons:
 7. Write a formal project plan and README. ✅
 8. Refactor my Stage 1 work, to implement
     - SOLID design principles. ✅ - This will require more reviews as we go. It looks OK for now.
-    - Newest, minimal Bootstrap syntax. ❌ - Decided not to, for now. It would obscure the interface I am programming to.
+    - Newest, minimal Bootstrap syntax. ❌ - Decided not to, for now. It would obscure the (HCJ) interface I am programming to.
     - Self-documenting, or docstring'd, code. ✅
     - Particularly, refactor:
         - Blogs. ✅
@@ -76,73 +76,59 @@ I'm following the Waterfall development cycle for a couple of reasons:
         - Choose a technology. Justify your choice. ✅
         - Design a NoSQL database structure for user services. ✅
         - Design a second NoSQL database structure for logging. ✅
-    - Design the backend.
-        - Design the API using the ExpressJS framework on NodeJS, following the database structure and
-            - Observer pattern for user subscription and termination.
-            - Chain of Responsibility pattern for logging.
-        - Write failing unit tests for the API.
-        - Write failing integration tests.
-            - Backend-server interaction.
-            - Routing.
-            - Error handling.
-            - Logging.
-        - Implement the API using NodeJS.
-            - Mock up in PostMan.
-            - Make unit tests pass.
-        - Implement the server.
-            - Upload test data.
-            - Make integration tests pass.
-    - Secure the backend.
-        - Research backend security issues.
-        - Design security features.
-        - Implement security features.
-2. Add data to the Projects database.
-    - UniMate.
-    - This site.
-    - Sumobots.
-3. Add to the Blogs database.
-4. Add a Professional Experience page.
-    - Embed a non-scrapable CV, or LinkedIn.
-    - Link my GitHub.
-5. Take blog notes on the development process so far.
+    - Design the backend. ✅
+        - Design the API using the ExpressJS framework on NodeJS. ✅
+        - Implement the API using NodeJS. ✅
+            - Mock up locally. No tests this time around. I can learn that later. ✅
+        - Implement the server. ✅
+            - Upload test data. ✅
+            - Integration test via frontend click-through. ✅
+    - Secure the backend. ✅
+        - Research backend security issues. ✅
+        - Design + implement basic security features. ✅
 
-### Stage 3: User Interface and User Experience
-1. You're (kind-of) half-way through! Make a social media post about the development process so far.
-2. Implement a responsive interface.
-3. Order a professional design review (cowboy-themed!).
-4. Add a bug reporting feature.
-5. Add a search feature to the Blogs and Projects pages.
-6. Add a blog mailing list, including
-    - User contact data collection and storage.
-    - Simple mailing list mass-contact method.
-7. Implement the professional design review's recommendations.
-8. Create a simple, interesting animation for the landing page.
-9. Start promoting the site launch on social media.
-10. Add user interactivity to the projects page, including
-    - Embedded Jupyter notebooks.
-    - System diagrams with onHover popouts.
-    - Algorithm demonstrations, akin to the phone apps I have.
-11. Take blog notes on the development process so far.
+### Stage 3: Frontend and backend re-design
+1. I want to learn some design skills by making a frontend from scratch. Since this isn't a portfolio, I can go a bit wild.
+    - Design on Figma. ✅
+    - Iterate until you're happy with it. ✅ (this took ages!)
+2. Implement the new frontend.
+    - Intro
+    - Essays
+    - Projects
+    - Art
+        - Stories
+        - Poems?
+        - Images
+    - Contact
+    - Outro
+    - Credits
+3. The Express backend isn't cooperating with NextJS. I've learned the low-level stuff on Express, so it's best to transition to Next now, for simplicity.
+    - Rewrite the backend API in pure (serverless) NextJS
+    - Add data to the Projects and Essays databases
+        - Projects: UniMate, SumoBots, this site. Don't go overboard, just the basics. You can do the analysis later.
+        - Essays: Everything from AISoc (needs to be tidied up but again, can do that later :))
+    - Integrate the backend with the new frontend
+    - Add bug reporting somewhere
+    - Add essay mailing list signup
+4. Take some dot notes on the frontend redesign and development process
+5. Add animations
+6. Simplify for mobile and implement a mobile UI, or add a blocker to prevent people from viewing on mobile
 
-### Stage 4: Deployment and Maintenance
-1. Set up a basic monitoring system.
-2. Set up a basic analytics system.
-3. Promote the project some more on social media.
-4. Set up CI/CD, including
-    - Use generative AI to write Jest tests.
-5. Review security and patch any vulnerabilities.
-    - Get a friend or freelancer to pen test the site.
-6. Promote the launch on social media.
-7. Buy a domain (see GitHub deals) and hosting service.
-8. Go live.
-    - Announce the launch on social media.
-    - Promote user-interactive elements.
+### Stage 4: Launch prep
+1. Integrate Vercel monitoring and analytics
+2. Go live. Run final click-through tests
+3. Promote the launch on social media
+
+### Stage 5: Writeup
 9. Write a capstone blog about the development process, including
     - How I like the new technologies I've used.
     - What I did well.
     - What I could do better.
     - What are my next steps with this project.
     - What did I want to do but skipped, and why.
+
+### Stage 6: Enhancement
+1. Build some interactive features and promote them via socials to get traffic
 
 ## References
 Thank you to the authors and maintainers of these resources!
