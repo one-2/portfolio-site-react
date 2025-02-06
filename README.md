@@ -1,26 +1,20 @@
 # My Portfolio Site
-## About
-### Summary
-I want to be able to bring my ideas to the world quickly and at low cost, so I'm building myself a portfolio site in the MERN stack. This project will give me a custom platform to share information with the world. Simultaneously, I'm developing the skills I need to rapidly prototype and ship future software products.
+## Summary
+I built a MERN portfolio site to learn to bring my ideas and prototypes to the world quickly, at low cost. I learned a great deal through the project, including core full-stack web development skills, web hosting, and some web networking concepts. I learned the React framework and implemented the backend in Express-Node.js-MongoDB. I reworked the site to work with Vercel and hosted it live in development. I have learned so many new skills from scratch for this project.
 
-### Status
-I'm now **upgrading the full website stack from my v0.2 first draft.** I've completed a draft frontend and backend in v0.1 and v0.2 respectively. Now I want to add personality, polish, and best-practice programming throughout my project. That means
-* Designing a new UI,
-* Adjusting the project module structure,
-* Finishing the transition from Express/Node to Next.js serverless, and
-* Adding advanced features like accessibility/animations/SEO/responsive interfaces.
+After successfully implementing the site, I transitioned to a hosted Wordpress instance to cut down on future maintenance and modification time, allowing me to focus on machine learning technologies instead. This was a fantastic experience in web dev!
 
-See dev-notes/todo for more info.
-
-### Goals
-My ambitions for this project are to:
-1. Create a place where I can share my projects, research, and knowledge with interested people.
-2. Develop strong fundamental web development skills, and explore interesting advanced topics.
-3. Hone my project management skills for self-directed projects. I want to perform self-directed machine learning research for my next project, so it's important to learn highly efficient, structured workflow practices.
-4. Inspire other students to pursue their own self-directed learning.
+## Goals
+1. Create a place where I can share my projects, research, and knowledge.
+2. Develop some full-stack web development skills.
+3. Hone my project management skills for self-directed projects, to prepare for self-directed projects in machine learning.
+4. Inspire other learners.
 5. Demonstrate a technical competency to future employers.
 
-### Technologies
+## Status
+✅  Complete.
+
+## Technologies
 I am using the MERN stack for this project. I chose this stack because it has
 - Strong support from large companies, giving it a long expected lifetime.
 - High-quality learning resources on Coursera, my platform of choice.
@@ -28,63 +22,32 @@ I am using the MERN stack for this project. I chose this stack because it has
 - Strong demand in the global job market.
 - Extensive package support.
 
-| Name          | Usage             | Implemented yet?  |
-|:-             |-                  |:-:                |
-| React         | Frontend          | Yes               |
-| Next.js       | React Framework   | Yes               |
-| Bootstrap     | Styling           | Yes               |
-| Node JS       | Backend           | Yes               |
-| Express JS    | Backend API       | Yes               |
-| MongoDB       | Database          | Yes               |
+| Name          | Usage             |
+|:-             |-                  |
+| React         | Frontend          |
+| Next.js       | React Framework   |
+| Bootstrap     | Styling           |
+| Node JS       | Backend           |
+| Express JS    | Backend API       |
+| MongoDB       | Database          |
+| Wordpress     | Final build       |
 
 ### Development cycle
-I'm following the Waterfall development cycle for a couple of reasons:
-1. I've followed Agile at Chubb, UniMate, and in several uni courses, but I have little experience with Waterfall. I'd like to experience the benefits and drawbacks of both.
-2. I don't expect the project requirements to evolve much with user feedback.
-3. I don't want to ship a public-facing representation of myself if it's not finished.
-4. I want to give myself time to explore, evaluate, test, and implement these unfamiliar technologies. Efficiency is not a primary goal this time around.
+I followed the Waterfall development cycle for a couple of reasons:
+1. I'd followed Agile before, but I had no experience with Waterfall.
+2. I did't expect the project requirements to evolve.
+3. I did't want to ship an unfinished site, since it is public-facing.
+4. I wanted to give myself time to explore unfamiliar technologies. Efficiency is not a primary goal.
 
-## Project Plan
-### Version 0.1: Setup, Design, Draft Frontend Implementation. ✅
-1. Find some frontend design inspiration. ✅
-2. Build the app structure. ✅
-3. Draft the app's key pages and components. ✅
-4. Add internal navigation/routing using React Router. ✅
-5. Add example content and a placeholder/draft UI. ✅
-6. Take blog notes on the development process, particularly focusing on: problems I've faced during development; how I've overcome them; and what I learned through these challenges. ✅
-7. Write a formal project plan and README. ✅
-8. Refactor to implement cleaner and more readable code. ✅
-
-### Version 0.2: Draft Backend Implementation. ✅
-1. Design and build a MERN backend to retrieve data for the Projects, Blogs, and Email List pages.
-    - Design and implement the MongoDB databases and collection schemas. ✅
-    - Design, implement and secure the Node-Express backend. ✅
-2. Add test data to the Writing database collections. ✅
-3. Add a Professional Experience page. ✅
-4. Take blog notes on the development process so far. ✅
-
-### Version 0.3: Upgrade the Full Stack.
-See devnotes/todo.txt for more info.
-
-### Version 0.4: Upgrade the Frontend.
-See devnotes/todo.txt for more info.
-
-### Version 1.0: Write Up, Add Content, Polish.
-See devnotes/todo.txt for more info.
+## Features
+* Internal navigation/routing using React Router. ✅
+* Database in MongoDB ✅
+* Express-Node.js server ✅
+* React stateful frontend ✅
+* Artsy frontend design tricks, such as styled and animated text ✅
 
 ## References
-Thank you to the authors and maintainers of these resources, as well as all packages credited in the codebase (I will add those here soon).
-
-### Courses
-https://www.coursera.org/professional-certificates/meta-front-end-developer
-
-### Optimisation
-https://www.linkedin.com/advice/0/how-can-you-optimize-mern-stack-application-performance-mzdhf
-
-### UI
-https://www.wix.com/ (for prototype UI design inspiration)
-
-
+Thank you to the authors and maintainers of all the resources mentioned in the codebase. Particularly to Meta for their frontend course, which I used: https://www.coursera.org/professional-certificates/meta-front-end-developer
 
 Thanks for reading! 🤠
 
