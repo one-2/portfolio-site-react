@@ -1,8 +1,9 @@
-# My Portfolio Site
-## Summary
-I built a MERN portfolio site to learn to bring my ideas and prototypes to the world quickly, at low cost. I learned a great deal through the project, including core full-stack web development skills, web hosting, and some web networking concepts. I learned the React framework and implemented the backend in Express-Node.js-MongoDB. I reworked the site to work with Vercel and hosted it live in development. I have learned so many new skills from scratch for this project.
+# My Portfolio Site Project
+## Status
+✅  Complete.
 
-After successfully implementing the site, I transitioned to a hosted Wordpress instance to cut down on future maintenance and modification time, allowing me to focus on machine learning technologies instead. This was a fantastic experience in web dev!
+## Summary
+I built a MERN portfolio site to learn to bring my ideas and prototypes to the world quickly, at low cost. I learned core full-stack web development (in MERN) skills, frontend design (in Figma), web hosting (on Vercel), and some web networking concepts, completely from scratch. After successfully implementing the site, I transitioned to a hosted Wordpress instance to cut down on future maintenance and modification time, allowing me to focus on machine learning technologies instead. This was a fantastic experience in web dev!
 
 ## Goals
 1. Create a place where I can share my projects, research, and knowledge.
@@ -10,9 +11,6 @@ After successfully implementing the site, I transitioned to a hosted Wordpress i
 3. Hone my project management skills for self-directed projects, to prepare for self-directed projects in machine learning.
 4. Inspire other learners.
 5. Demonstrate a technical competency to future employers.
-
-## Status
-✅  Complete.
 
 ## Technologies
 I am using the MERN stack for this project. I chose this stack because it has
@@ -28,23 +26,15 @@ I am using the MERN stack for this project. I chose this stack because it has
 | Next.js       | React Framework   |
 | Bootstrap     | Styling           |
 | Node JS       | Backend           |
-| Express JS    | Backend API       |
+| Express JS (reworked to run on Vercel)    | Backend API       |
 | MongoDB       | Database          |
 | Wordpress     | Final build       |
 
-### Development cycle
-I followed the Waterfall development cycle for a couple of reasons:
+## Development cycle
+I followed the _Waterfall_ development cycle:
 1. I'd followed Agile before, but I had no experience with Waterfall.
-2. I did't expect the project requirements to evolve.
-3. I did't want to ship an unfinished site, since it is public-facing.
-4. I wanted to give myself time to explore unfamiliar technologies. Efficiency is not a primary goal.
-
-## Features
-* Internal navigation/routing using React Router. ✅
-* Database in MongoDB ✅
-* Express-Node.js server ✅
-* React stateful frontend ✅
-* Artsy frontend design tricks, such as styled and animated text ✅
+2. I didn't expect the project requirements to evolve.
+3. I wanted to give myself time to explore unfamiliar technologies. Efficiency is not a primary goal.
 
 ## References
 Thank you to the authors and maintainers of all the resources mentioned in the codebase. Particularly to Meta for their frontend course, which I used: https://www.coursera.org/professional-certificates/meta-front-end-developer
